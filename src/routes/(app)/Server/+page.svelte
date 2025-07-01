@@ -724,13 +724,3 @@ radial-gradient(36.24% 104.38% at 40.01% 64.79%, rgba(156, 53, 234, 0.2) 0%, rgb
 	</button>
 </div>
 </div>
-
-<style>
-	.transition-fast {
-		transition: stroke-dashoffset 0.3s ease-in;
-	}
-
-	.transition-slow {
-		transition: stroke-dashoffset 1s linear;
-	}
-</style>

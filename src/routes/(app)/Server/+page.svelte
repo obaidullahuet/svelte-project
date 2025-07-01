@@ -68,6 +68,10 @@
 				icon: '/fi_12123759.svg',
 				name: 'Barcelona'
 			},
+			city: {
+				icon: '/fi_12123759.svg',
+				name: 'Barcelona'
+			},
 			rating: {
 				svg: {
 					path: 'polygon',

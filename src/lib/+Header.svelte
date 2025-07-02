@@ -18,8 +18,10 @@
 	};
 
 	const closeMobileMenu = () => {
+	if (window.innerWidth < 1024) {
 		isMobileMenuOpen = false;
-	};
+	}
+};
 </script>
 
 <div class="flex w-full justify-center px-4 sm:px-6 lg:px-8">
@@ -63,11 +65,11 @@
 		<!-- Right Side Actions -->
 		<div class="flex items-center gap-2">
 			<!-- Desktop Action Buttons - Progressive display based on screen size -->
-			<div class="hidden items-center gap-1 sm:flex">
+			<div class="hidden items-center gap-1 lg:flex">
 			
                 <div class="rounded-full border  border-[#ffffff]/10 px-3 text-[#ffffff] flex items-center justify-between gap-2"> 
 				<!-- Subscription Button - Show on md+ -->
-				<a href="/subscription" class="action-link hidden py-2.5 md:block">
+				<a href="/subscription" class="action-link hidden py-2 md:block">
 					<button class="flex items-center gap-2">
 						<img src={Star} alt="Subscription" class="h-4 w-4 flex-shrink-0" />
 						<span class="action-text">Subscription</span>
@@ -84,7 +86,7 @@
 
 				<span class="w-[1px] h-full text-border">|</span>
 				<!-- Download Button - Show on xl+ -->
-				<a href="/download" class="action-link hidden xl:block">
+				<a href="/download" class="action-link hidden lg:block">
 					<button class="flex items-center gap-2">
 						<img src={File} alt="Download" class="h-4 w-4 flex-shrink-0" />
 						<span class="action-text">Download launcher</span>
@@ -93,24 +95,24 @@
 				</div>
 
 				<!-- Bell Button - Show on lg+ -->
- <div class="ml-4 flex justify-normal bg-border rounded-full border border-white/10">
-				<a href="/notifications" class="action-link hidden lg:block rounded-full border border-[#ffffff]/10 ">
+ <div class="ml-4 flex justify-normal bg-border rounded-full border  border-white/10">
+				<a href="/notifications" class="action-link hidden lg:block rounded-full border  border-[#ffffff]/10 ">
 					<button class="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 transition-colors hover:bg-white/10">
 						<img src="/belo.svg" alt="Notifications" class="h-4 w-4 rounded-full " />
 					</button>
 				</a>
 
 				<!-- User Profile -->
-				<div class=" flex h-9 items-center gap-2   rounded-full px-2 py-2 sm:px-3">
-					<img
+				<div class=" flex h-9 items-center gap-2 ml-4  rounded-full px-5  sm:px-3">
+					<!-- <img
 						src={Avatar}
 						alt="User Avatar"
 						class="h-6 w-6 rounded-full border border-white/10 sm:h-7 sm:w-7"
-					/>
+					/> -->
 					<span class="hidden text-sm font-medium text-white lg:inline xl:text-base">
 						JohnDoe_911
 					</span>
-					<img src="/downar (1).svg" alt="Dropdown" class="ml-1 hidden h-2 w-3 lg:inline" />
+					<img src="/downar (1).svg" alt="Dropdown" class="ml-1 hidden h-2 w-3  lg:inline" />
 			</div>
 			</div>
 			
@@ -119,7 +121,7 @@
 			
 			<!-- Mobile Menu Button -->
 			<button
-				class="relative z-[60] flex h-10 w-10 items-center justify-center rounded-md border border-white/10 bg-white/5 transition-colors hover:bg-white/10 sm:hidden"
+				class="relative z-[60] flex h-10 w-10 items-center justify-center rounded-md border border-white/10 bg-white/5 transition-colors hover:bg-white/10 lg:hidden"
 				on:click={toggleMobileMenu}
 				aria-label="Toggle menu"
 			>
@@ -151,14 +153,14 @@
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div
-			class="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm sm:hidden"
+			class="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm  lg:hidden"
 			on:click={closeMobileMenu}
 			transition:fade={{ duration: 250 }}
 		></div>
 
 		<!-- Mobile Menu Content -->
 		<div
-			class="fixed left-4 right-4 top-20 z-50 max-h-[calc(100vh-120px)] overflow-y-auto rounded-2xl border border-white/20 bg-[rgba(8,6,10,0.95)] p-4 shadow-2xl backdrop-blur-xl sm:hidden"
+			class="fixed left-4 font-inter right-4 top-6 z-50 max-h-[calc(100vh-120px)] overflow-y-auto rounded-2xl border border-white/20 bg-[rgba(8,6,10,0.95)] p-4 shadow-2xl backdrop-blur-xl lg:hidden "
 			transition:slide={{ duration: 300 }}
 		>
 			<!-- Close Button -->
@@ -181,14 +183,11 @@
 
 			<!-- Navigation Links -->
 			<div class="space-y-2">
-				<h3 class="mb-3 text-sm font-semibold text-gray-300 uppercase tracking-wider">Navigation</h3>
 				{#each [
 					{ href: '/get-started', label: 'Get started' },
-					{ href: '/shop', label: 'Shop' },
 					{ href: '/about', label: 'About us' },
-					{ href: '/news', label: 'News' },
+					{ href: '/news', label: 'Partners' },
 					{ href: '/contacts', label: 'Contacts' },
-					{ href: '/faqs', label: 'FAQs' }
 				] as link}
 					<a href={link.href} on:click={closeMobileMenu} class="block">
 						<div class="mobile-menu-item">
@@ -199,14 +198,11 @@
 			</div>
 
 			<!-- Action Items -->
-			<div class="mt-6 space-y-2">
-				<h3 class="mb-3 text-sm font-semibold text-gray-300 uppercase tracking-wider">Actions</h3>
+			<div class="mt-2 space-y-2">
 				{#each [
-					{ href: '/live', label: 'Live', icon: Alert },
 					{ href: '/subscription', label: 'Subscription', icon: Star },
 					{ href: '/servers', label: 'Servers', icon: Data, special: true },
 					{ href: '/download', label: 'Download launcher', icon: File },
-					{ href: '/notifications', label: 'Notifications', icon: Bell }
 				] as action}
 					<a href={action.href} on:click={closeMobileMenu} class="block">
 						<div class="mobile-menu-item {action.special ? 'bg-[#252327]' : ''}">
@@ -217,20 +213,7 @@
 				{/each}
 			</div>
 
-			<!-- User Profile -->
-			<div class="mt-6 pt-4 border-t border-white/10">
-				<div class="flex items-center gap-3 rounded-lg bg-purple-800/50 p-3">
-					<img
-						src={Avatar}
-						alt="User Avatar"
-						class="h-10 w-10 rounded-full border border-white/20"
-					/>
-					<div>
-						<div class="text-base font-medium text-white">JohnDoe_911</div>
-						<div class="text-sm text-gray-300">View Profile</div>
-					</div>
-				</div>
-			</div>
+			
 		</div>
 	{/if}
 </div>
@@ -272,7 +255,7 @@
 		align-items: center;
 		gap: 0.75rem;
 		border-radius: 0.5rem;
-		padding: 0.75rem 1rem;
+		padding: 8px 8px;
 		color: white;
 		transition: all 0.2s ease;
 		text-decoration: none;

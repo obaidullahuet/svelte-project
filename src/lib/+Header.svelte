@@ -293,11 +293,11 @@
 	}
 
 	/* Focus styles for accessibility */
-	button:focus,
+	/* button:focus,
 	a:focus {
 		outline: 2px solid rgba(255, 255, 255, 0.5);
 		outline-offset: 2px;
-	}
+	} */
 
 	/* Ensure proper text contrast */
 	.text-white {

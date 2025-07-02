@@ -5,7 +5,7 @@
 
 <div class=" "> 
 	
-	<!-- <Header/> -->
+	<Header/>
 
 	<main class="">
 		<slot />

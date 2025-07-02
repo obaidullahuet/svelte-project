@@ -1,1 +1,1 @@
-<div>Hello Landing page ....</div>
+<div class="text-[#fafafafa]">Hello Landing page ....</div>

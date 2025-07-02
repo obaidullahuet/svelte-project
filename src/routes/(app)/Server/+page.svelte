@@ -206,9 +206,6 @@
 				image: '/Polygon 1.svg'
 			}
 		},
-		
-		
-		
 		{
 			thumbnail: '/Rectangle 115.png',
 			title: 'Chill Convoy | Voice Chat Enabled',
@@ -262,7 +259,228 @@
 				},
 				image: '/Polygon 1.svg'
 			}
-		}
+		},
+		{
+			thumbnail: '/Rectangle 115.png',
+			title: 'Heavy Traffic I Public I NO DLC 2',
+			badge: {
+				icon: '/bjli.svg',
+				label: 'Featured'
+			},
+			tier: {
+				icon: 'Vector (1).svg',
+				label: 'Public'
+			},
+			bg: 'bg-[rgba(255,255,255,0.1)]',
+			dp: '',
+			country: {
+				icon: '/flag.svg',
+				name: 'Australia'
+			},
+			players: {
+				icon: '/Vector (3).svg',
+				count: '18/32'
+			},
+			traffic: {
+				icon: '/grr.svg',
+				level: 'Light Traffic'
+			},
+			location: {
+				icon: '/fi_12123759.svg',
+				name: 'Barcelona'
+			},
+			city: {
+				icon: '/fi_12123759.svg',
+				name: 'Barcelona'
+			},
+			rating: {
+				svg: {
+					path: 'polygon',
+					points: [
+						'12 2',
+						'15.09 8.26',
+						'22 9.27',
+						'17 14.14',
+						'18.18 21.02',
+						'12 17.77',
+						'5.82 21.02',
+						'7 14.14',
+						'2 9.27',
+						'8.91 8.26',
+						'12 2'
+					],
+					style: {
+						fill: 'transparent',
+						stroke: '#5B5B5B',
+						strokeWidth: 2
+					}
+				},
+				image: '/Polygon 1.svg'
+			}
+		},
+		{
+			thumbnail: '/Rectangle 115.png',
+			title: 'No Rules Server | Europe ',
+			badge: {
+				icon: '/bjli.svg',
+				label: 'Popular'
+			},
+			tier: {
+				icon: 'Vector (1).svg',
+				label: 'Tier 1'
+			},
+			bg: 'bg-[rgba(255,255,255,0.1)]',
+			dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]',
+			country: {
+				icon: '/flag.png',
+				name: 'Germany'
+			},
+			players: {
+				icon: '/Vector (3).svg',
+				count: '27/32'
+			},
+			traffic: {
+				icon: '/grr.svg',
+				level: 'Heavey Trffic'
+			},
+			location: {
+				icon: '/fi_12123759.svg',
+				name: 'Rome'
+			},
+			rating: {
+				svg: {
+					path: 'polygon',
+					points: [
+						'12 2',
+						'15.09 8.26',
+						'22 9.27',
+						'17 14.14',
+						'18.18 21.02',
+						'12 17.77',
+						'5.82 21.02',
+						'7 14.14',
+						'2 9.27',
+						'8.91 8.26',
+						'12 2'
+					],
+					style: {
+						fill: 'transparent',
+						stroke: '#5B5B5B',
+						strokeWidth: 2
+					}
+				},
+				image: '/Polygon 1.svg'
+			}
+		},
+		{
+			thumbnail: '/Rectangle 115.png',
+			title: 'Simulation Only | Strict Rules',
+			badge: {
+				icon: '/bjli.svg',
+				label: 'New'
+			},
+			tier: {
+				icon: 'ortire.svg',
+				label: 'Tier 2'
+			},
+
+			dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)] ',
+			bg: 'bg-[rgba(175,74,0,0.2)]',
+			country: {
+				icon: '/NL - Netherlands.svg',
+				name: 'United Kingdom'
+			},
+			players: {
+				icon: '/Vector (3).svg',
+				count: '12/32'
+			},
+			traffic: {
+				icon: '/grr.svg',
+				level: 'Light Traffic'
+			},
+			location: {
+				icon: '/fi_12123759.svg',
+				name: 'London'
+			},
+			rating: {
+				svg: {
+					path: 'polygon',
+					points: [
+						'12 2',
+						'15.09 8.26',
+						'22 9.27',
+						'17 14.14',
+						'18.18 21.02',
+						'12 17.77',
+						'5.82 21.02',
+						'7 14.14',
+						'2 9.27',
+						'8.91 8.26',
+						'12 2'
+					],
+					style: {
+						fill: 'transparent',
+						stroke: '#5B5B5B',
+						strokeWidth: 2
+					}
+				},
+				image: '/Polygon 1.svg'
+			}
+		},
+		{
+			thumbnail: '/Rectangle 115.png',
+			title: 'Chill Convoy | Voice Chat Enabled',
+			badge: {
+				icon: '/bjli.svg',
+				label: 'Featured'
+			},
+			tier: {
+				icon: '3itir.svg',
+				label: 'Tier 3'
+			},
+			bg: 'bg-[rgba(155,0,58,0.2)]',
+			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
+			country: {
+				icon: '/NL - Netherlands.svg',
+				name: 'France'
+			},
+			players: {
+				icon: '/Vector (3).svg',
+				count: '5/20'
+			},
+			traffic: {
+				icon: '/grr.svg',
+				level: 'Realistic Traffic'
+			},
+			location: {
+				icon: '/fi_12123759.svg',
+				name: 'Paris'
+			},
+			rating: {
+				svg: {
+					path: 'polygon',
+					points: [
+						'12 2',
+						'15.09 8.26',
+						'22 9.27',
+						'17 14.14',
+						'18.18 21.02',
+						'12 17.77',
+						'5.82 21.02',
+						'7 14.14',
+						'2 9.27',
+						'8.91 8.26',
+						'12 2'
+					],
+					style: {
+						fill: 'transparent',
+						stroke: '#5B5B5B',
+						strokeWidth: 2
+					}
+				},
+				image: '/Polygon 1.svg'
+			}
+		},
 	];
 
 	let width = 0;
@@ -316,8 +534,8 @@ radial-gradient(36.24% 104.38% at 40.01% 64.79%, rgba(156, 53, 234, 0.2) 0%, rgb
 	</div>
 
 	<div class="mt-6 h-[36px]">
-		<div class="flex flex-wrap items-center justify-between gap-3">
-			<div class="font-inter-tight rounded-2xl text-[#EEEDEEAD]">
+		<div class="flex flex-wrap items-center justify-between gap-3 ">
+			<div class="font-inter-tight rounded-2xl text-[#EEEDEEAD] ">
 				<div class="flex w-full flex-wrap items-center font-inter  justify-start gap-3 sm:w-auto">
 					<div class="relative">
 						<input
@@ -454,14 +672,14 @@ radial-gradient(36.24% 104.38% at 40.01% 64.79%, rgba(156, 53, 234, 0.2) 0%, rgb
 			</div>
 		</div>
 		{#each cards as card}
-			<div class="mt-2 h-[72px] rounded-md border text-[#EEEDEEDE] border-border-light bg-[#161416]">
+			<div class="mt-2 h-[72px] rounded-md border text-[#EEEDEEDE] border-border-light hover:bg-border duration-200">
 				<div class="flex flex-wrap items-center justify-between gap-3">
-					<div class="font-inter-tight rounded-2xl">
+					<div class="font-inter-tight rounded-2xl  ">
 						<div
 							class="align-center flex w-full flex-wrap items-center justify-start gap-4 py-1 sm:w-auto"
 						>
 							<div
-								class="relative flex h-[60px] w-[420px] items-center gap-1.5 bg-[#161416] px-1 py-2 text-sm placeholder-white/50 focus:outline-none"
+								class="relative flex h-[60px] w-[420px] items-center gap-1.5  px-1 py-2 text-sm placeholder-white/50 focus:outline-none"
 							>
 								<img src="/Rectangle 115.png" class="h-[60px] w-[124px] rounded-sm" alt="thumbnail" />
 								<span class="text-[15px] font-medium">{card.title}</span>
@@ -477,7 +695,7 @@ radial-gradient(36.24% 104.38% at 40.01% 64.79%, rgba(156, 53, 234, 0.2) 0%, rgb
 								{/if}
 							</div>
 
-							<div class="flex w-[151px] items-center gap-1.5 bg-[#161416] text-sm">
+							<div class="flex w-[151px] items-center gap-1.5  text-sm ">
 								<div
 									class="flex h-[24px] w-[70px] items-center gap-1 rounded-2xl px-2 py-2 font-medium {card.bg} {card.dp} "
 								>
@@ -486,36 +704,36 @@ radial-gradient(36.24% 104.38% at 40.01% 64.79%, rgba(156, 53, 234, 0.2) 0%, rgb
 										class="h-[15px] w-[15px] rounded-2xl {card.dp}  "
 										alt="tier"
 									/>
-									<span class="whitespace-nowrap py-2 text-[15px] font-medium"
+									<span class="whitespace-nowrap py-2 text-[15px] font-medium font-inter"
 										>{card.tier.label}</span
 									>
 								</div>
 							</div>
 
-							<div class="flex w-[151px] items-center gap-2.5 bg-[#161416] px-1 py-2 text-sm">
+							<div class="flex w-[151px] items-center gap-2.5  px-1 py-2 text-sm">
 								<img src={card.country.icon} class="h-[14px] w-[20px]" alt="country" />
-								<span class="text-[15px] font-medium">{card.country.name}</span>
+								<span class="text-[15px] font-medium ">{card.country.name}</span>
 							</div>
 
 							<div
-								class="flex w-[151px] items-center justify-center gap-2.5 bg-[#161416] px-1 py-2 text-sm"
+								class="flex w-[151px] items-center justify-center gap-2.5  px-1 py-2 text-sm"
 							>
 								<img src={card.players.icon} class="h-[13px] w-[18px]" alt="players" />
 								<span class="text-[15px] font-medium">{card.players.count}</span>
 							</div>
 
-							<div class="flex w-[151px] items-center gap-1.5 bg-[#161416] px-1 py-2 text-sm">
+							<div class="flex w-[151px] items-center gap-1.5  px-1 py-2 text-sm">
 								<img src={card.traffic.icon} class="h-[16px] w-[16px]" alt="traffic" />
 								<span class="text-[15px] font-medium">{card.traffic.level}</span>
 							</div>
 
-							<div class="flex w-[151px] items-center gap-2 bg-[#161416] px-1 py-2 text-sm">
+							<div class="flex w-[151px] items-center gap-2  px-1 py-2 text-sm">
 								<img src={card.location.icon} class="h-[20px] w-[20px]" alt="location" />
 								<span class="text-[15px] font-medium">{card.location.name}</span>
 							</div>
 
 							<div
-								class="flex w-[72px] items-center justify-center gap-3 bg-[#161416] px-1 py-2 "
+								class="flex w-[72px] items-center justify-center gap-3 px-1 py-2 "
 							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
@@ -694,7 +912,7 @@ radial-gradient(36.24% 104.38% at 40.01% 64.79%, rgba(156, 53, 234, 0.2) 0%, rgb
 	<!-- Prev -->
 	<button
 		on:click={() => goToPage(currentPage - 1)}
-		class="w-12 h-12 flex items-center justify-center rounded-lg border  border-border-light  bg-border  text-[#FFFFFF] disabled:opacity-30"
+		class="w-13 h-13 flex items-center justify-center rounded-lg border  border-border-light  bg-border  text-[#FFFFFF] disabled:opacity-30"
 		disabled={currentPage === 1}>
 		<img src="CaretLeft (3).svg" alt="">
 	</button>
@@ -704,21 +922,21 @@ radial-gradient(36.24% 104.38% at 40.01% 64.79%, rgba(156, 53, 234, 0.2) 0%, rgb
 		{#if page === 1 || page === totalPages || Math.abs(page - currentPage) <= 1}
 			<button
 				on:click={() => goToPage(page)}
-				class={`w-12 h-12 flex items-center justify-center rounded-lg border  text-[16px]
+				class={`w-13 h-13 flex items-center justify-center rounded-lg border  text-[16px]
 					${currentPage === page
 						? 'bg-[#FFFFFF] text-black border-white'
 						: 'border-background-light text-[#FFFFFFFF] hover:bg-white/10 transition'}`}>
 				{page}
 			</button>
 		{:else if page === currentPage - 2 || page === currentPage + 2}
-			<span class="w-12 h-12 flex items-center bg-background-light border rounded-md text-[#FFFFFF] border-[#FFFFFF] justify-center text-white">...</span>
+			<span class="w-13 h-13 flex items-center bg-background-light border rounded-md text-[#FFFFFF] border-[#FFFFFF] justify-center text-white">...</span>
 		{/if}
 	{/each}
 
 	<!-- Next -->
 	<button
 		on:click={() => goToPage(currentPage + 1)}
-		class="w-12 h-12 flex items-center justify-center rounded-lg border border-background-light  text-[#FFFFFF] text-white disabled:opacity-30"
+		class="w-13 h-13 flex items-center justify-center rounded-lg border border-background-light  text-[#FFFFFF] text-white disabled:opacity-30"
 		disabled={currentPage === totalPages}>
 	<img src="CaretLeft (2).svg" alt="">
 	</button>

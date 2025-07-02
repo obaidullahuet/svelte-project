@@ -1,0 +1,16 @@
+<svg width="1440" height="420" viewBox="0 0 1440 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_14559_13056)">
+<rect width="1920" height="420" transform="translate(-240)" fill="#08060A"/>
+<rect x="-240" width="1920" height="218" fill="#05176C"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M-1644 217.58L-1501.76 223.672C-1396.64 230.441 -1186.38 243.301 -976.118 269.022C-765.859 295.419 -555.6 334 -344.027 334C-133.768 334 76.4905 295.419 286.749 275.79C497.008 256.162 707.267 216.5 812.396 216.5L967 216.5L967 89L812.396 89C707.267 89 497.008 88.9999 286.749 88.9999C76.4905 88.9999 -133.768 88.9999 -344.027 88.9999C-555.6 88.9999 -765.859 88.9998 -976.118 88.9998C-1186.38 88.9998 -1396.64 88.9998 -1501.76 88.9998L-1644 88.9998L-1644 217.58Z" fill="#05176C"/>
+<rect x="-240" width="1920" height="130" fill="#A100FF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2431.5 130L2387 130C2281.5 130 2076 117.5 1962.02 149.157C1792.02 190.53 1622.03 251 1450.97 251C1280.97 251 1110.98 190.531 940.984 159.765C770.99 129 600.995 129 515.997 129L391 129L391 -92.9998L515.997 -92.9998C600.995 -92.9998 770.99 -92.9999 940.984 -92.9999C1110.98 -92.9999 1280.97 -92.9999 1450.97 -92.9999C1622.03 -92.9999 1792.02 -92.9999 1962.02 -93C2132.01 -93 2302 -93 2387 -93L2431.5 -92.9999L2431.5 130Z" fill="#A200FF"/>
+<foreignObject x="-340" y="-100" width="2120" height="620"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(50px);clip-path:url(#bgblur_1_14559_13056_clip_path);height:100%;width:100%"></div></foreignObject><rect data-figma-bg-blur-radius="100" x="-240" width="1920" height="420" fill="#08060A" fill-opacity="0.3"/>
+</g>
+<defs>
+<clipPath id="bgblur_1_14559_13056_clip_path" transform="translate(340 100)"><rect x="-240" width="1920" height="420"/>
+</clipPath><clipPath id="clip0_14559_13056">
+<rect width="1920" height="420" fill="white" transform="translate(-240)"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Test from '$lib/+test.svelte';
+	import Tiercard from '$lib/+Card.svelte'
 
 	let updates = [
 		{
@@ -124,48 +125,141 @@
 
 	const devlogCards = [
 		{
-			date: "June 13, 2025",
-			title: "Phased transitional ability that scales well across platforms and devices",
-			tag: "Devlog",
-			icon: "/blog/Newspaper.svg"
+			date: 'June 13, 2025',
+			title: 'Phased transitional ability that scales well across platforms and devices',
+			tag: 'Devlog',
+			icon: '/blog/Newspaper.svg',
+			img: '/blog/image 49.png'
 		},
 		{
-			date: "June 14, 2025",
-			title: "Improved animation sync between client-side transitions",
-			tag: "Devlog",
-			icon: "/blog/Newspaper.svg"
+			date: 'June 14, 2025',
+			title: 'Improved animation sync between client-side transitions',
+			tag: 'Devlog',
+			icon: '/blog/Newspaper.svg'
 		},
 		{
-			date: "June 15, 2025",
-			title: "New dark mode theming engine for accessibility compliance",
-			tag: "Devlog",
-			icon: "/blog/Newspaper.svg"
+			date: 'June 15, 2025',
+			title: 'New dark mode theming engine for accessibility compliance',
+			tag: 'Devlog',
+			icon: '/blog/Newspaper.svg'
 		},
 		{
-			date: "June 16, 2025",
-			title: "Enhanced API caching layer with fallback support",
-			tag: "Devlog",
-			icon: "/blog/Newspaper.svg"
+			date: 'June 16, 2025',
+			title: 'Enhanced API caching layer with fallback support',
+			tag: 'Devlog',
+			icon: '/blog/Newspaper.svg'
 		},
 		{
-			date: "June 17, 2025",
-			title: "Component library refactor with atomic design principles",
-			tag: "Devlog",
-			icon: "/blog/Newspaper.svg"
+			date: 'June 17, 2025',
+			title: 'Component library refactor with atomic design principles',
+			tag: 'Devlog',
+			icon: '/blog/Newspaper.svg'
 		},
 		{
-			date: "June 18, 2025",
-			title: "WebSocket implementation with auto-reconnect feature",
-			tag: "Devlog",
-			icon: "/blog/Newspaper.svg"
+			date: 'June 18, 2025',
+			title: 'WebSocket implementation with auto-reconnect feature',
+			tag: 'Devlog',
+			icon: '/blog/Newspaper.svg'
 		},
 		{
-			date: "June 19, 2025",
-			title: "Performance tuning for dashboard load times",
-			tag: "Devlog",
-			icon: "/blog/Newspaper.svg"
+			date: 'June 19, 2025',
+			title: 'Performance tuning for dashboard load times',
+			tag: 'Devlog',
+			icon: '/blog/Newspaper.svg'
 		}
 	];
+
+	const plans = [
+		{
+			icon: '/tier0.png',
+			tier: 'Tier 0',
+			title: 'Public',
+			price: 'Free',
+			anuallayprice: 'Free',
+			isCurrent: true,
+			buttonText: 'Current Plan',
+			// giftIcon: Gift,
+			bg: 'bg-[linear-gradient(0deg,rgba(8,6,10,0.44),rgba(8,6,10,0.44)),radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.05)_25.18%,rgba(231,223,216,0.05)_100%)]',
+			dp: '',
+			features: [
+				'Access to 100+ public servers',
+				' monthly public car update',
+				'Help & Faq support'
+			],
+			btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-white ',
+			month: '',
+			discount: '-20%'
+		},
+		{
+			icon: '/tier0.png',
+			tier: 'Tier 1',
+			title: 'Public+',
+			price: '$3.99',
+			anuallayprice: '$2.99',
+			buttonText: 'Subscribe',
+			// giftIcon: Gift,
+			bg: 'bg-[linear-gradient(0deg,rgba(8,6,10,0.15),rgba(8,6,10,0.15)),radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.02)_25.18%,rgba(231,223,216,0.02)_100%)]',
+			dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]',
+			features: [
+				'Access to “Public Pack” Servers',
+				' In-Game Badges',
+				'VIP Alternative and Drift Servers',
+				'Priority Queue for Server Hosting'
+			],
+
+			btn: 'bg-white text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
+			month: '/month',
+			discount: '-20%'
+		},
+		{
+			icon: '/Tier3.png',
+			tier: 'Tier 2',
+			title: 'Midnight',
+			price: '$7.99',
+			anuallayprice: '$5.58',
+			isCurrent: true,
+			buttonText: 'Free 7-Days Trial',
+			// giftIcon: Gift,
+			features: [
+				'Access to 100+ public servers',
+				' monthly public car update',
+				'Help & Faq support',
+				'Priority Queue for Server Hosting',
+				'Priority Queue for Server Hosting'
+			],
+			dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)]',
+			bg: 'bg-[radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.05)_25.18%,rgba(255,129,38,0.05)_100%)]',
+
+			btn: 'bg-white text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
+			month: '/month',
+			discount: '-20%'
+		},
+		{
+			icon: '/Tier4.png',
+			tier: 'Tier 3',
+			title: 'Underground',
+			price: '$12.99',
+			anuallayprice: '$6.67',
+			buttonText: 'Subscribe',
+			// giftIcon: Gift,
+			features: [
+				'Access to 100+ public servers',
+				' monthly public car update',
+				'Help & Faq support',
+				'Priority Queue for Server Hosting',
+				'Priority Queue for Server Hosting',
+				'Priority Queue for Server Hosting'
+			],
+			bg: 'bg-[radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.22)_25.18%,rgba(254,44,85,0.22)_100%)]',
+			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
+			btn: 'bg-white text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
+			month: '/month',
+			discount: '-40%'
+		}
+		// Add 2 more plans as needed...
+	];
+
+
 
 	let currentImageIndex = 0;
 
@@ -182,10 +276,15 @@
 	function goToImage(index: number) {
 		currentImageIndex = index;
 	}
+
+		let selected = 'month';
+	// @ts-ignore
+	function select(type) {
+		selected = type;
+	}
 </script>
 
 <div class="container flex flex-col gap-16">
-	<!-- Hero Section -->
 	<div class="relative h-[420px] w-full overflow-hidden">
 		<img
 			src="/blog/ANIMATION (1).svg"
@@ -209,7 +308,7 @@
 			</p>
 			<div class="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
 				<button
-					class="bg-[#E6E6E6] text-[#1A1A1A] font-medium py-[12px] sm:py-[14px] px-5 sm:px-6 rounded-full text-sm sm:text-base"
+					class="bg-border text-[#EEEDEE] font-medium py-[12px] sm:py-[14px] px-5 sm:px-6 rounded-full text-sm sm:text-base"
 				>
 					See What’s New
 				</button>
@@ -222,7 +321,7 @@
 		</section>
 	</div>
 
-	<section class="text-[#EEEDEE] px-4 sm:px-6 md:px-8 lg:px-9 font-inter">
+	<section class="text-[#EEEDEE] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
 		<h2 class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold mb-4">Announcements</h2>
 
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -338,10 +437,9 @@
 		</div>
 	</section>
 
-	<!-- Public Updates Section -->
 	<Test />
 
-	<section class="text-[#EEEDEE] px-4 sm:px-6 md:px-8 lg:px-9 font-inter">
+	<section class="text-[#EEEDEE] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
 		<h2 class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold mb-4">Announcements</h2>
 
 		<div class=" ">
@@ -543,34 +641,122 @@
 		</div>
 	</section>
 
-
-
-<section class="px-4 py-2">
-	{#each devlogCards as log}
-		<div
-			class="bg-border text-[#EEEDEE] mb-[6px] rounded-2xl p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm border border-border h-[68px]"
-		>
-			<div class="flex flex-col font-inter sm:flex-row items-center w-full gap-6 sm:gap-6">
-				<span class="text-[18px] min-w-[100px] w-[224px] px-[10px] whitespace-nowrap">
-					{log.date}
-				</span>
-
-				<p class="text-[18px] font-inter sm:text-lg font-semibold flex-1">
-					{log.title}
-				</p>
-			</div>
-
-			<span
-				class="px-4 py-2 text-sm text-white bg-border-light border border-border-light w-[114px] rounded-full flex items-center gap-2 self-start sm:self-center"
+	
+	<section class="px-1 py-2 sm:px-6 md:px-8 lg:px-9">
+		{#each devlogCards as log}
+			<div
+				class="bg-border text-[#EEEDEE] mb-[6px] rounded-2xl px-3 py-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm border border-border"
 			>
-				<img src={log.icon} alt={log.tag} class="w-4 h-4" />
-				{log.tag}
-			</span>
-		</div>
-	{/each}
-</section>
-s
+				<!-- Left Section -->
+				<div
+					class="flex flex-col sm:flex-row items-start sm:items-center w-full gap-2 sm:gap-6 font-inter"
+				>
+					<span class="text-sm sm:text-base md:text-[18px] w-full sm:w-[224px] whitespace-nowrap">
+						{log.date}
+					</span>
 
+					<span
+						class="flex gap-6 relative items-center text-sm sm:text-sm md:text-md lg:text-lg xl:text-[22px] font-semibold flex-1 leading-snug"
+					>
+						{#if log.img}
+							<img src={log.img} alt="" class=" h-17 w-20  xl:w-[240px] xl:h-[135px]" />
+
+							<!-- Button only shows when image exists -->
+							<button
+								class=" hidden absolute bottom-1 left-[19%] w-13 h-13 xl:flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
+							>
+								<img src="/blog/ArrowUpRight.svg" alt="Open" />
+							</button>
+						{/if}
+
+						{log.title}
+					</span>
+				</div>
+
+				<!-- Right Tag -->
+				<span
+					class="px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-border-light border border-border-light rounded-full flex items-center gap-2 w-max self-start sm:self-center"
+				>
+					<img src={log.icon} alt={log.tag} class="w-4 h-4" />
+					{log.tag}
+				</span>
+			</div>
+		{/each}
+	</section>
+
+
+<!-- <div class=" mt-22 flex items-center justify-cente bg-[red]">
+	<div><img src={Defaul} alt="Default" class="back" /></div>
+	<div class="b mt-24 flex w-[95%] flex-col items-center justify-center gap-1">
+		<div class="flex w-full flex-wrap items-center justify-center gap-2 rounded-md sm:flex-row">
+			<div class="SI font-bold">JOIN</div>
+			<div class="SI font-bold text-[#dd0355] sm:hidden">28,643</div>
+
+			
+
+			<div class="SI font-bold">OTHERS</div>
+		</div>
+		<div class="S2 flex flex-col items-center justify-center">ON no hesi vip</div>
+		<div class="SE">Enhance Your No Hesi Experience With VIP</div>
+	</div>
+</div> -->
+
+<!-- <div class="flex items-center justify-center">
+	<div class="mt-6 flex flex-col items-center justify-center gap-1 py-1">
+		<div class="flex items-center justify-center">
+			<div class="relative z-[2] flex rounded-lg bg-[rgba(8,6,10,0.83)] p-1">
+				<button
+					class="btn cursor-pointer rounded-md px-4 py-2 transition-colors delay-150 duration-300"
+					class:bg-white={selected === 'month'}
+					class:text-black={selected === 'month'}
+					class:bg-transparent={selected !== 'month'}
+					class:text-white={selected !== 'month'}
+					on:click={() => select('month')}
+				>
+					Monthly
+				</button>
+
+				<button
+					class="btn cursor-pointer rounded-md px-4 py-2 transition-colors duration-300"
+					class:bg-white={selected === 'annualy'}
+					class:text-black={selected === 'annualy'}
+					class:bg-transparent={selected !== 'annualy'}
+					class:text-white={selected !== 'annualy'}
+					on:click={() => select('annualy')}
+				>
+					Annual
+				</button>
+
+				<div
+					class="badge :q absolute bottom-8 left-50 sm:left-60
+					 rounded-2xl bg-[#6aff67] px-1 py-1 text-[10px] text-black"
+				>
+					Save 20%
+				</div>
+			</div>
+		</div>
+		<div class="group inline-flex cursor-pointer items-center gap-1">
+			Can't choose? Compare plans
+			<img
+				src="/leftarrow.png"
+				alt="arrow"
+				class="duration-600 h-2 w-2 cursor-pointer brightness-0 contrast-200 invert filter transition-transform group-hover:translate-x-[5px]"
+			/>
+		</div>
+	</div>
+</div> -->
+
+<div
+	class="  grid grid-cols-1 gap-3 px-1 md:px-8 lg:px-9 sm:grid-cols-2 sm:px-8 lg:grid-cols-2 lg:gap-1 xl:grid-cols-4"
+>
+	{#each plans as plan}
+		<Tiercard
+			{...plan}
+			selectedPrice={selected === 'month' ? plan.price : plan.anuallayprice}
+			selectedType={selected}
+		/>
+	{/each}
+</div>
 
 
 </div>
@@ -615,5 +801,333 @@ s
 
 	.animate-bounce-pulse-right {
 		animation: bouncePulseRight 0.7s ease-in-out;
+	}
+
+
+	.back {
+		@media (max-width: 2800px) {
+			position: absolute;
+			top: 90px;
+			left: 500px;
+			width: 800px;
+			height: 800px;
+			opacity: 100%;
+			transform: rotate(75deg);
+			z-index: -50;
+		}
+		@media (max-width: 1440px) {
+			position: absolute;
+			top: 90px;
+			left: 300px;
+			width: 800px;
+			height: 800px;
+			opacity: 100%;
+			transform: rotate(75deg);
+			z-index: -50;
+		}
+		@media (max-width: 1240px) {
+			position: absolute;
+			top: 110px;
+			left: 280px;
+			width: 350px;
+			height: 350px;
+			opacity: 100%;
+			transform: rotate(75deg);
+			z-index: -50;
+		}
+
+		@media (max-width: 1024px) {
+			position: absolute;
+			top: 110px;
+			left: 280px;
+			width: 350px;
+			height: 350px;
+			opacity: 100%;
+			transform: rotate(75deg);
+			z-index: -50;
+		}
+		@media (max-width: 768px) {
+			position: absolute;
+			top: 110px;
+			left: 200px;
+			width: 350px;
+			height: 350px;
+			opacity: 100%;
+			/* transform: rotate(75deg); */
+			z-index: -50;
+		}
+		@media (max-width: 636px) {
+			position: absolute;
+			top: 110px;
+			left: 150px;
+			width: 350px;
+			height: 350px;
+			opacity: 100%;
+			/* transform: rotate(75deg); */
+			z-index: -50;
+		}
+		@media (max-width: 536px) {
+			position: absolute;
+			top: 110px;
+			left: 100px;
+			width: 280px;
+			height: 280px;
+			opacity: 100%;
+			/* transform: rotate(75deg); */
+			z-index: -50;
+		}
+		@media (max-width: 462px) {
+			position: absolute;
+			top: 110px;
+			left: 70px;
+			width: 250px;
+			height: 250px;
+			opacity: 100%;
+			/* transform: rotate(75deg); */
+			z-index: -50;
+		}
+		@media (max-width: 425px) {
+			position: absolute;
+			top: 190px;
+			left: 80px;
+			width: 250px;
+			height: 250px;
+			opacity: 100%;
+			/* transform: rotate(75deg); */
+			z-index: -50;
+		}
+		@media (max-width: 375px) {
+			position: absolute;
+			top: 190px;
+			left: 60px;
+			width: 250px;
+			height: 250px;
+			opacity: 100%;
+			/* transform: rotate(75deg); */
+			z-index: -50;
+		}
+		@media (max-width: 320px) {
+			position: absolute;
+			top: 190px;
+			left: 50px;
+			width: 230px;
+			height: 230px;
+			opacity: 100%;
+			/* transform: rotate(75deg); */
+			z-index: -50;
+		}
+
+		/*
+		@media (max-width: 425px) {
+			position: absolute;
+			top: 190px;
+			left: 80px;
+			width: 250px;
+			height: 250px;
+			opacity: 100%;
+			transform: rotate(75deg);
+			z-index: 0;
+			border: 1px solid black;
+			background: #ffffff;
+		}
+		@media (max-width: 768px) {
+			position: absolute;
+			top: 110px;
+			left: 200px;
+			width: 350px;
+			height: 350px;
+			opacity: 100%;
+			transform: rotate(75deg);
+			z-index: 0;
+			border: 1px solid black;
+			background: #ffffff;
+		}
+		@media (max-width: 1024px) {
+			position: absolute;
+			top: 110px;
+			left: 280px;
+			width: 350px;
+			height: 350px;
+			opacity: 100%;
+			transform: rotate(75deg);
+			z-index: 0;
+			border: 1px solid black;
+			background: #ffffff;
+		} */
+		/* @media (max-width: 1440px) {
+			position: absolute;
+			top: 90px;
+			left: 300px;
+			width: 800px;
+			height: 800px;
+			opacity: 100%;
+			transform: rotate(75deg);
+			z-index: 0;
+			border: 1px solid black;
+			background-color: #6aff67;
+		} */
+	}
+	.SI {
+		font-size: 64px;
+		/* font-family: 'Roboto flex'; */
+		font-weight: 1000;
+		text-transform: uppercase;
+
+		@media (max-width: 320px) {
+			font-size: 28px;
+		}
+
+		@media (max-width: 375px) {
+			font-size: 28px;
+		}
+
+		@media (max-width: 475px) {
+			font-size: 28px;
+		}
+		@media (max-width: 495px) {
+			font-size: 28px;
+		}
+		@media (max-width: 515px) {
+			font-size: 28px;
+		}
+	}
+
+	.S2 {
+		font-size: 64px;
+		/* font-family: 'Roboto flex'; */
+		font-weight: 1000;
+		
+		text-transform: uppercase;
+		
+
+	@media (max-width: 320px) {
+			font-size: 28px;
+		}
+
+		@media (max-width: 375px) {
+			font-size: 28px;
+		}
+
+		@media (max-width: 475px) {
+			font-size: 28px;
+		}
+		@media (max-width: 495px) {
+			font-size: 28px;
+		}
+		@media (max-width: 515px) {
+			font-size: 28px;
+		}
+	}
+	.SE {
+		font-size: 17px;
+		color: #ffffff;
+		/* font-family: 'Inter Tight'; */
+		font-weight: 400;
+		text-align: center;
+		@media (max-width: 320px) {
+			font-size: 14px;
+		}
+		@media (max-width: 375px) {
+			font-size: 14px;
+		}
+	}
+	.btn {
+		width: 150px;
+		height: 36px;
+
+		@media (max-width: 320px) {
+			width: 110px;
+			height: 36px;
+			left: 200px;
+		}
+	}
+	.badge {
+		@media (max-width: 320px) {
+			width: 45px;
+			height: 16px;
+			font-size: 8px;
+		}
+	}
+
+	.comma {
+		display: inline-block;
+		font-size: 64px;
+		line-height: 4rem;
+		margin: 0 0.1rem;
+		vertical-align: bottom;
+		color: #dd0355;
+		font-weight: 1000;
+	}
+
+	.roller {
+		display: flex;
+		justify-content: center;
+		height: 60px;
+		width: 48px;
+		display: inline-block;
+		position: relative;
+		border-radius: 0.25rem;
+		overflow: hidden;
+	}
+
+	.roller-digit {
+		width: 47px;
+		height: 3rem;
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		animation: rollDownBounce 0.5s linear forwards;
+		/* settleBounce 0.5s ease-in-out 0.6s forwards; */
+		/* animation-iteration-count: infinite; */
+		/* overflow: hidden; */
+	}
+
+	.digit-row {
+		height: 56px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 66px;
+		color: #dd0355;
+		font-weight: 1000;
+		/*  make digit bounce  */
+		animation: bounce 1.5s ease-in;
+	}
+
+	@keyframes bounce {
+		0% {
+			transform: translateY(0);
+		}
+
+		50% {
+			transform: translateY(-2px);
+		}
+
+		100% {
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes rollDownBounce {
+		0% {
+			transform: translateY(calc(-10 * 3.5rem));
+			/* transform: translateY(-35rem); */
+		}
+		90% {
+			/* transform: translateY(-10px); */
+		}
+		100% {
+			/* transform: translateY(0); */
+		}
+	}
+
+	@keyframes settleBounce {
+		0% {
+		}
+		80% {
+			/* transform: translateY(-3.5rem); */
+		}
+		100% {
+		}
 	}
 </style>

@@ -218,7 +218,7 @@ function getScrollAmount(): number {
 	}
 </style>
 
-<section class="px-4 sm:px-6 md:px-8 lg:px-9">
+<section class="px-1 sm:px-6 md:px-8 lg:px-9">
 	<div class="flex justify-between mb-6">
 		<h2 class="text-[#EEEDEE] font-inter text-xl md:text-2xl font-semibold">Public Updates</h2>
 		<div class="flex items-center gap-4">
@@ -282,6 +282,8 @@ function getScrollAmount(): number {
 	<!-- Dots -->
 	<div class="flex justify-center mt-6 gap-2">
 		{#each dots as _, i}
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			<span class="dot {i === activeIndex ? 'active' : ''}" on:click={() => scrollToIndex(i)}></span>
 		{/each}
 	</div>

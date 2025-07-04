@@ -282,7 +282,7 @@
 	}
 </script>
 
-<div class="container flex flex-col gap-16">
+<div class=" flex flex-col gap-16 font-inter">
 	<div class="relative h-[420px] w-full overflow-hidden">
 		<img
 			src="/blog/ANIMATION (1).svg"
@@ -293,16 +293,16 @@
 		<div class="absolute inset-0 bg-[rgba(8,6,10,0.3)] backdrop-blur-[50px] " />
 
 		<section
-			class="relative z-10 font-inter flex flex-col items-center justify-end h-full text-[#FFFFFF] text-center px-4 sm:px-6 md:px-8"
+			class="relative z-10 font-inter flex flex-col   items-center justify-end h-full text-[#FFFFFF] text-center  px-4 sm:px-6 md:px-8"
 		>
-			<p class="text-[39px]  font-inter sm:text-[32px] md:text-5xl text-[#EEEDEE]  font-semibold leading-tight">
+			<p class="xl:text-[39px]  text-[25px] font-inter sm:text-[32px] md:text-5xl text-[#EEEDEE]  font-semibold leading-tight">
 				No Hesi is always evolving
 			</p>
 			<p
-				class="mt-3 sm:mt-4 max-w-md sm:max-w-lg md:max-w-2xl font-inter text-[#EEEDEE] text-[18px] sm:text-sm md:text-base leading-relaxed"
+				class="mt-3 sm:mt-4 max-w-md sm:max-w-lg md:max-w- px-0.5 font-inter text-[#EEEDEE] text-[15px] xl:text-[18px] sm:text-sm md:text-base leading-relaxed"
 			>
-				Our evolution is community-led, and VIPs direct the future. The Garage is<br> where you'll find
-				every update: cars, maps, devlogs, and everything else <br>we're working on…
+				Our evolution is community-led, and VIPs direct the future. The Garage is where you'll find
+				every update: cars, maps, devlogs, and everything else we're working on…
 			</p>
 			<div class="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center gap-4 sm:gap-4">
 				<button

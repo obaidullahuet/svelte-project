@@ -409,7 +409,7 @@
 							class="absolute bottom-1 xl:bottom-1 left-1 px-6 lg:px-4 xl:px-[26px] py-4 lg:text-[11px] text-xs sm:text-sm md:text-sm font-medium xl:text-[16px] whitespace-nowrap text-[#EEEDEE] rounded-full
 							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center"
 						>
-							Limited Times Event
+							Exclusive Gateways
 						</span>
 					</div>
 					<div class="flex flex-col justify-between p-4 w-full">

@@ -126,46 +126,46 @@
 	const devlogCards = [
 		{
 			date: 'June 13, 2025',
-			title: 'Phased transitional ability that scales well across platforms and devices',
+			title: 'Everything you know about Nohesi is about to change',
 			tag: 'Devlog',
-			icon: '/blog/Newspaper.svg',
+			icon: '/blog/Code.svg',
 			img: '/blog/image 49.png'
 		},
 		{
 			date: 'June 14, 2025',
-			title: 'Improved animation sync between client-side transitions',
+			title: 'We Solved No Hesis Biggest Problem  Car Switching Teaser',
 			tag: 'Devlog',
-			icon: '/blog/Newspaper.svg'
+			icon: '/blog/Code.svg'
 		},
 		{
 			date: 'June 15, 2025',
-			title: 'New dark mode theming engine for accessibility compliance',
-			tag: 'Devlog',
-			icon: '/blog/Newspaper.svg'
+			title: 'Assimilated methodical pricing structure',
+			tag: 'Upcoming',
+			icon: '/blog/ArrowLineUpRight.svg'
 		},
 		{
 			date: 'June 16, 2025',
-			title: 'Enhanced API caching layer with fallback support',
-			tag: 'Devlog',
+			title: 'Our best gameplay mode yet',
+			tag: 'Teaser',
 			icon: '/blog/Newspaper.svg'
 		},
 		{
 			date: 'June 17, 2025',
-			title: 'Component library refactor with atomic design principles',
+			title: 'Expanded eco-centric task-force',
 			tag: 'Devlog',
-			icon: '/blog/Newspaper.svg'
+			icon: '/blog/Code.svg'
 		},
 		{
 			date: 'June 18, 2025',
-			title: 'WebSocket implementation with auto-reconnect feature',
-			tag: 'Devlog',
-			icon: '/blog/Newspaper.svg'
+			title: 'Configurable fresh-thinking process improvement',
+			tag: 'Upcoming',
+			icon: '/blog/ArrowLineUpRight.svg'
 		},
 		{
 			date: 'June 19, 2025',
 			title: 'Performance tuning for dashboard load times',
 			tag: 'Devlog',
-			icon: '/blog/Newspaper.svg'
+			icon: '/blog/Code.svg'
 		}
 	];
 
@@ -440,7 +440,7 @@
 	<section class="text-[#EEEDEE] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
 		<p class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold mb-3">VIP-Only Updates</p>
 
-		<div class=" ">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
 			<!-- First Left Card -->
 			<div
 				class="bg-[#E6E6E6]/[0.05] rounded-3xl p-2 overflow-hidden shadow-md relative flex flex-col h-auto"
@@ -664,7 +664,7 @@
 							<button
 								class=" hidden absolute bottom-1 left-[19%] w-13 h-13 xl:flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
 							>
-								<img src="/blog/ArrowUpRight.svg" alt="Open" />
+								<img src="/blog/fi_27223.png" alt="Open" />
 							</button>
 						{/if}
 

@@ -274,7 +274,7 @@ function getScrollAmount(): number {
 				>
 					<p class="text-[18px] font-inter mb-4">{card.date}</p>
 					<p class="text-[24px] font-semibold font-inter mb-4 leading-8">{card.title}</p>
-					<span class="text-[16px] mb-4 font-inter">{card.description}</span>
+					<span class="text-[16px] mb-4 leading-2  font-inter">{card.description}</span>
 					<button class="mt-auto bg-border font-inter text-[16px] px-9 py-2 rounded-full w-max">{card.buttonText}</button>
 				</div>
 			{/if}

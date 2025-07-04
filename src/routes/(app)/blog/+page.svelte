@@ -261,7 +261,7 @@
 
 	let currentImageIndex = 0;
 
-	const images = ['/blog/car1.svg', '/blog/car2.svg', '/blog/car3.svg'];
+	const images = ['/blog/car1.svg', '/blog/car1.svg', '/blog/car1.svg'];
 
 	function prevImage() {
 		currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
@@ -290,28 +290,28 @@
 			class="absolute inset-0 w-full h-full object-cover -z-10"
 		/>
 
-		<div class="absolute inset-0 bg-[rgba(8,6,10,0.3)] backdrop-blur-[50px] z-0" />
+		<div class="absolute inset-0 bg-[rgba(8,6,10,0.3)] backdrop-blur-[50px] " />
 
 		<section
 			class="relative z-10 font-inter flex flex-col items-center justify-end h-full text-[#FFFFFF] text-center px-4 sm:px-6 md:px-8"
 		>
-			<h1 class="text-[28px] sm:text-[32px] md:text-5xl text-[#EEEDEE] font-bold leading-tight">
+			<p class="text-[39px]  font-inter sm:text-[32px] md:text-5xl text-[#EEEDEE]  font-semibold leading-tight">
 				No Hesi is always evolving
-			</h1>
-			<p
-				class="mt-3 sm:mt-4 max-w-md sm:max-w-lg md:max-w-2xl text-xs sm:text-sm md:text-base leading-relaxed"
-			>
-				Our evolution is community-led, and VIPs direct the future. The Garage is where you'll find
-				every update: cars, maps, devlogs, and everything else we're working on…
 			</p>
-			<div class="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+			<p
+				class="mt-3 sm:mt-4 max-w-md sm:max-w-lg md:max-w-2xl font-inter text-[#EEEDEE] text-[18px] sm:text-sm md:text-base leading-relaxed"
+			>
+				Our evolution is community-led, and VIPs direct the future. The Garage is<br> where you'll find
+				every update: cars, maps, devlogs, and everything else <br>we're working on…
+			</p>
+			<div class="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center gap-4 sm:gap-4">
 				<button
-					class="bg-border text-[#EEEDEE] font-medium py-[12px] sm:py-[14px] px-5 sm:px-6 rounded-full text-sm sm:text-base"
+					class="bg-border text-[#EEEDEE] font-medium py-[12px] font-inter sm:py-[14px] px-5 sm:px-6 rounded-full text-sm sm:text-base"
 				>
 					See What’s New
 				</button>
 				<button
-					class="bg-[#FFFFFF] text-[#000000] font-medium py-[12px] sm:py-[14px] px-5 sm:px-6 border border-[#FFFFFF4D] rounded-full text-sm sm:text-base"
+					class="bg-[#FFFFFF] text-[#000000] font-medium py-[12px] font-inter sm:py-[14px] px-5 sm:px-6 border border-[#FFFFFF4D] rounded-full text-sm sm:text-base"
 				>
 					VIPs Get First Access
 				</button>
@@ -320,7 +320,7 @@
 	</div>
 
 	<section class="text-[#EEEDEE] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
-		<h2 class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold mb-4">Announcements</h2>
+		<p class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold mb-3">Announcements</p>
 
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
 			<!-- First Left Card -->
@@ -344,11 +344,11 @@
 
 				<div class="py-4 px-4 md:px-6 pr-[58px]">
 					<p class="text-xs sm:text-sm md:text-base lg:text-[18px] mt-2">June 13, 2025</p>
-					<h3
+					<p
 						class="mt-3 text-base sm:text-lg md:text-xl lg:text-[20px] xl:text-[26px] font-semibold leading-snug lg:leading-8"
 					>
-						Ergonomic executive chair upholstered in bonded black leather and PVC
-					</h3>
+						Ergonomic executive chair upholstered in <br> bonded black leather and PVC
+				</p>
 				</div>
 
 				<button
@@ -371,21 +371,21 @@
 							class=" w-full h-[160px] sm:h-[200px] md:h-[240px] lg:h-[200px] object-cover rounded-2xl sm:rounded-l-2xl sm:rounded-r-none"
 						/>
 						<span
-							class="absolute bottom-1 xl:bottom-6 xl:mb-2 xl:w-[95%] left-1 px-11 py-4 text-xs sm:text-sm md:text-sm whitespace-nowrap text-[#EEEDEE] rounded-full
+							class="absolute bottom-1 xl:bottom-1  xl:w-[95%] left-1 px-11 py-4 text-xs sm:text-sm md:text-sm whitespace-nowrap text-[#EEEDEE] rounded-full
 							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center xl:text-[16px]"
 						>
-							Collab
+							Collabs
 						</span>
 					</div>
 					<div class="flex flex-col justify-between p-4 w-full">
 						<div>
 							<p class="text-xs sm:text-sm md:text-base lg:text-[18px]">June 13, 2025</p>
-							<h1
-								class="text-sm sm:text-base md:text-lg lg:text-[12px] xl:text-[26px] mt-3 font-semibold leading-snug lg:leading-8"
+							<p
+								class="text-sm sm:text-base md:text-lg lg:text-[12px] xl:text-[26px] mt-3 font-semibold leading-snug lg:leading-12"
 							>
-								Andy shoes are designed to keeping in mind durability as well as trends, the most
-								stylish range of shoes & sandals
-							</h1>
+								Andy shoes are designed to <br>keeping in mind durability as well<br> as trends, the most
+								stylish range of <br> shoes & sandals
+							</p>
 						</div>
 						<button
 							class="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
@@ -406,7 +406,7 @@
 							class="w-full h-[160px] sm:h-[200px] md:h-[240px] lg:h-[200px] object-cover rounded-2xl sm:rounded-l-2xl sm:rounded-r-none"
 						/>
 						<span
-							class="absolute bottom-1 xl:bottom-1 left-1 px-6 lg:px-4 xl:px-6 py-4 lg:text-[11px] text-xs sm:text-sm md:text-sm font-medium xl:text-[16px] whitespace-nowrap text-[#EEEDEE] rounded-full
+							class="absolute bottom-1 xl:bottom-1 left-1 px-6 lg:px-4 xl:px-[26px] py-4 lg:text-[11px] text-xs sm:text-sm md:text-sm font-medium xl:text-[16px] whitespace-nowrap text-[#EEEDEE] rounded-full
 							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center"
 						>
 							Limited Times Event
@@ -417,12 +417,12 @@
 							<p class="text-xs sm:text-sm md:text-base lg:text-[18px] text-[#FFFFFFB3]">
 								June 13, 2025
 							</p>
-							<h3
+							<p
 								class="text-sm sm:text-base md:text-lg lg:text-[12px] xl:text-[26px] mt-3 font-semibold leading-snug lg:leading-8"
 							>
 								The beautiful range of Apple Naturalé that has an exciting mix of natural
 								ingredients.
-							</h3>
+							</p>
 						</div>
 						<button
 							class="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
@@ -438,7 +438,7 @@
 	<Test />
 
 	<section class="text-[#EEEDEE] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
-		<h2 class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold mb-4">VIP-Only Updates</h2>
+		<p class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold mb-4">VIP-Only Updates</p>
 
 		<div class=" ">
 			<!-- First Left Card -->
@@ -519,11 +519,11 @@
 
 				<div class="py-4 px-4 md:px-6 pr-[58px]">
 					<p class="text-xs sm:text-sm md:text-base lg:text-[18px] mt-2">June 13, 2025</p>
-					<h3
+					<p
 						class="mt-3 text-base sm:text-lg md:text-xl lg:text-[20px] xl:text-[26px] font-semibold leading-snug lg:leading-8"
 					>
 						Ergonomic executive chair upholstered in bonded black leather and PVC
-					</h3>
+					</p>
 				</div>
 
 				<button
@@ -583,12 +583,12 @@
 						<div class="flex flex-col justify-between z-0 p-4 w-full">
 							<div>
 								<p class="text-xs sm:text-sm md:text-base lg:text-[18px]">June 13, 2025</p>
-								<h1
+								<p
 									class="text-sm sm:text-base md:text-lg lg:text-[12px] xl:text-[26px] mt-3 font-semibold leading-snug lg:leading-8"
 								>
 									Andy shoes are designed to keeping in mind durability as well as trends, the most
 									stylish range of shoes & sandals
-								</h1>
+								</p>
 							</div>
 							<button
 								class="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
@@ -620,12 +620,12 @@
 								<p class="text-xs sm:text-sm md:text-base lg:text-[18px] text-[#FFFFFFB3]">
 									June 13, 2025
 								</p>
-								<h3
+								<p
 									class="text-sm sm:text-base md:text-lg lg:text-[12px] xl:text-[26px] mt-3 font-semibold leading-snug lg:leading-8"
 								>
 									The beautiful range of Apple Naturalé that has an exciting mix of natural
 									ingredients.
-								</h3>
+								</p>
 							</div>
 							<button
 								class="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
@@ -640,7 +640,7 @@
 	</section>
 
 	<section class="px-1 py-2 sm:px-6 md:px-8 lg:px-9">
-						<h2 class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl lg:text-[30px] font-semibold mb-4">Under The Hood: Devlogs and Patch Notes</h2>
+						<p class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl lg:text-[30px] font-semibold mb-4">Under The Hood: Devlogs and Patch Notes</p>
 
 		{#each devlogCards as log}
 			<div

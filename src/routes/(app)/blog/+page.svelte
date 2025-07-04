@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Test from '$lib/+test.svelte';
-	import Tiercard from '$lib/+Card.svelte'
+	import Tiercard from '$lib/+Card.svelte';
 
 	let updates = [
 		{
@@ -171,7 +171,7 @@
 
 	const plans = [
 		{
-			icon: '/tier0.png',
+			icon: '/Vector (1).svg',
 			tier: 'Tier 0',
 			title: 'Public',
 			price: 'Free',
@@ -191,7 +191,7 @@
 			discount: '-20%'
 		},
 		{
-			icon: '/tier0.png',
+			icon: '/Vector (1).svg',
 			tier: 'Tier 1',
 			title: 'Public+',
 			price: '$3.99',
@@ -207,12 +207,12 @@
 				'Priority Queue for Server Hosting'
 			],
 
-			btn: 'bg-white text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
+			btn: 'bg-[#FFFFFF] text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
 			month: '/month',
 			discount: '-20%'
 		},
 		{
-			icon: '/Tier3.png',
+			icon: '/ortire.svg',
 			tier: 'Tier 2',
 			title: 'Midnight',
 			price: '$7.99',
@@ -230,12 +230,12 @@
 			dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)]',
 			bg: 'bg-[radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.05)_25.18%,rgba(255,129,38,0.05)_100%)]',
 
-			btn: 'bg-white text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
+			btn: 'bg-[#FFFFFF] text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
 			month: '/month',
 			discount: '-20%'
 		},
 		{
-			icon: '/Tier4.png',
+			icon: '/3itir.svg',
 			tier: 'Tier 3',
 			title: 'Underground',
 			price: '$12.99',
@@ -252,14 +252,12 @@
 			],
 			bg: 'bg-[radial-gradient(160.5%_100%_at_50%_0%,rgba(8,6,10,0.22)_25.18%,rgba(254,44,85,0.22)_100%)]',
 			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
-			btn: 'bg-white text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
+			btn: 'bg-[#FFFFFF] text-black hover:shadow-[0_0_10px_2px_rgba(255,255,255,0.5)] transition-all duration-300 ',
 			month: '/month',
 			discount: '-40%'
 		}
 		// Add 2 more plans as needed...
 	];
-
-
 
 	let currentImageIndex = 0;
 
@@ -277,7 +275,7 @@
 		currentImageIndex = index;
 	}
 
-		let selected = 'month';
+	let selected = 'month';
 	// @ts-ignore
 	function select(type) {
 		selected = type;
@@ -440,7 +438,7 @@
 	<Test />
 
 	<section class="text-[#EEEDEE] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
-		<h2 class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold mb-4">Announcements</h2>
+		<h2 class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold mb-4">VIP-Only Updates</h2>
 
 		<div class=" ">
 			<!-- First Left Card -->
@@ -641,8 +639,9 @@
 		</div>
 	</section>
 
-	
 	<section class="px-1 py-2 sm:px-6 md:px-8 lg:px-9">
+						<h2 class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl lg:text-[30px] font-semibold mb-4">Under The Hood: Devlogs and Patch Notes</h2>
+
 		{#each devlogCards as log}
 			<div
 				class="bg-border text-[#EEEDEE] mb-[6px] rounded-2xl px-3 py-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm border border-border"
@@ -659,7 +658,7 @@
 						class="flex gap-6 relative items-center text-sm sm:text-sm md:text-md lg:text-lg xl:text-[22px] font-semibold flex-1 leading-snug"
 					>
 						{#if log.img}
-							<img src={log.img} alt="" class=" h-17 w-20  xl:w-[240px] xl:h-[135px]" />
+							<img src={log.img} alt="" class=" h-17 w-20 xl:w-[240px] xl:h-[135px]" />
 
 							<!-- Button only shows when image exists -->
 							<button
@@ -684,8 +683,7 @@
 		{/each}
 	</section>
 
-
-<!-- <div class=" mt-22 flex items-center justify-cente bg-[red]">
+	<!-- <div class=" mt-22 flex items-center justify-cente bg-[red]">
 	<div><img src={Defaul} alt="Default" class="back" /></div>
 	<div class="b mt-24 flex w-[95%] flex-col items-center justify-center gap-1">
 		<div class="flex w-full flex-wrap items-center justify-center gap-2 rounded-md sm:flex-row">
@@ -701,64 +699,70 @@
 	</div>
 </div> -->
 
-<!-- <div class="flex items-center justify-center">
-	<div class="mt-6 flex flex-col items-center justify-center gap-1 py-1">
-		<div class="flex items-center justify-center">
-			<div class="relative z-[2] flex rounded-lg bg-[rgba(8,6,10,0.83)] p-1">
-				<button
-					class="btn cursor-pointer rounded-md px-4 py-2 transition-colors delay-150 duration-300"
-					class:bg-white={selected === 'month'}
-					class:text-black={selected === 'month'}
-					class:bg-transparent={selected !== 'month'}
-					class:text-white={selected !== 'month'}
-					on:click={() => select('month')}
-				>
-					Monthly
-				</button>
+	<section
+		class=" font-inter flex flex-col items-center justify-end h-full text-[#FFFFFF] text-center  sm:px-6 md:px-8"
+	>
+		<h1 class="text-[30px] sm:text-[32px] md:text-5xl text-[#EEEDEE] font-bold leading-tight py-2">
+			No Hesi is always evolving
+		</h1>
 
-				<button
-					class="btn cursor-pointer rounded-md px-4 py-2 transition-colors duration-300"
-					class:bg-white={selected === 'annualy'}
-					class:text-black={selected === 'annualy'}
-					class:bg-transparent={selected !== 'annualy'}
-					class:text-white={selected !== 'annualy'}
-					on:click={() => select('annualy')}
-				>
-					Annual
-				</button>
+		<div class="flex items-center justify-center">
+			<div class="mt-4 flex flex-col items-center justify-center gap-1 py-2">
+				<div class="flex items-center justify-center">
+					<div class="relative z-[2] flex rounded-lg p-1">
+						<button
+							class="btn cursor-pointer rounded-md font-inter px-4 py-2 transition-colors delay-150 duration-300"
+							class:bg-[#FFFFFF]={selected === 'month'}
+							class:text-black={selected === 'month'}
+							class:bg-border={selected !== 'month'}
+							class:text-[#FFFFFF]={selected !== 'month'}
+							on:click={() => select('month')}
+						>
+							Monthly
+						</button>
+
+						<button
+							class="btn cursor-pointer rounded-md px-4 py-2 transition-colors duration-300"
+							class:bg-[#FFFFFF]={selected === 'annualy'}
+							class:text-black={selected === 'annualy'}
+							class:bg-border={selected !== 'annualy'}
+							class:text-[#FFFFFF]={selected !== 'annualy'}
+							on:click={() => select('annualy')}
+						>
+							Annual
+						</button>
+
+						<div
+							class="  absolute bottom-8 left-[75%] sm:left-[80%]
+					 rounded-2xl bg-[#6aff67] px-1 py-[2px] text-[10px] text-black"
+						>
+							Save 20%
+						</div>
+					</div>
+				</div>
+				<div class="group inline-flex cursor-pointer items-center gap-1">
+					Can't choose? Compare plans
+					<img
+						src="/leftarrow.png"
+						alt="arrow"
+						class="duration-600 h-2 w-2 cursor-pointer brightness-0 contrast-200 invert filter transition-transform group-hover:translate-x-[5px]"
+					/>
+				</div>
 
 				<div
-					class="badge :q absolute bottom-8 left-50 sm:left-60
-					 rounded-2xl bg-[#6aff67] px-1 py-1 text-[10px] text-black"
+					class=" mt-12 grid grid-cols-1 gap-3  sm:grid-cols-2  lg:grid-cols-2 lg:gap-1 xl:grid-cols-4"
 				>
-					Save 20%
+					{#each plans as plan}
+						<Tiercard
+							{...plan}
+							selectedPrice={selected === 'month' ? plan.price : plan.anuallayprice}
+							selectedType={selected}
+						/>
+					{/each}
 				</div>
 			</div>
 		</div>
-		<div class="group inline-flex cursor-pointer items-center gap-1">
-			Can't choose? Compare plans
-			<img
-				src="/leftarrow.png"
-				alt="arrow"
-				class="duration-600 h-2 w-2 cursor-pointer brightness-0 contrast-200 invert filter transition-transform group-hover:translate-x-[5px]"
-			/>
-		</div>
-	</div>
-</div> -->
-
-<div
-	class="  grid grid-cols-1 gap-3 px-1 md:px-8 lg:px-9 sm:grid-cols-2 sm:px-8 lg:grid-cols-2 lg:gap-1 xl:grid-cols-4"
->
-	{#each plans as plan}
-		<Tiercard
-			{...plan}
-			selectedPrice={selected === 'month' ? plan.price : plan.anuallayprice}
-			selectedType={selected}
-		/>
-	{/each}
-</div>
-
-
+	</section>
 </div>
 
 <style>
@@ -802,7 +806,6 @@
 	.animate-bounce-pulse-right {
 		animation: bouncePulseRight 0.7s ease-in-out;
 	}
-
 
 	.back {
 		@media (max-width: 2800px) {
@@ -996,11 +999,10 @@
 		font-size: 64px;
 		/* font-family: 'Roboto flex'; */
 		font-weight: 1000;
-		
-		text-transform: uppercase;
-		
 
-	@media (max-width: 320px) {
+		text-transform: uppercase;
+
+		@media (max-width: 320px) {
 			font-size: 28px;
 		}
 

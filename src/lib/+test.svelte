@@ -219,8 +219,9 @@ function getScrollAmount(): number {
 </style>
 
 <section class="px-1 sm:px-6 md:px-8 lg:px-9">
-	<div class="flex justify-between mb-6">
-		<h2 class="text-[#EEEDEE] font-inter text-xl md:text-2xl font-semibold">Public Updates</h2>
+	<div class="flex items-center justify-between mb-6">
+				<h2 class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl lg:text-[30px] font-semibold ">Public Updates</h2>
+
 		<div class="flex items-center gap-4">
 			<button on:click={scrollLeft} class="w-9 h-9 bg-border-light rounded-full text-white flex items-center justify-center">
 				<img src="/blog/CaretRight.svg" alt="Left" class=" w-4 h-4" />

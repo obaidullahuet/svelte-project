@@ -26,7 +26,7 @@
 	console.log(dp);
 </script>
 
-<div class="relative  ">
+<div class="relative">
 	{#if tier === 'Tier 3'}
 		<div
 			class="font-roboto text-md absolute left-0 top-[-34px] z-10 h-[50px] w-[100%] rounded-t-lg bg-[#dd0355] pl-5 pt-[6px] font-bold text-white"
@@ -58,7 +58,7 @@
 			</div>
 		{/if}
 
-		<div class="relative z-40 flex h-[20px] w-[294px] items-center gap-2 {dp}">
+		<div class="relative z-40 flex h-[20px] items-center gap-2 {dp}">
 			<img src={icon} alt="{tier} icon" class=" h-6 w-6 bg-transparent {dp} " />
 			<!-- <svg class=""><use href='/Tier3.png'></use> </svg> -->
 			<span
@@ -68,9 +68,9 @@
 			</span>
 		</div>
 
-		<div class="flex h-[76px] w-[294px] flex-col items-start gap-1">
+		<div class="flex h-[76px] flex-col items-start gap-1">
 			<span
-				class="font-inter text-[20px] font-semibold leading-[24px] text-[rgba(238,237,238,0.87)]"
+				class="font-inter text-[20px] font-semibold inline-flex leading-[24px] text-[rgba(238,237,238,0.87)]"
 			>
 				{title}
 			</span>
@@ -80,37 +80,39 @@
 					class="inline-flex h-12 flex-col items-start justify-start overflow-hidden text-[#FAFAFA]"
 				>
 					<div
-						class=" transition-transform duration-500 ease-in"
-						style=" width:transition: transform 300ms, width :400ms cubic-bezier(0.42, 0, 0.58, 1);"
-						class:roll-up={selectedType === 'annualy'}
-						class:roll-down={selectedType === 'month'}
+						class="transition-transform duration-500 ease-in"
+						style="width:transition: transform 300ms, width 400ms cubic-bezier(0.42, 0, 0.58, 1);"
+						class:roll-up={selectedPrice !== 'Free' && selectedType === 'annualy'}
+						class:roll-down={selectedPrice !== 'Free' && selectedType === 'month'}
 					>
+						<!-- Always visible main price -->
 						<div class="title-gradient font-inter text-4xl font-semibold leading-[48px]">
 							{selectedPrice}
 						</div>
-						<div
-							class="title-gradient font-inter justify-start text-4xl font-semibold leading-[48px]"
-						>
-							3.33
-						</div>
-						<div
-							class="title-gradient font-inter justify-start text-4xl font-semibold leading-[48px]"
-						>
-							2.96
-						</div>
-						<div
-							class="title-gradient font-inter justify-start text-4xl font-semibold leading-[48px]"
-						>
-							{selectedPrice}
-						</div>
+
+						<!-- Conditionally render the other prices if not Free -->
+						{#if selectedPrice !== 'Free'}
+							<div
+								class="title-gradient font-inter justify-start text-4xl font-semibold leading-[48px]"
+							>
+								3.33
+							</div>
+							<div
+								class="title-gradient font-inter justify-start text-4xl font-semibold leading-[48px]"
+							>
+								2.96
+							</div>
+							<div
+								class="title-gradient font-inter justify-start text-4xl font-semibold leading-[48px]"
+							>
+								{selectedPrice}
+							</div>
+						{/if}
 					</div>
 				</div>
 				<span class="font-inter flex items-end">
 					{#if selectedPrice === '$12.99'}
-						<span
-							in:fly={{ x: 5, duration: 800, easing: cubicIn }}
-							out:fly={{ x: -16, duration: 800, easing: cubicInOut }}
-						>
+						<span>
 							{month}
 						</span>
 					{:else}
@@ -124,13 +126,13 @@
 			<div
 				class="flex h-[52px] w-full items-center justify-center gap-[20px] rounded-md {btn} p-[16px_28px]"
 			>
-				<button class="font-roboto text-[16px] font-bold uppercase italic leading-[20px]">
+				<button class="font-inter text-[16px] font-bold uppercase italic leading-[20px]">
 					{buttonText}
 				</button>
 			</div>
 
-			<!-- <div
-				class="font-inter text-content-tertiary flex cursor-pointer items-center justify-center gap-2 fill-[#898385] text-[15px] text-[rgba(255,255,255,0.48)] underline hover:fill-[#FAFAFA] hover:text-[#FAFAFA]"
+			<div
+				class="font-inter  flex cursor-pointer items-center justify-center gap-2 fill-[#898385] text-[15px] text-[rgba(255,255,255,0.48)] underline hover:fill-[#FAFAFA] hover:text-[#FAFAFA]"
 			>
 				<svg class="" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
 					><path
@@ -138,14 +140,16 @@
 					></path></svg
 				>
 				Send as a Gift
-			</div> -->
+			</div>
 		</div>
 
-		<div class="flex w-[294px] flex-col items-start gap-3">
+		<div class="flex flex-col items-start gap-3">
 			{#each features as feat}
 				<div class="flex h-[49px] w-full items-center gap-3">
 					<img src={Tick} alt="feature icon" class="h-4 w-4" />
-					<span class="font-inter flex-1 text-[15px] font-medium leading-[25px] text-white">
+					<span
+						class="font-inter text-start flex-1 text-[15px] font-medium leading-[25px] text-white"
+					>
 						{feat}
 					</span>
 				</div>

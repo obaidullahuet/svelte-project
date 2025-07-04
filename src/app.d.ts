@@ -7,9 +7,9 @@ declare global {
 		// interface Error {}
 		interface Locals {
 
+// aa
 
-
-			
+	
 			supabase: SupabaseClient<Database>;
 			leaderboardClient: SupabaseClient<Database>;
 			getSession(): Promise<Session | null>;

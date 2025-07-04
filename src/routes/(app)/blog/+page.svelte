@@ -17,7 +17,7 @@
 			id: 2,
 			date: 'June 13, 2025',
 			title:
-				'The beautiful range of Apple Naturale that has an exciting mix of natural ingredients.',
+				'The beautiful range of <br> Apple Naturale that has an <br> exciting mix of natural ingredients.',
 			description: '',
 			tag: '',
 			image: '/blog/ANIMATION (1).svg'
@@ -26,7 +26,7 @@
 			id: 3,
 			date: 'June 13, 2025',
 			title:
-				'The beautiful range of Apple Naturale that has an exciting mix of natural ingredients.',
+				'The beautiful range of <br> Apple Naturale that has an <br> exciting mix of natural ingredients.',
 			description: '',
 			tag: '',
 			image: '/blog/ANIMATION (1).svg'
@@ -438,7 +438,7 @@
 	<Test />
 
 	<section class="text-[#EEEDEE] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
-		<p class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold mb-4">VIP-Only Updates</p>
+		<p class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold mb-3">VIP-Only Updates</p>
 
 		<div class=" ">
 			<!-- First Left Card -->
@@ -640,7 +640,7 @@
 	</section>
 
 	<section class="px-1 py-2 sm:px-6 md:px-8 lg:px-9">
-						<p class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl lg:text-[30px] font-semibold mb-4">Under The Hood: Devlogs and Patch Notes</p>
+						<p class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl lg:text-[30px] font-semibold mb-3">Under The Hood: Devlogs and Patch Notes</p>
 
 		{#each devlogCards as log}
 			<div

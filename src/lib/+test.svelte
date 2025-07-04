@@ -11,7 +11,7 @@
 		{
 			type: 'image-card',
 			date: 'June 13, 2025',
-			title: 'Ergonomic executive chair upholstered in bonded black leather and PVC',
+			title: 'The beautiful range of Apple Naturalé that  has an exciting mix of natural ingredients.',
 			label: 'Limited Times Event',
 			image: '/blog/car1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
@@ -19,7 +19,8 @@
 		{
 			type: 'text-card',
 			date: 'June 13, 2025',
-			title: 'The beautiful range of Apple Naturalé that has an exciting mix of',
+		title: 'The beautiful range of\nApplee`s Naturalé that has an\nexciting mix of',
+
 			description:
 				'Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals',
 			buttonText: 'General Bug Fixes'
@@ -28,7 +29,7 @@
 		{
 			type: 'image-card',
 			date: 'June 13, 2025',
-			title: 'Ergonomic executive chair upholstered in bonded black leather and PVC',
+			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
 			label: 'Limited Times Event',
 			image: '/blog/car1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
@@ -36,7 +37,7 @@
 		{
 			type: 'image-card',
 			date: 'June 13, 2025',
-			title: 'Ergonomic executive chair upholstered in bonded black leather and PVC',
+			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
 			label: 'Limited Times Event',
 			image: '/blog/car1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
@@ -44,7 +45,7 @@
 		{
 			type: 'text-card',
 			date: 'June 13, 2025',
-			title: 'The beautiful range of Apple Naturalé that has an exciting mix of',
+		title: 'The beautiful range of\nApplee`s Naturalé that has an\nexciting mix of',
 			description:
 				'Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals',
 			buttonText: 'General Bug Fixes'
@@ -53,7 +54,7 @@
 		{
 			type: 'image-card',
 			date: 'June 13, 2025',
-			title: 'Ergonomic executive chair upholstered in bonded black leather and PVC',
+			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
 			label: 'Limited Times Event',
 			image: '/blog/car1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
@@ -61,7 +62,7 @@
 		{
 			type: 'image-card',
 			date: 'June 13, 2025',
-			title: 'Ergonomic executive chair upholstered in bonded black leather and PVC',
+			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
 			label: 'Limited Times Event',
 			image: '/blog/car1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
@@ -69,7 +70,7 @@
 		{
 			type: 'text-card',
 			date: 'June 13, 2025',
-			title: 'The beautiful range of Apple Naturalé that has an exciting mix of',
+		title: 'The beautiful range of\nApplee`s Naturalé that has an\nexciting mix of',
 			description:
 				'Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals',
 			buttonText: 'General Bug Fixes'
@@ -78,7 +79,7 @@
 		{
 			type: 'image-card',
 			date: 'June 13, 2025',
-			title: 'Ergonomic executive chair upholstered in bonded black leather and PVC',
+			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
 			label: 'Limited Times Event',
 			image: '/blog/car1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
@@ -220,7 +221,7 @@ function getScrollAmount(): number {
 
 <section class="px-1 sm:px-6 md:px-8 lg:px-9">
 	<div class="flex items-center justify-between mb-6">
-				<p class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl lg:text-[30px] font-semibold ">Public Updates</p>
+				<p class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl lg:text-[30px] font-semibold mb-3">Public Updates</p>
 
 		<div class="flex items-center gap-4">
 			<button on:click={scrollLeft} class="w-9 h-9 bg-border-light rounded-full text-white flex items-center justify-center">
@@ -256,7 +257,7 @@ function getScrollAmount(): number {
 					</div>
 					<div class="py-4 px-4 md:px-6 font-inter pr-[58px]">
 						<p class="text-sm lg:text-[18px] text-[#EEEDEE] font-inter mt-2">{card.date}</p>
-						<p class="mt-3 text-base sm:text-lg md:text-[18px] font-inter text-[#EEEDEE]  lg:text-[20px] xl:text-[24px] font-semibold leading-snug lg:leading-8">
+						<p class="mt-3 text-base sm:text-lg md:text-[18px] font-inter whitespace-pre-line text-[#EEEDEE]  lg:text-[20px] xl:text-[24px] font-semibold leading-snug lg:leading-8">
 							{card.title}
 					</p>
 					</div>

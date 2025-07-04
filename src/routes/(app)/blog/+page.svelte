@@ -457,7 +457,7 @@
 						class="absolute top-1 left-1 px-2 py-2 md:px-9 md:py-4 text-[8px] sm:text-sm md:text-base font-medium text-[#EEEDEE] rounded-full
 							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center"
 					>
-						Public Car Releases
+						Vip Access Car Releases
 					</span>
 
 					<span

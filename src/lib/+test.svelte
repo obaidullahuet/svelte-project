@@ -12,7 +12,7 @@
 			type: 'image-card',
 			date: 'June 13, 2025',
 			title: 'The beautiful range of Apple Naturalé that  has an exciting mix of natural ingredients.',
-			label: 'Limited Times Event',
+					label: 'Public Car Releases',
 			image: '/blog/car1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
 		},
@@ -30,7 +30,7 @@
 			type: 'image-card',
 			date: 'June 13, 2025',
 			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
-			label: 'Limited Times Event',
+					label: 'Public Car Releases',
 			image: '/blog/car1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
 		},
@@ -38,32 +38,7 @@
 			type: 'image-card',
 			date: 'June 13, 2025',
 			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
-			label: 'Limited Times Event',
-			image: '/blog/car1.svg',
-			buttonIcon: '/blog/ArrowUpRight.svg'
-		},
-		{
-			type: 'text-card',
-			date: 'June 13, 2025',
-		title: 'The beautiful range of\nApplee`s Naturalé that has an\nexciting mix of',
-			description:
-				'Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals',
-			buttonText: 'General Bug Fixes'
-		},
-		// Repeat pattern to reach 10 cards
-		{
-			type: 'image-card',
-			date: 'June 13, 2025',
-			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
-			label: 'Limited Times Event',
-			image: '/blog/car1.svg',
-			buttonIcon: '/blog/ArrowUpRight.svg'
-		},
-		{
-			type: 'image-card',
-			date: 'June 13, 2025',
-			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
-			label: 'Limited Times Event',
+				label: 'Public Car Releases',
 			image: '/blog/car1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
 		},
@@ -80,7 +55,32 @@
 			type: 'image-card',
 			date: 'June 13, 2025',
 			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
-			label: 'Limited Times Event',
+					label: 'Public Car Releases',
+			image: '/blog/car1.svg',
+			buttonIcon: '/blog/ArrowUpRight.svg'
+		},
+		{
+			type: 'image-card',
+			date: 'June 13, 2025',
+			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
+					label: 'Public Car Releases',
+			image: '/blog/car1.svg',
+			buttonIcon: '/blog/ArrowUpRight.svg'
+		},
+		{
+			type: 'text-card',
+			date: 'June 13, 2025',
+		title: 'The beautiful range of\nApplee`s Naturalé that has an\nexciting mix of',
+			description:
+				'Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals',
+			buttonText: 'General Bug Fixes'
+		},
+		// Repeat pattern to reach 10 cards
+		{
+			type: 'image-card',
+			date: 'June 13, 2025',
+			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
+			label: 'Public Car Releases',
 			image: '/blog/car1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
 		}
@@ -223,7 +223,7 @@ function getScrollAmount(): number {
 	<div class="flex items-center justify-between mb-6">
 				<p class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl lg:text-[30px] font-semibold mb-3">Public Updates</p>
 
-		<div class="flex items-center gap-4">
+		<div class="flex items-center gap-3">
 			<button on:click={scrollLeft} class="w-9 h-9 bg-border-light rounded-full text-white flex items-center justify-center">
 				<img src="/blog/CaretRight.svg" alt="Left" class=" w-4 h-4" />
 			</button>

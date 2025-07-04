@@ -322,7 +322,7 @@
 	<section class="text-[#EEEDEE] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
 		<p class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold mb-3">Announcements</p>
 
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
 			<!-- First Left Card -->
 			<div
 				class="bg-[#E6E6E6]/[0.05] rounded-3xl p-2 overflow-hidden shadow-md relative flex flex-col h-auto"

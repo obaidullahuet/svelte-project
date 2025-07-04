@@ -457,7 +457,7 @@
 						class="absolute top-1 left-1 px-2 py-2 md:px-9 md:py-4 text-[8px] sm:text-sm md:text-base font-medium text-[#EEEDEE] rounded-full
 							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center"
 					>
-						Limited Times Event
+						Public Car Releases
 					</span>
 
 					<span
@@ -612,7 +612,7 @@
 								class="absolute bottom-1 xl:bottom-1 left-1 px-6 lg:px-4 xl:px-6 py-4 lg:text-[11px] text-xs sm:text-sm md:text-sm font-medium xl:text-[16px] whitespace-nowrap text-[#EEEDEE] rounded-full
 							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center"
 							>
-								Limited Times Event
+						Public Car Releases
 							</span>
 						</div>
 						<div class="flex flex-col justify-between p-4 w-full">

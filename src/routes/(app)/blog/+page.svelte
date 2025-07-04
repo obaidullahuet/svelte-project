@@ -299,7 +299,7 @@
 				No Hesi is always evolving
 			</p>
 			<p
-				class="mt-3 sm:mt-4 max-w-md sm:max-w-lg md:max-w- px-0.5 font-inter text-[#EEEDEE] text-[15px] xl:text-[18px] sm:text-sm md:text-base leading-relaxed"
+				class="mt-3 sm:mt-4 max-w-md sm:max-w-lg md:max-w-2xl md:px-[62px] font-inter text-[#EEEDEE] text-[15px] xl:text-[18px] sm:text-sm md:text-base leading-relaxed"
 			>
 				Our evolution is community-led, and VIPs direct the future. The Garage is where you'll find
 				every update: cars, maps, devlogs, and everything else we're working on…

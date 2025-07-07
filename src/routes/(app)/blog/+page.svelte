@@ -287,10 +287,10 @@
 		<img
 			src="/blog/ANIMATION (1).svg"
 			alt="Background"
-			class="absolute inset-0 w-full h-full object-cover -z-10"
+			class="absolute  w-full h-full object-cover "
 		/>
 
-		<div class="absolute inset-0 bg-[rgba(8,6,10,0.3)] backdrop-blur-[50px] " />
+		<div class="absolute inset-0 bg-[rgba(8, 6, 10, 0.30)] backdrop-blur-[50px] " />
 
 		<section
 			class="relative z-10 font-inter flex flex-col   items-center justify-end h-full text-[#FFFFFF] text-center  px-4 sm:px-6 md:px-8"

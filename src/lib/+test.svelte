@@ -13,7 +13,7 @@
 			date: 'June 13, 2025',
 			title: 'The beautiful range of Apple Naturalé that  has an exciting mix of natural ingredients.',
 					label: 'Public Car Releases',
-			image: '/blog/car1.svg',
+			image: '/blog/Rectangle 165 (2) 1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
 		},
 		{
@@ -31,7 +31,7 @@
 			date: 'June 13, 2025',
 			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
 					label: 'Public Car Releases',
-			image: '/blog/car1.svg',
+			image: '/blog/Rectangle 165 (3) 1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
 		},
 		{

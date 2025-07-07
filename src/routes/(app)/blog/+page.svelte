@@ -261,7 +261,7 @@
 
 	let currentImageIndex = 0;
 
-	const images = ['/blog/car1.svg', '/blog/car1.svg', '/blog/car1.svg'];
+	const images = ['/blog/c872020f786b7f4e7710ed9bb6cd00c692f130f4.png', '/blog/fa17ea44cbdef5f9b7a21cb932028cb96dbc349a.png', '/blog/c88be13019a9d7bd6501b2836ffffd9f620369dd.png'];
 
 	function prevImage() {
 		currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
@@ -536,7 +536,7 @@
 			<!-- Right Column (Two Cards) -->
 			<div class="relative">
 				<div
-					class="absolute top-[35%] md:top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
+					class="absolute top-[40%] md:top-1/2 left-1/2 lg:left-[58%] transform -translate-x-1/2 -translate-y-1/2 text-center"
 				>
 					<div
 						class="text-[20px] md:text-[30px] whitespace-nowrap font-semibold text-[#EEEDEE] mb-4"
@@ -674,7 +674,7 @@
 
 				<!-- Right Tag -->
 				<span
-					class="px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-base bg-border-light border border-border-light rounded-full flex items-center gap-2 w-max self-start sm:self-center"
+					class="px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-[16px] text-[#EEEDEE] font-inter bg-border-light border border-border-light rounded-full flex items-center gap-2 w-max self-start sm:self-center"
 				>
 					<img src={log.icon} alt={log.tag} class="w-4 h-4" />
 					{log.tag}

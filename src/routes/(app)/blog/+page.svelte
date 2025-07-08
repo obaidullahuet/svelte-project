@@ -335,7 +335,7 @@
 						   h-[160px] sm:h-[200px] md:h-[240px] lg:h-[260px]"
 					/>
 					<span
-						class="absolute bottom-1 left-1 px-9 py-4 text-xs sm:text-sm md:text-base font-medium text-[#EEEDEE] rounded-full
+						class="absolute bottom-1 left-1 px-9 py-4 text-xs sm:text-sm md:text-base font-medium border border-border-light text-[#EEEDEE] rounded-full
 							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center"
 					>
 						Limited Times Event
@@ -371,7 +371,7 @@
 							class=" w-full h-[160px] sm:h-[200px] md:h-[240px] lg:h-[200px] object-cover rounded-2xl sm:rounded-l-2xl sm:rounded-r-none"
 						/>
 						<span
-							class="absolute bottom-1 xl:bottom-1  xl:w-[95%] left-1 px-11 py-4 text-xs sm:text-sm md:text-sm whitespace-nowrap text-[#EEEDEE] rounded-full
+							class="absolute bottom-1 xl:bottom-1 border border-border-light  xl:w-[95%] left-1 px-11 py-4 text-xs sm:text-sm md:text-sm whitespace-nowrap text-[#EEEDEE] rounded-full
 							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center xl:text-[16px]"
 						>
 							Collabs
@@ -406,7 +406,7 @@
 							class="w-full h-[160px] sm:h-[200px] md:h-[240px] lg:h-[200px] object-cover rounded-2xl sm:rounded-l-2xl sm:rounded-r-none"
 						/>
 						<span
-							class="absolute bottom-1 xl:bottom-1 left-1 px-6 lg:px-4 xl:px-[26px] py-4 lg:text-[11px] text-xs sm:text-sm md:text-sm font-medium xl:text-[16px] whitespace-nowrap text-[#EEEDEE] rounded-full
+							class="absolute bottom-1 xl:bottom-1 border border-border-light left-1 px-6 lg:px-4 xl:px-[26px] py-4 lg:text-[11px] text-xs sm:text-sm md:text-sm font-medium xl:text-[16px] whitespace-nowrap text-[#EEEDEE] rounded-full
 							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center"
 						>
 							Exclusive Gateways
@@ -455,7 +455,7 @@
 
 					<span
 						class="absolute top-1 left-1 px-2 py-2 md:px-9 md:py-4 text-[8px] sm:text-sm md:text-base font-medium text-[#EEEDEE] rounded-full
-							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center"
+							   bg-[#FFFFFF1A] border border-border-light backdrop-blur-[24px] text-center"
 					>
 						Vip Access Car Releases
 					</span>
@@ -474,10 +474,10 @@
 						<!-- Left Arrow -->
 						<button
 							on:click={prevImage}
-							class="w-8 h-8 flex items-center justify-center bg-[#FFFFFF1A] backdrop-blur-[24px] text-white rounded-full"
+							class="w-8 h-8 flex items-center justify-center border border-border-light bg-[#FFFFFF1A] backdrop-blur-[24px] text-white rounded-full"
 						>
 							<svg
-								class="w-4 h-4"
+								class="w-4 h-4 "
 								fill="none"
 								stroke="currentColor"
 								stroke-width="2"
@@ -487,7 +487,7 @@
 							</svg>
 						</button>
 
-						<div class="flex gap-2 bg-[#FFFFFF1A] backdrop-blur-[24px] py-4 px-4 rounded-full">
+						<div class="flex gap-2 bg-[#FFFFFF1A] border border-border-light backdrop-blur-[24px] py-4 px-4 rounded-full">
 							{#each images as _, i}
 								<!-- svelte-ignore a11y-click-events-have-key-events -->
 								<!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -502,7 +502,7 @@
 
 						<button
 							on:click={nextImage}
-							class="w-8 h-8 flex items-center justify-center bg-[#FFFFFF1A] backdrop-blur-[24px] text-white rounded-full"
+							class="w-8 h-8 flex items-center border border-border-light justify-center bg-[#FFFFFF1A] backdrop-blur-[24px] text-white rounded-full"
 						>
 							<svg
 								class="w-4 h-4"
@@ -545,7 +545,7 @@
 					</div>
 
 					<div
-						class="relative inline-flex items-center justify-between bg-[#FFFFFF1A] backdrop-blur-[24px] rounded-full"
+						class="relative inline-flex border border-border-light items-center justify-between bg-[#FFFFFF1A] backdrop-blur-[24px] rounded-full"
 					>
 						<span
 							class="px-6 py-4 text-xs text-[10px] md:text-base font-medium text-[#EEEDEE] rounded-full whitespace-nowrap"
@@ -683,28 +683,14 @@
 		{/each}
 	</section>
 
-	<!-- <div class=" mt-22 flex items-center justify-cente bg-[red]">
-	<div><img src={Defaul} alt="Default" class="back" /></div>
-	<div class="b mt-24 flex w-[95%] flex-col items-center justify-center gap-1">
-		<div class="flex w-full flex-wrap items-center justify-center gap-2 rounded-md sm:flex-row">
-			<div class="SI font-bold">JOIN</div>
-			<div class="SI font-bold text-[#dd0355] sm:hidden">28,643</div>
 
-			
-
-			<div class="SI font-bold">OTHERS</div>
-		</div>
-		<div class="S2 flex flex-col items-center justify-center">ON no hesi vip</div>
-		<div class="SE">Enhance Your No Hesi Experience With VIP</div>
-	</div>
-</div> -->
 
 	<section
 		class=" font-inter flex flex-col items-center justify-end h-full text-[#FFFFFF] text-center  sm:px-6 md:px-8"
 	>
-		<h1 class="text-[30px] sm:text-[32px] md:text-5xl text-[#EEEDEE] font-bold leading-tight py-2">
-			No Hesi is always evolving
-		</h1>
+		<p class="text-[30px] sm:text-[32px] md:text-5xl text-[#EEEDEE] font-bold leading-tight py-2">
+			Unlock More Features With VIP
+		</p>
 
 		<div class="flex items-center justify-center">
 			<div class="mt-4 flex flex-col items-center justify-center gap-1 py-2">

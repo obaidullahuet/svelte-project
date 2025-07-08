@@ -251,7 +251,7 @@ function getScrollAmount(): number {
 							alt="card"
 							class="w-full object-cover rounded-2xl h-[160px] sm:h-[200px] md:h-[200px] lg:h-[260px]"
 						/>
-						<span class="absolute bottom-1 left-1 px-7 py-3 text-sm font-medium text-[#EEEDEE] rounded-full bg-border backdrop-blur-[24px]">
+						<span class="absolute bottom-1 border border-border-light left-1 px-7 py-3 text-sm font-medium text-[#EEEDEE] rounded-full bg-border backdrop-blur-[24px]">
 							{card.label}
 						</span>
 					</div>

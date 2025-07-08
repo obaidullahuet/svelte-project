@@ -1,122 +1,119 @@
 <script>
+// @ts-nocheck
+
+	import CancelModal from '$lib/+Modal1.svelte'
+	  import { fade, scale } from 'svelte/transition';
+//   export let isOpen = false;
+//   export let close = () => {};
+let showModal = false;
 </script>
 
-<div class="mt-25 px-4 sm:px-6 lg:px-10 xl:px-11">
-	<nav class="rounded-2xl px-4 py-3">
-		<div class="flex flex-wrap items-center justify-start lg:justify-end">
+<div class="mt-[100px] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
+	<nav class="rounded-2xl py-3">
+		<div class="flex flex-wrap items-center text-[#EEEDEE] justify-start lg:justify-end">
 			<!-- Right Section (Buttons) -->
-			 <div class="px-5 bg-[#0D0B0F] border border-white/5 rounded-2xl py-3 font-inter-tight">
-			<div
-				class="flex w-full flex-wrap items-center justify-start gap-2  sm:w-auto sm:justify-end"
-			>
-				<a href="/get-started" class="mb-2 sm:mb-0">
-					<button
-						class="font-inter-tight flex h-9 items-center rounded-md border border-white/5 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-white/5"
-					>
-						Home
-					</button>
-				</a>
+			<div class="px-2 bg-border border border-[#FFFFFF]/5 rounded-2xl py-2 font-inter-tight">
+				<div
+					class="flex w-full flex-wrap items-center justify-start gap-2 sm:w-auto sm:justify-end"
+				>
+					<a href="/Subscription">
+						<button
+							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
+						>
+							<img src="/billing/House.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
 
-				<a href="/Subscription">
-					<button
-						class="font-inter-tight flex h-9 items-center rounded-md border border-white/5 px-3 py-2 text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
-					>
-						<!-- <img src={Star} alt="Alert Icon" class="mr-2 h-4 w-4" /> -->
-						<span
-							class="font-inter-tight h-[20px] w-[85px] text-[13px] font-medium leading-5 tracking-normal"
-							>Leaderboard</span
-						>
-					</button>
-				</a>
-				<a href="/Subscription">
-					<button
-						class="font-inter-tight flex h-9 items-center rounded-md border border-white/5 px-3 py-2 text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
-					>
-						<!-- <img src={Star} alt="Alert Icon" class="mr-2 h-4 w-4" /> -->
-						<span
-							class="font-inter-tight h-[20px] text-[13px] font-medium leading-5 tracking-normal"
-							>Friends</span
-						>
-					</button>
-				</a>
+							Home
+						</button>
+					</a>
 
-				<a href="/Subscription">
-					<button
-						class="font-inter-tight flex h-9 items-center rounded-md border border-white/5 px-3 py-2 text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
-					>
-						<!-- <img src={Star} alt="Alert Icon" class="mr-2 h-4 w-4" /> -->
-						<span
-							class="font-inter-tight h-[20px] text-[13px] font-medium leading-5 tracking-normal"
-							>Clinet</span
+					<a href="/Subscription">
+						<button
+							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
 						>
-					</button>
-				</a>
+							<img src="/billing/Crown.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
+							Leaderboard
+						</button>
+					</a>
 
-				<a href="/Subscription">
-					<button
-						class="font-inter-tight flex h-9 items-center rounded-md border border-white/5 px-3 py-2 text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
-					>
-						<!-- <img src={Star} alt="Alert Icon" class="mr-2 h-4 w-4" /> -->
-						<span
-							class="font-inter-tight h-[20px] w-[85px] text-[13px] font-medium leading-5 tracking-normal"
-							>Edit Profiles</span
+					<a href="/Subscription">
+						<button
+							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
 						>
-					</button>
-				</a>
-				<a href="/Subscription">
-					<button
-						class="font-inter-tight flex h-9 items-center rounded-md border border-white/5 px-3 py-2 text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
-					>
-						<!-- <img src={Star} alt="Alert Icon" class="mr-2 h-4 w-4" /> -->
-						<span
-							class="font-inter-tight h-[20px] w-[85px] text-[13px] font-medium leading-5 tracking-normal"
-							>Subscription</span
-						>
-					</button>
-				</a>
-				<a href="/Subscription">
-					<button
-						class="font-inter-tight flex h-9 items-center rounded-md border border-white/5 px-3 py-2 text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/5"
-					>
-						<!-- <img src={Star} alt="Alert Icon" class="mr-2 h-4 w-4" /> -->
-						<span
-							class="font-inter-tight h-[20px] w-[85px] text-[13px] font-medium leading-5 tracking-normal"
-							>Transactions</span
-						>
-					</button>
-				</a>
+							<img src="/billing/Users.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
 
-				<a href="/Billing">
-					<button
-						class="font-inter-tight flex h-9  items-center rounded-md border border-white/5 px-3 py-2 text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-white/10"
-						style="background: #252327;"
-					>
-						<!-- <img src={Data} alt="Alert Icon" class="mr-2 h-4 w-4" /> -->
-						<span
-							class="font-inter-tight h-[20px]  text-[14px] font-medium leading-5 tracking-normal"
-							>Billing</span
+							Friends
+						</button>
+					</a>
+
+					<a href="/Subscription">
+						<button
+							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
 						>
-					</button>
-				</a>
+							<img src="/billing/fi_6557720.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
+
+							Clients
+						</button>
+					</a>
+
+					<a href="/Subscription">
+						<button
+							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
+						>
+							<img src="/billing/PencilSimple.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
+
+							Edit Profile
+						</button>
+					</a>
+					<a href="/Subscription">
+						<button
+							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
+						>
+							<img src="/billing/Cube.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
+
+							Subscription
+						</button>
+					</a>
+					<a href="/Subscription">
+						<button
+							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
+						>
+							<img src="/billing/Cube.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
+
+							Transactions
+						</button>
+					</a>
+
+					<a href="/Billing">
+						<button
+							class="font-inter-tight flex h-9 items-center rounded-md border border-[#FFFFFF]/5 px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/10"
+						>
+							<img src="/billing/fi_9554529.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
+
+							Billing
+						</button>
+					</a>
+				</div>
 			</div>
-		</div>
 		</div>
 	</nav>
 </div>
 
-<div class="mx-4 my-10 sm:mx-6 md:mx-10">
-	<p class="text-[39px] font-bold font-inter-tight">Billing</p>
+<div class=" my-10 px-1 sm:px-6 md:px-8 lg:px-9">
+	<p class="text-[39px] font-bold font-roboto text-[#EEEDEE]">Billing</p>
+	
+	<!-- Example div with Tailwind classes -->
+	<div class="w-10 h-[6px] bg-red-500 rounded-full"></div>
 </div>
 
-<div class="mx-4 flex justify-center sm:mx-6 md:mx-10">
-	<div class="flex w-full flex-col rounded-2xl border border-white/5 bg-[#0D0B0F] p-4">
+<div class=" flex justify-center px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
+	<div class="flex w-full flex-col rounded-2xl border border-[#FFFFFF]/5 bg-[#0D0B0F] p-4">
 		<!-- Heading -->
 		<div class="py-3">
-			<span class="text-base text-white text-[18px] sm:text-lg">Your Subscription</span>
+			<span class="text-base text-[#EEEDEE] text-[18px] sm:text-lg">Your Subscription</span>
 		</div>
 
 		<!-- Tier -->
-		<div class="py-3 text-xl font-bold italic text-white sm:text-2xl">
+		<div class="py-3 text-[16px] font-bold italic text-[#EEEDEE] sm:text-2xl">
 			<span>TIER 3</span>
 		</div>
 
@@ -124,24 +121,31 @@
 		<div class="flex flex-wrap items-center gap-3 py-3">
 			<img
 				class="h-10 w-9 drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
-				src="/Tier4.png"
+				src="/3itir.svg"
 				alt="Tier Badge"
 			/>
-			<span class="text-xl font-extrabold text-white sm:text-2xl lg:text-4xl">UNDERGROUND</span>
+			<span class="md:text-[37px]   font-roboto font-extrabold text-[#EEEDEE] text-xl lg:text-4xl"
+				>UNDERGROUND</span
+			>
 		</div>
 
 		<!-- Renewal & Actions -->
 		<div
-			class="flex flex-col items-start justify-between gap-4 py-3 text-sm text-white sm:flex-row sm:items-center sm:text-base"
+			class="flex flex-col items-start justify-between gap-4 py-3 text-sm text-[#EEEDEE] sm:flex-row sm:items-center sm:text-base"
 		>
 			<span class="whitespace-nowrap">
-				New subscription renewal: <span class="font-bold font-inter-tight  ">28.03.2024</span>
+				New subscription renewal: <span class="font-bold font-inter-tight">28.03.2024</span>
 			</span>
 
 			<div class="flex gap-[16px] font-inter-tight justify-end">
-				<button class="text-purple-500 transition hover:underline ">Upgrade</button>
+				<button on:click={() => (showModal = true)} class="text-[#B130FF] transition hover:underline">Upgrade</button>
 				<button class="transition hover:underline">Cancel</button>
 			</div>
 		</div>
 	</div>
 </div>
+
+<!-- svelte-ignore missing-declaration -->
+<!-- <CancelModal isOpen={showModal} close={() => (showModal = false)} /> -->
+
+<CancelModal isOpen={showModal} close={() => (showModal = false)} />

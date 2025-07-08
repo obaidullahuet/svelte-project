@@ -1,0 +1,204 @@
+<script>
+	import { fade, scale } from 'svelte/transition';
+	export let isOpen = false;
+	export let close = () => {};
+	let selectedOption = '';
+
+	const options = [
+		{
+			key: 'pause',
+			title: 'Pause My Subscription',
+			desc: 'Temporarily stop payments & keep your data'
+		},
+		{
+			key: 'switch',
+			title: 'Switch to a Lower Tier',
+			desc: 'Stay on Tier 1 for just $2.99/month'
+		},
+		{
+			key: 'cancel',
+			title: 'Continue to Cancel',
+			desc: 'Still want to cancel?'
+		}
+	];
+</script>
+
+{#if isOpen}
+	<div
+		class="fixed inset-0 z-40 text-[#EEEDEE] backdrop-blur-sm p-4 bg-black/60 flex items-center justify-center"
+		transition:fade
+	>
+		<div
+			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-2xl h-fit p-3 sm:p-14 xl:p-8 relative z-50 backdrop-blur-[64px] bg-bg-top"
+			transition:scale
+		>
+			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4">
+				<h2 class="text-[10px] sm:text-xs text-[#FF3059] uppercase font-semibold mb-2 sm:mb-0">
+					Cancel of Tier 3 Subscription
+				</h2>
+				<div class="flex items-center gap-1 sm:gap-2">
+					<div class="w-5 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-[#FF3059] rounded-full" />
+					<div
+						class="w-5 sm:w-6 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-border border border-border rounded-full"
+					/>
+					<div
+						class="w-5 sm:w-6 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-border border border-border rounded-full"
+					/>
+				</div>
+			</div>
+
+			<p class="text-sm sm:text-lg xl:text-[22px] font-roboto uppercase font-black mb-2 sm:mb-3">
+				Wait! Want to Keep Driving?
+			</p>
+
+			<p class="text-xs sm:text-sm text-[gray] mb-3 sm:mb-4">
+				Canceling now means losing access to:
+			</p>
+
+			<div class="grid grid-cols-3 gap-1 sm:gap-2 xl:gap-4 mb-4 sm:mb-5">
+				<div class="flex flex-col gap-1 sm:gap-2">
+					<div
+						class="rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-4 h-full"
+					>
+						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
+							Server Hosting
+						</p>
+						<img
+							src="/billing/Full.svg"
+							alt="Server Hosting"
+							class="w-6 h-4 sm:w-8 sm:h-6 md:w-10 md:h-7 lg:w-12 lg:h-9 xl:w-[77px] xl:h-[58px]"
+						/>
+						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
+							Functionality
+						</p>
+					</div>
+					<div
+						class="rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-4 h-full"
+					>
+						<div class="py-1 xl:py-2">
+							<img
+								src="/billing/Frame 2579.svg"
+								alt="Feature"
+								class="w-12 h-4 sm:w-16 sm:h-5 md:w-20 md:h-6 lg:w-24 lg:h-7 xl:w-[146px] xl:h-[44px]"
+							/>
+						</div>
+						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
+							Clan Tags
+						</p>
+					</div>
+				</div>
+
+				<div>
+					<div
+						class="relative rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border h-full"
+					>
+						<img
+							src="/billing/image.svg"
+							alt="Exclusive Cars"
+							class="h-full w-full object-cover rounded-lg xl:rounded-2xl"
+						/>
+						<p
+							class="absolute text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-3 xl:bottom-4 left-1 right-1 md:left-2 md:right-2 lg:left-3 lg:right-3 xl:px-4 leading-tight"
+						>
+							Early and Exclusive Map & Traffic Update
+						</p>
+					</div>
+				</div>
+				<div class="flex flex-col gap-1 sm:gap-2">
+					<div
+						class="rounded-lg xl:rounded-2xl flex flex-col gap-4 items-center bg-border border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-4 h-full"
+					>
+				
+						<img
+							src="/billing/tier-tag.svg"
+							alt="Server Hosting"
+							class="w-6 h-4 sm:w-8 sm:h-6 md:w-10 md:h-7 lg:w-12 lg:h-9 xl:w-[77px] xl:h-[58px]"
+						/>
+						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
+							Tier Badge
+						</p>
+					</div>
+					<div
+						class="rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-4 h-full"
+					>
+						<div class="py-1 xl:py-2">
+							<img
+								src="/billing/Frame 1.svg"
+								alt="Feature"
+								class="w-12 h-4 sm:w-16 sm:h-5 md:w-20 md:h-6 lg:w-24 lg:h-7 xl:w-[146px] xl:h-[44px]"
+							/>
+						</div>
+						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
+							Exclusive Tier 3 Cars
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="space-y-1 sm:space-y-2 mb-4 sm:mb-5">
+				{#each options as option}
+					<button
+						on:click={() => (selectedOption = option.key)}
+						class={`w-full items-center text-left border font-inter flex justify-between p-2 sm:p-3 xl:px-6 xl:py-3 rounded-md transition ${
+							selectedOption === option.key
+								? 'border-white bg-[#333]'
+								: ' border-[#FFFFFF]/5 hover:bg-[#222]'
+						}`}
+					>
+						<div class="flex-1 min-w-0">
+							<span class="font-semibold text-xs sm:text-sm xl:text-[18px] block"
+								>{option.title}</span
+							>
+							<p class="text-[10px] sm:text-[14px] text-[gray] mt-1">{option.desc}</p>
+						</div>
+
+						<div class="ml-2 sm:ml-3 flex-shrink-0">
+							{#if selectedOption === option.key}
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									class="sm:w-5 sm:h-5 xl:w-6 xl:h-6"
+									fill="none"
+									viewBox="0 0 24 24"
+								>
+									<path
+										d="M12 0C5.40891 0 0 5.40891 0 12C0 18.5911 5.40891 24 12 24C18.5911 24 24 18.5911 24 12C24 5.40891 18.5911 0 12 0ZM10.5478 17.4581L5.29284 12.2032L7.28137 10.2147L10.6398 13.5731L17.382 7.44413L19.2743 9.52467L10.5478 17.4581Z"
+										fill="white"
+									/>
+								</svg>
+							{:else}
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									class="sm:w-5 sm:h-5 xl:w-6 xl:h-6"
+									fill="none"
+									viewBox="0 0 24 24"
+								>
+									<circle cx="12" cy="12" r="10" stroke="gray" stroke-width="2" />
+								</svg>
+							{/if}
+						</div>
+					</button>
+				{/each}
+			</div>
+
+			<!-- Action buttons -->
+			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 sm:gap-0">
+				<button
+					class="text-xs sm:text-sm text-gray-400 hover:underline py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-lg bg-border-light transition-colors"
+					on:click={close}
+				>
+					Cancel
+				</button>
+				<button
+					class="bg-border-selected text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-lg hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-base"
+					disabled={!selectedOption}
+				>
+					Next Step
+				</button>
+			</div>
+		</div>
+	</div>
+{/if}

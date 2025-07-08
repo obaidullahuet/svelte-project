@@ -29,7 +29,7 @@
 		transition:fade
 	>
 		<div
-			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-2xl h-fit p-3 sm:p-14 xl:p-8 relative z-50 backdrop-blur-[64px] bg-bg-top"
+			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto  p-3 sm:p-4 xl:p-6 border border-border relative z-50 backdrop-blur-[64px] bg-border"
 			transition:scale
 		>
 			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4">
@@ -90,32 +90,46 @@
 
 				<div>
 					<div
-						class="relative rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border h-full"
+						class="relative rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border h-full "
 					>
 						<img
 							src="/billing/image.svg"
 							alt="Exclusive Cars"
-							class="h-full w-full object-cover rounded-lg xl:rounded-2xl"
+							class="sm:h-full sm:w-full object-cover rounded-lg xl:rounded-2xl"
 						/>
 						<p
-							class="absolute text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-3 xl:bottom-4 left-1 right-1 md:left-2 md:right-2 lg:left-3 lg:right-3 xl:px-4 leading-tight"
+							class="absolute text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-3 xl:bottom-4 left-1 right-1 md:left-2 md:right-2 lg:left-3 lg:right-3 xl:px-3 leading-tight"
 						>
 							Early and Exclusive Map & Traffic Update
 						</p>
 					</div>
 				</div>
 				<div class="flex flex-col gap-1 sm:gap-2">
-					<div
-						class="rounded-lg xl:rounded-2xl flex flex-col gap-4 items-center bg-border border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-4 h-full"
+					<!-- <div
+						class="flex h-[24px] w-[70px] items-center gap-1 rounded-2xl px-2 py-2 font-medium bg-[rgba(155,0,58,0.2)] drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
 					>
-				
 						<img
-							src="/billing/tier-tag.svg"
-							alt="Server Hosting"
-							class="w-6 h-4 sm:w-8 sm:h-6 md:w-10 md:h-7 lg:w-12 lg:h-9 xl:w-[77px] xl:h-[58px]"
+							src=""
+							class="h-[15px] w-[15px] rounded-2xl drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
+							alt="tier"
 						/>
+						<span class="whitespace-nowrap py-2 text-[15px] font-medium font-inter">Tier 3</span>
+					</div> -->
+					<div
+						class="rounded-lg xl:rounded-2xl flex flex-col gap-3    items-center bg-border border border-border p-5 sm:p-2 md:py-[38.5px] md:px-[41.5px] h-full"
+					>
+						<div
+							class="flex h-[19px] w-[60px] md:h-[30px] md:w-[84px] items-center justify-center    gap-1 rounded-2xl font-medium bg-[rgba(155,0,58,0.2)] drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
+						>
+							<img
+								src="3itir.svg"
+								class="h-[15px] w-[15px] rounded-2xl drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
+								alt="tier"
+							/>
+							<span class="whitespace-nowrap py-2 text-[10px] sm-text-[15px] font-medium font-inter">Tier 3</span>
+						</div>
 						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
-							Tier Badge
+							 Tier Badge
 						</p>
 					</div>
 					<div
@@ -139,9 +153,9 @@
 				{#each options as option}
 					<button
 						on:click={() => (selectedOption = option.key)}
-						class={`w-full items-center text-left border font-inter flex justify-between p-2 sm:p-3 xl:px-6 xl:py-3 rounded-md transition ${
+						class={`w-full items-center text-left border font-inter bg-[#08060A70] bg-[linear-gradient(90deg,rgba(8,6,10,1)_24%,rgba(231,223,216,1)_600%)] flex justify-between p-2 sm:p-3 xl:px-6 xl:py-3 rounded-md transition ${
 							selectedOption === option.key
-								? 'border-white bg-[#333]'
+								? 'border-white bg-[linear-gradient(90deg,rgba(8,6,10,1)_44%,rgba(231,223,216,1)_100%)] '
 								: ' border-[#FFFFFF]/5 hover:bg-[#222]'
 						}`}
 					>
@@ -172,11 +186,11 @@
 									xmlns="http://www.w3.org/2000/svg"
 									width="16"
 									height="16"
-									class="sm:w-5 sm:h-5 xl:w-6 xl:h-6"
+									class="sm:w-5 sm:h-5 xl:w-6 xl:h-6  "
 									fill="none"
 									viewBox="0 0 24 24"
 								>
-									<circle cx="12" cy="12" r="10" stroke="gray" stroke-width="2" />
+									<circle cx="12" cy="12" r="10" class="border border-border" stroke="gray" stroke-width="2" />
 								</svg>
 							{/if}
 						</div>

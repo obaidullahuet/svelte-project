@@ -13,12 +13,12 @@
 		{
 			key: 'switch',
 			title: 'Switch to a Lower Tier',
-			desc: 'Stay on Tier 1 for just $2.99/month'
+			desc: 'Stay on Tier 1 for just $2.99/month,'
 		},
 		{
 			key: 'cancel',
 			title: 'Continue to Cancel',
-			desc: 'Still want to cancel?'
+			desc: 'Still want to cancel'
 		}
 	];
 </script>
@@ -33,7 +33,7 @@
 			transition:scale
 		>
 			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4">
-				<h2 class="text-[10px] sm:text-xs text-[#FF3059] uppercase font-semibold mb-2 sm:mb-0">
+				<h2 class="text-[10px]  font-inter sm:text-[15px] text-[#FF3059] uppercase leading-2 font-medium  sm:mb-0">
 					Cancel of Tier 3 Subscription
 				</h2>
 				<div class="flex items-center gap-1 sm:gap-2">
@@ -47,7 +47,7 @@
 				</div>
 			</div>
 
-			<p class="text-sm sm:text-lg xl:text-[22px] font-roboto uppercase font-black mb-2 sm:mb-3">
+			<p class="text-sm sm:text-lg xl:text-[22px] leading-4 font-roboto uppercase font-black mb-2 sm:mb-3">
 				Wait! Want to Keep Driving?
 			</p>
 
@@ -55,7 +55,7 @@
 				Canceling now means losing access to:
 			</p>
 
-			<div class="grid grid-cols-3 gap-1 sm:gap-2 xl:gap-4 mb-4 sm:mb-5">
+			<div class="grid grid-cols-3 gap-1 sm:gap-2  mb-4 sm:mb-5">
 				<div class="flex flex-col gap-1 sm:gap-2">
 					<div
 						class="rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-4 h-full"
@@ -95,10 +95,10 @@
 						<img
 							src="/billing/image.svg"
 							alt="Exclusive Cars"
-							class="sm:h-full sm:w-full object-cover rounded-lg xl:rounded-2xl"
+							class="h-auto w-auto sm:h-full sm:w-full object-cover rounded-lg xl:rounded-2xl"
 						/>
 						<p
-							class="absolute text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-3 xl:bottom-4 left-1 right-1 md:left-2 md:right-2 lg:left-3 lg:right-3 xl:px-3 leading-tight"
+							class="absolute text-center text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-3 xl:bottom-4 left-1 right-1 md:left-2 md:right-2 lg:left-3 lg:right-3 xl:px-3 leading-tight"
 						>
 							Early and Exclusive Map & Traffic Update
 						</p>
@@ -116,7 +116,7 @@
 						<span class="whitespace-nowrap py-2 text-[15px] font-medium font-inter">Tier 3</span>
 					</div> -->
 					<div
-						class="rounded-lg xl:rounded-2xl flex flex-col gap-3    items-center bg-border border border-border p-5 sm:p-2 md:py-[38.5px] md:px-[41.5px] h-full"
+						class="rounded-lg xl:rounded-2xl flex flex-col gap-2    items-center bg-border border border-border p-5 sm:p-2 md:py-[38.5px] md:px-[41.5px] h-full"
 					>
 						<div
 							class="flex h-[19px] w-[60px] md:h-[30px] md:w-[84px] items-center justify-center    gap-1 rounded-2xl font-medium bg-[rgba(155,0,58,0.2)] drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
@@ -139,7 +139,7 @@
 							<img
 								src="/billing/Frame 1.svg"
 								alt="Feature"
-								class="w-12 h-4 sm:w-16 sm:h-5 md:w-20 md:h-6 lg:w-24 lg:h-7 xl:w-[146px] xl:h-[44px]"
+								class="  w-24 h-6 md:w-[171px] md:h-[79px]"
 							/>
 						</div>
 						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
@@ -149,18 +149,18 @@
 				</div>
 			</div>
 
-			<div class="space-y-1 sm:space-y-2 mb-4 sm:mb-5">
+			<div class="space-y-1 sm:space-y-2 mb-4 sm:mb-5 ">
 				{#each options as option}
 					<button
 						on:click={() => (selectedOption = option.key)}
-						class={`w-full items-center text-left border font-inter bg-[#08060A70] bg-[linear-gradient(90deg,rgba(8,6,10,1)_24%,rgba(231,223,216,1)_600%)] flex justify-between p-2 sm:p-3 xl:px-6 xl:py-3 rounded-md transition ${
+						class={`w-full items-center text-left border border-border font-inter bg-[#08060A70] bg-[linear-gradient(90deg,rgba(8,6,10,1)_24%,rgba(231,223,216,1)_600%)] flex justify-between p-2 sm:p-3 xl:px-6 xl:py-3 rounded-md transition ${
 							selectedOption === option.key
-								? 'border-white bg-[linear-gradient(90deg,rgba(8,6,10,1)_44%,rgba(231,223,216,1)_100%)] '
+								? 'border-white r bg-[#08060A70] '
 								: ' border-[#FFFFFF]/5 hover:bg-[#222]'
 						}`}
 					>
 						<div class="flex-1 min-w-0">
-							<span class="font-semibold text-xs sm:text-sm xl:text-[18px] block"
+							<span class="font-semibold text-xs leading-2 sm:text-sm xl:text-[18px] block"
 								>{option.title}</span
 							>
 							<p class="text-[10px] sm:text-[14px] text-[gray] mt-1">{option.desc}</p>
@@ -201,13 +201,13 @@
 			<!-- Action buttons -->
 			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 sm:gap-0">
 				<button
-					class="text-xs sm:text-sm text-gray-400 hover:underline py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-lg bg-border-light transition-colors"
+					class="text-xs sm:text-[15px] text-gray-400  leading-1  font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-md bg-border-light transition-colors"
 					on:click={close}
 				>
 					Cancel
 				</button>
 				<button
-					class="bg-border-selected text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-lg hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-base"
+					class="bg-border-selected font-roboto text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
 					disabled={!selectedOption}
 				>
 					Next Step

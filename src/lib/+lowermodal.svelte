@@ -1,10 +1,10 @@
 <script>
 	import { fade, scale } from 'svelte/transition';
+    import Lower from '$lib/+lowermodal.svelte';
+    
 	export let isOpen = false;
 	export let close = () => {};
 	let selectedOption = '';
-    let showModal = false;
-	
 
 	const options = [
 		{

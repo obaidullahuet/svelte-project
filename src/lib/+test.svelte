@@ -261,11 +261,11 @@ function getScrollAmount(): number {
 							{card.title}
 					</p>
 					</div>
-						<button
+						<!-- <button
 					class="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
 				>
 					<img src="/blog/ArrowUpRight.svg" alt="" />
-				</button>
+				</button> -->
 				</div>
 			{:else}
 				<!-- Text Card -->

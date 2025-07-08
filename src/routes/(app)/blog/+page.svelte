@@ -163,7 +163,7 @@
 		},
 		{
 			date: 'June 19, 2025',
-			title: 'Performance tuning for dashboard load times',
+			title: 'Phased transitional ability',
 			tag: 'Devlog',
 			icon: '/blog/Code.svg'
 		}
@@ -454,16 +454,16 @@
 					/>
 
 					<span
-						class="absolute top-1 left-1 px-2 py-2 md:px-9 md:py-4 text-[8px] sm:text-sm md:text-base font-medium text-[#EEEDEE] rounded-full
+						class="absolute top-1 left-1 px-2 py-2 md:px-9 md:py-3 text-[8px] sm:text-sm md:text-base font-medium text-[#EEEDEE] rounded-full
 							   bg-[#FFFFFF1A] border border-border-light backdrop-blur-[24px] text-center"
 					>
 						Vip Access Car Releases
 					</span>
 
 					<span
-						class="absolute top-0.5 right-1 text-xs sm:text-sm md:text-base font-medium text-[#EEEDEE] rounded-full text-center"
+						class="absolute top-0.5 right-1 text-xs m sm:text-sm md:text-base font-medium text-[#EEEDEE] rounded-full text-center"
 					>
-						<img src="/blog/Frame 2616.png" class="h-7 md:h-[58px]" alt="" />
+						<img src="/blog/Frame 2616.png" class="h-7 md:h-[50px]" alt="" />
 					</span>
 
 					<!-- <div class="absoloute top-1 ">
@@ -526,11 +526,7 @@
 					</p>
 				</div>
 
-				<button
-					class="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
-				>
-					<img src="/blog/ArrowUpRight.svg" alt="" />
-				</button>
+			
 			</div>
 
 			<!-- Right Column (Two Cards) -->
@@ -591,7 +587,7 @@
 								</p>
 							</div>
 							<button
-								class="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
+								class="absolute  bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
 							>
 								<img src="/blog/ArrowUpRight.svg" alt="" />
 							</button>
@@ -626,9 +622,28 @@
 									The beautiful range of Apple Naturalé that has an exciting mix of natural
 									ingredients.
 								</p>
+								<div
+						class="relative inline-flex border border-border-light items-center justify-between bg-[#FFFFFF1A] backdrop-blur-[24px] rounded-full"
+					>
+
+
+					<button
+							class=" w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
+						>
+							<img src="/blog/ArrowUpRight.svg" alt="" />
+						</button>
+						<span
+							class="px-6 py-4 text-xs text-[10px] md:text-base font-medium text-[#EEEDEE] rounded-full whitespace-nowrap"
+						>
+							Get VIP Access
+						</span>
+
+						<!-- Arrow Button -->
+						
+					</div>
 							</div>
 							<button
-								class="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
+								class="absolute  bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
 							>
 								<img src="/blog/ArrowUpRight.svg" alt="" />
 							</button>

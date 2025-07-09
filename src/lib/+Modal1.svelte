@@ -1,10 +1,12 @@
 <script>
 	import { fade, scale } from 'svelte/transition';
+	import PauseModal from '$lib/+lowermodal.svelte';
+	import SwitchModal from '$lib/+SwitchModal.svelte';
+	import CancelModal from '$lib/+CancelModal.svelte';
 	export let isOpen = false;
 	export let close = () => {};
 	let selectedOption = '';
-    let showModal = false;
-	
+	let showModal = false;
 
 	const options = [
 		{
@@ -31,11 +33,13 @@
 		transition:fade
 	>
 		<div
-			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto  p-3 sm:p-4 xl:p-6 border border-border relative z-50 backdrop-blur-[64px] bg-border"
+			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto p-3 sm:p-4 xl:p-6 border border-border relative z-50 backdrop-blur-[64px] bg-border"
 			transition:scale
 		>
 			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4">
-				<h2 class="text-[10px]  font-inter sm:text-[15px] text-[#FF3059] uppercase leading-2 font-medium  sm:mb-0">
+				<h2
+					class="text-[10px] font-inter sm:text-[15px] text-[#FF3059] uppercase leading-2 font-medium sm:mb-0"
+				>
 					Cancel of Tier 3 Subscription
 				</h2>
 				<div class="flex items-center gap-1 sm:gap-2">
@@ -49,7 +53,9 @@
 				</div>
 			</div>
 
-			<p class="text-sm sm:text-lg xl:text-[22px] leading-4 font-roboto uppercase font-black mb-2 sm:mb-3">
+			<p
+				class="text-sm sm:text-lg xl:text-[22px] leading-4 font-roboto uppercase font-black mb-2 sm:mb-3"
+			>
 				Wait! Want to Keep Driving?
 			</p>
 
@@ -57,7 +63,7 @@
 				Canceling now means losing access to:
 			</p>
 
-			<div class="grid grid-cols-3 gap-1 sm:gap-2  mb-4 sm:mb-5">
+			<div class="grid grid-cols-3 gap-1 sm:gap-2 mb-4 sm:mb-5">
 				<div class="flex flex-col gap-1 sm:gap-2">
 					<div
 						class="rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-4 h-full"
@@ -92,7 +98,7 @@
 
 				<div>
 					<div
-						class="relative rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border h-full "
+						class="relative rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border h-full"
 					>
 						<img
 							src="/billing/image.svg"
@@ -107,22 +113,23 @@
 					</div>
 				</div>
 				<div class="flex flex-col gap-1 sm:gap-2">
-					
 					<div
-						class="rounded-lg xl:rounded-2xl flex flex-col gap-2    items-center bg-border border border-border p-5 sm:p-2 md:py-[38.5px] md:px-[41.5px] h-full"
+						class="rounded-lg xl:rounded-2xl flex flex-col gap-2 items-center bg-border border border-border p-5 sm:p-2 md:py-[38.5px] md:px-[41.5px] h-full"
 					>
 						<div
-							class="flex h-[19px] w-[60px] md:h-[30px] md:w-[84px] items-center justify-center    gap-1 rounded-2xl font-medium bg-[rgba(155,0,58,0.2)] drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
+							class="flex h-[19px] w-[60px] md:h-[30px] md:w-[84px] items-center justify-center gap-1 rounded-2xl font-medium bg-[rgba(155,0,58,0.2)] drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
 						>
 							<img
 								src="3itir.svg"
 								class="h-[15px] w-[15px] rounded-2xl drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
 								alt="tier"
 							/>
-							<span class="whitespace-nowrap py-2 text-[10px] sm-text-[15px] font-medium font-inter">Tier 3</span>
+							<span class="whitespace-nowrap py-2 text-[10px] sm-text-[15px] font-medium font-inter"
+								>Tier 3</span
+							>
 						</div>
 						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
-							 Tier Badge
+							Tier Badge
 						</p>
 					</div>
 					<div
@@ -142,7 +149,7 @@
 				</div>
 			</div>
 
-			<div class="space-y-1 sm:space-y-2 mb-4 sm:mb-5 ">
+			<div class="space-y-1 sm:space-y-2 mb-4 sm:mb-5">
 				{#each options as option}
 					<button
 						on:click={() => (selectedOption = option.key)}
@@ -179,11 +186,18 @@
 									xmlns="http://www.w3.org/2000/svg"
 									width="16"
 									height="16"
-									class="sm:w-5 sm:h-5 xl:w-6 xl:h-6  "
+									class="sm:w-5 sm:h-5 xl:w-6 xl:h-6 border border-border rounded-full bg-border"
 									fill="none"
 									viewBox="0 0 24 24"
 								>
-									<circle cx="12" cy="12" r="10" class="border border-border" stroke="gray" stroke-width="2" />
+									<circle
+										cx="12"
+										cy="12"
+										r="10"
+										class="border border-border"
+										stroke=""
+										stroke-width="2"
+									/>
 								</svg>
 							{/if}
 						</div>
@@ -194,13 +208,16 @@
 			<!-- Action buttons -->
 			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 sm:gap-0">
 				<button
-					class="text-xs sm:text-[15px] text-gray-400  leading-1  font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-md bg-border-light transition-colors"
+					class="text-xs sm:text-[15px] text-gray-400 leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-md bg-border-light transition-colors"
 					on:click={close}
 				>
 					Cancel
 				</button>
 				<button
 					class="bg-border-selected font-roboto text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
+					on:click={() => {
+						if (selectedOption) showModal = true;
+					}}
 					disabled={!selectedOption}
 				>
 					Next Step
@@ -208,4 +225,12 @@
 			</div>
 		</div>
 	</div>
+{/if}
+
+{#if showModal && selectedOption === 'pause'}
+	<PauseModal isOpen={showModal} close={() => (showModal = false)} />
+{:else if showModal && selectedOption === 'switch'}
+	<SwitchModal isOpen={showModal} close={() => (showModal = false)} />
+{:else if showModal && selectedOption === 'cancel'}
+	<CancelModal isOpen={showModal} close={() => (showModal = false)} />
 {/if}

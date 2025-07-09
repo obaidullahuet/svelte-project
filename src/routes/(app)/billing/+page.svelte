@@ -138,8 +138,8 @@ let showModal = false;
 			</span>
 
 			<div class="flex gap-[16px] font-inter-tight justify-end">
-				<button on:click={() => (showModal = true)} class="text-[#B130FF] transition hover:underline">Upgrade</button>
-				<button class="transition hover:underline">Cancel</button>
+				<button on:click={() => (showModal = true)} class="text-[#B130FF] ">Upgrade</button>
+				<button class="">Cancel</button>
 			</div>
 		</div>
 	</div>

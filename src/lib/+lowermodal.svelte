@@ -1,28 +1,21 @@
-<script>
+<script lang="ts">
 	import { fade, scale } from 'svelte/transition';
-    import Lower from '$lib/+lowermodal.svelte';
-    
+	import Done from '$lib/+Pauseaction.svelte';
+
 	export let isOpen = false;
 	export let close = () => {};
 	let selectedOption = '';
 
-	const options = [
-		{
-			key: 'pause',
-			title: 'Pause My Subscription',
-			desc: 'Temporarily stop payments & keep your data'
-		},
-		{
-			key: 'switch',
-			title: 'Switch to a Lower Tier',
-			desc: 'Stay on Tier 1 for just $2.99/month,'
-		},
-		{
-			key: 'cancel',
-			title: 'Continue to Cancel',
-			desc: 'Still want to cancel'
-		}
+	let selectedMonth = '1 month'; // default selected
+	let showDropdown = false;
+	const months = [
+		{ month: '1 month' },
+		{ month: '2 months' },
+		{ month: '3 months' }
+		
 	];
+
+	let showModal = false;
 </script>
 
 {#if isOpen}
@@ -31,181 +24,101 @@
 		transition:fade
 	>
 		<div
-			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto  p-3 sm:p-4 xl:p-6 border border-border relative z-50 backdrop-blur-[64px] bg-border"
+			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto p-3 sm:p-4 xl:p-6 border border-border relative z-50 backdrop-blur-[64px] bg-border"
 			transition:scale
 		>
 			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4">
-				<h2 class="text-[10px]  font-inter sm:text-[15px] text-[#FF3059] uppercase leading-2 font-medium  sm:mb-0">
+				<h2
+					class="text-[10px] font-inter sm:text-[15px] text-[#FF3059] uppercase leading-2 font-medium sm:mb-0"
+				>
 					Cancel of Tier 3 Subscription
 				</h2>
 				<div class="flex items-center gap-1 sm:gap-2">
 					<div class="w-5 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-[#FF3059] rounded-full" />
-					<div
-						class="w-5 sm:w-6 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-border border border-border rounded-full"
-					/>
+					<div class="w-5 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-[#FF3059] rounded-full" />
+
 					<div
 						class="w-5 sm:w-6 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-border border border-border rounded-full"
 					/>
 				</div>
 			</div>
 
-			<p class="text-sm sm:text-lg xl:text-[22px] leading-4 font-roboto uppercase font-black mb-2 sm:mb-3">
-				Wait! Want to Keep Driving?
+			<p
+				class="text-sm sm:text-lg xl:text-[22px] leading-4 font-roboto uppercase font-black mb-2 sm:mb-3"
+			>
+				Pause My Subscription
 			</p>
 
-			<p class="text-xs sm:text-sm text-[gray] mb-3 sm:mb-4">
-				Canceling now means losing access to:
+			<p class="text-[16px] font-inter py-[2px] text-[#EEEDEE] mb-3">
+				Your subscription will be paused on <span
+					class="bg-background px-[10px]
+                py-[2px] border border-border-light rounded-md">12/06/2025</span
+				>
+				and you will <br /> be charged $10.99 when it resumes.
 			</p>
 
-			<div class="grid grid-cols-3 gap-1 sm:gap-2  mb-4 sm:mb-5">
-				<div class="flex flex-col gap-1 sm:gap-2">
-					<div
-						class="rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-4 h-full"
-					>
-						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
-							Server Hosting
-						</p>
-						<img
-							src="/billing/Full.svg"
-							alt="Server Hosting"
-							class="w-6 h-4 sm:w-8 sm:h-6 md:w-10 md:h-7 lg:w-12 lg:h-9 xl:w-[77px] xl:h-[58px]"
-						/>
-						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
-							Functionality
-						</p>
-					</div>
-					<div
-						class="rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-4 h-full"
-					>
-						<div class="py-1 xl:py-2">
-							<img
-								src="/billing/Frame 2579.svg"
-								alt="Feature"
-								class="w-12 h-4 sm:w-16 sm:h-5 md:w-20 md:h-6 lg:w-24 lg:h-7 xl:w-[146px] xl:h-[44px]"
+			<p class="text-[14px] leading-1 font-inter font-normal mb-1.5">
+				When would you like to resume your subscription?
+			</p>
+
+			<div class="relative mb-6">
+				<div
+					class="px-[16px] py-[14px] border border-border-light rounded-md cursor-pointer"
+					on:click={() => (showDropdown = !showDropdown)}
+				>
+					<div class="flex items-center justify-between gap-2 font-inter text-[#EEEDEE]">
+						<p>{selectedMonth}</p>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+						>
+							<path
+								d="M20.2969 9.79586L12.7969 17.2959C12.6924 17.4007 12.5682 17.484 12.4314 17.5407C12.2947 17.5975 12.1481 17.6267 12 17.6267C11.8519 17.6267 11.7053 17.5975 11.5686 17.5407C11.4318 17.484 11.3076 17.4007 11.2031 17.2959L3.70312 9.79586C3.49178 9.58451 3.37305 9.29787 3.37305 8.99898C3.37305 8.7001 3.49178 8.41345 3.70312 8.20211C3.91447 7.99076 4.20111 7.87203 4.5 7.87203C4.79888 7.87203 5.08553 7.99076 5.29687 8.20211L12.0009 14.9062L18.705 8.20117C18.9163 7.98983 19.203 7.87109 19.5019 7.87109C19.8008 7.87109 20.0874 7.98983 20.2987 8.20117C20.5101 8.41252 20.6288 8.69916 20.6288 8.99805C20.6288 9.29693 20.5101 9.58358 20.2987 9.79492L20.2969 9.79586Z"
+								fill="white"
+								fill-opacity="0.3"
 							/>
-						</div>
-						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
-							Clan Tags
-						</p>
+						</svg>
 					</div>
 				</div>
 
-				<div>
-					<div
-						class="relative rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border h-full "
-					>
-						<img
-							src="/billing/image.svg"
-							alt="Exclusive Cars"
-							class="h-auto w-auto sm:h-full sm:w-full object-cover rounded-lg xl:rounded-2xl"
-						/>
-						<p
-							class="absolute text-center text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-3 xl:bottom-4 left-1 right-1 md:left-2 md:right-2 lg:left-3 lg:right-3 xl:px-3 leading-tight"
-						>
-							Early and Exclusive Map & Traffic Update
-						</p>
-					</div>
-				</div>
-				<div class="flex flex-col gap-1 sm:gap-2">
-					
-					<div
-						class="rounded-lg xl:rounded-2xl flex flex-col gap-2    items-center bg-border border border-border p-5 sm:p-2 md:py-[38.5px] md:px-[41.5px] h-full"
-					>
-						<div
-							class="flex h-[19px] w-[60px] md:h-[30px] md:w-[84px] items-center justify-center    gap-1 rounded-2xl font-medium bg-[rgba(155,0,58,0.2)] drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
-						>
-							<img
-								src="3itir.svg"
-								class="h-[15px] w-[15px] rounded-2xl drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
-								alt="tier"
-							/>
-							<span class="whitespace-nowrap py-2 text-[10px] sm-text-[15px] font-medium font-inter">Tier 3</span>
-						</div>
-						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
-							 Tier Badge
-						</p>
-					</div>
-					<div
-						class="rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-4 h-full"
-					>
-						<div class="py-1 xl:py-2">
-							<img
-								src="/billing/Frame 1.svg"
-								alt="Feature"
-								class="  w-24 h-6 md:w-[171px] md:h-[79px]"
-							/>
-						</div>
-						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
-							Exclusive Tier 3 Cars
-						</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="space-y-1 sm:space-y-2 mb-4 sm:mb-5 ">
-				{#each options as option}
-					<button
-						on:click={() => (selectedOption = option.key)}
-						class={`w-full items-center text-left border border-border font-inter bg-[#08060A70] bg-[linear-gradient(90deg,rgba(8,6,10,1)_24%,rgba(231,223,216,1)_600%)] flex justify-between p-2 sm:p-3 xl:px-6 xl:py-3 rounded-md transition ${
-							selectedOption === option.key
-								? 'border-white r bg-[#08060A70] '
-								: ' border-[#FFFFFF]/5 hover:bg-[#222]'
-						}`}
-					>
-						<div class="flex-1 min-w-0">
-							<span class="font-semibold text-xs leading-2 sm:text-sm xl:text-[18px] block"
-								>{option.title}</span
+				{#if showDropdown}
+					<div class="absolute z-10 w-full bg-[#1a1a1a] border border-border-light rounded-md mt-1">
+						{#each months as item}
+							<div
+								class="px-[16px] py-[14px] hover:bg-[#333] cursor-pointer"
+								on:click={() => {
+									selectedMonth = item.month;
+									showDropdown = false;
+								}}
 							>
-							<p class="text-[10px] sm:text-[14px] text-[gray] mt-1">{option.desc}</p>
-						</div>
-
-						<div class="ml-2 sm:ml-3 flex-shrink-0">
-							{#if selectedOption === option.key}
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									class="sm:w-5 sm:h-5 xl:w-6 xl:h-6"
-									fill="none"
-									viewBox="0 0 24 24"
-								>
-									<path
-										d="M12 0C5.40891 0 0 5.40891 0 12C0 18.5911 5.40891 24 12 24C18.5911 24 24 18.5911 24 12C24 5.40891 18.5911 0 12 0ZM10.5478 17.4581L5.29284 12.2032L7.28137 10.2147L10.6398 13.5731L17.382 7.44413L19.2743 9.52467L10.5478 17.4581Z"
-										fill="white"
-									/>
-								</svg>
-							{:else}
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									class="sm:w-5 sm:h-5 xl:w-6 xl:h-6  "
-									fill="none"
-									viewBox="0 0 24 24"
-								>
-									<circle cx="12" cy="12" r="10" class="border border-border" stroke="gray" stroke-width="2" />
-								</svg>
-							{/if}
-						</div>
-					</button>
-				{/each}
+								{item.month}
+							</div>
+						{/each}
+					</div>
+				{/if}
 			</div>
-
-			<!-- Action buttons -->
 			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 sm:gap-0">
 				<button
-					class="text-xs sm:text-[15px] text-gray-400  leading-1  font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-md bg-border-light transition-colors"
+					class="text-xs sm:text-[15px] text-gray-400 leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-sm bg-border-light transition-colors"
 					on:click={close}
 				>
-					Cancel
+					Keep my subscription
 				</button>
 				<button
-					class="bg-border-selected font-roboto text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
-					disabled={!selectedOption}
+					class="bg-border-selected font-roboto text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-sm hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
+						on:click={() => {
+						 showModal = true;
+					}}
 				>
-					Next Step
+					Pause subscription
 				</button>
 			</div>
 		</div>
 	</div>
 {/if}
+
+
+<Done isOpen={showModal} close={() => (showModal = false)} />

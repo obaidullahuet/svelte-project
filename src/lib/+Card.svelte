@@ -75,7 +75,7 @@
 				{title}
 			</span>
 
-			<div class="h6-inter text-content-secondary svelte-1l3vz5j flex font-medium">
+			<div class="h6-inter text-content-secondary  flex font-medium">
 				<div
 					class="inline-flex h-12 flex-col items-start justify-start overflow-hidden text-[#FAFAFA]"
 				>

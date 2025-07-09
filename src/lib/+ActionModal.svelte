@@ -90,7 +90,7 @@
 			</div>
 
 			<p
-				class="text-sm sm:text-lg xl:text-[22px] leading-4 font-roboto uppercase font-black mb-2 sm:mb-3"
+				class="text-[14px] sm:text-[20px] xl:text-[22px] leading-4 font-roboto uppercase font-black mb-2 sm:mb-3"
 			>
 				Your subscription has <br /> been canceled
 			</p>
@@ -101,14 +101,8 @@
 			</p>
 
 			<div class="flex justify-end sm:flex-row">
-				<!-- <button
-					class="text-xs sm:text-[15px] text-gray-400 leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-sm bg-border-light transition-colors"
-					on:click={close}
-				>
-					Keep my subscription
-				</button> -->
 				<button
-					class="bg-border-selected font-roboto text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-sm hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
+					class="bg-border-selected font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-sm hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
 					on:click={close}
 				>
 					Close

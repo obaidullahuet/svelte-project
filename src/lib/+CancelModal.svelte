@@ -71,9 +71,9 @@
 			</div>
 
 			<p
-				class="text-sm sm:text-lg xl:text-[22px] leading-4 font-roboto uppercase font-black mb-2 sm:mb-3"
+				class="text-[14px]  xl:text-[22px] leading-4 font-roboto uppercase font-black mb-2 sm:mb-3"
 			>
-				Wait! Want to Keep Driving?
+				Why are you canceling?
 			</p>
 
 			<div class="space-y-1 sm:space-y-2 mb-3 sm:mb-5">
@@ -169,13 +169,13 @@
 
 			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 sm:gap-0">
 				<button
-					class="text-xs sm:text-[15px] text-gray-400 leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-md bg-border-light transition-colors"
+					class="text-xs sm:text-[15px] text-gray-400 font-semibold leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-md bg-border-light transition-colors"
 					on:click={close}
 				>
 					Back
 				</button>
 				<button
-					class="bg-border-selected font-roboto text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
+					class="bg-border-selected font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
 					on:click={() => {
 						if (selectedOption) showModal = true;
 					}}
@@ -189,4 +189,3 @@
 {/if}
 
 <Confirm isOpen={showModal} close={() => (showModal = false)} />
-

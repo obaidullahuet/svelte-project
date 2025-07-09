@@ -42,7 +42,7 @@
 			</div>
 
 			<p
-				class="text-sm sm:text-lg xl:text-[22px] leading-4 font-roboto uppercase font-black mb-2 sm:mb-3"
+				class="text-[14px] sm:text-[20px] xl:text-[22px] leading-4 font-roboto uppercase font-black mb-2 sm:mb-3"
 			>
 				Confirm cancellation
 			</p>
@@ -50,7 +50,7 @@
 			<p class="text-[16px] font-inter py-[2px] text-[#EEEDEE] mb-3">
 				You’ll keep your benefits until <span
 					class="bg-background px-[10px]
-                py-[2px] border border-border-light rounded-md">01/01/2025</span
+                py-[2px] border border-border-light rounded-sm">01/01/2025</span
 				>
 				<br /> After that, your account will be downgraded to free tier.
 			</p>
@@ -118,21 +118,21 @@
 								</clipPath>
 							</defs>
 						</svg>
-						<p class="font-inter text-[15px] leading-2">{feature.text}</p>
+						<p class="font-inter text-[15px] font-medium leading-2">{feature.text}</p>
 					</div>
 				{/each}
 			</div>
 
 			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 sm:gap-0">
 				<button
-					class="text-xs sm:text-[15px] text-gray-400 leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-sm bg-border-light transition-colors"
+					class="text-xs sm:text-[15px] text-gray-400 leading-1 font-semibold font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-sm bg-border-light transition-colors"
 					on:click={close}
 				>
 					Keep my subscription
 				</button>
 				
                 <button
-					class="bg-border-selected font-roboto text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
+					class="bg-border-selected font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
                     	on:click={() => {
 						 showModal = true;
 					}}

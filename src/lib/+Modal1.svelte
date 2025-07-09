@@ -54,21 +54,23 @@
 			</div>
 
 			<p
-				class="text-sm sm:text-lg xl:text-[22px] leading-4 font-roboto uppercase font-black mb-2 sm:mb-3"
+				class="text-sm sm:text-lg xl:text-[22px] leading-9 font-roboto uppercase font-black mb-2 sm:mb-3"
 			>
 				Wait! Want to Keep Driving?
 			</p>
 
-			<p class="text-xs sm:text-sm text-[gray] mb-3 sm:mb-4">
+			<p class="text-xs sm:text-[16px] leading-2 text-[gray] mb-3 sm:mb-4">
 				Canceling now means losing access to:
 			</p>
 
 			<div class="grid grid-cols-3 gap-1 sm:gap-2 mb-4 sm:mb-5">
 				<div class="flex flex-col gap-1 sm:gap-2">
 					<div
-						class="rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-4 h-full"
+						class="rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-background-light border border-border px-3 py-4 sm:p-2 md:p-2 lg:p-3 xl:p-4 h-full"
 					>
-						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
+						<p
+							class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm leading-[100%] xl:text-[15px]"
+						>
 							Server Hosting
 						</p>
 						<img
@@ -76,12 +78,14 @@
 							alt="Server Hosting"
 							class="w-6 h-4 sm:w-8 sm:h-6 md:w-10 md:h-7 lg:w-12 lg:h-9 xl:w-[77px] xl:h-[58px]"
 						/>
-						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
+						<p
+							class="font-medium text-[8px] sm:text-[10px] md:text-xs leading-[100%] lg:text-sm xl:text-[15px] lead"
+						>
 							Functionality
 						</p>
 					</div>
 					<div
-						class="rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-4 h-full"
+						class="rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-background-light border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-4 h-full"
 					>
 						<div class="py-1 xl:py-2">
 							<img
@@ -90,14 +94,16 @@
 								class="w-12 h-4 sm:w-16 sm:h-5 md:w-20 md:h-6 lg:w-24 lg:h-7 xl:w-[146px] xl:h-[44px]"
 							/>
 						</div>
-						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
+						<p
+							class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm leading-2 xl:text-[15px]"
+						>
 							Clan Tags
 						</p>
 					</div>
 				</div>
 
 				<div>
-					<div
+<div
 						class="relative rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border h-full"
 					>
 						<img
@@ -106,43 +112,45 @@
 							class="h-auto w-auto sm:h-full sm:w-full object-cover rounded-lg xl:rounded-2xl"
 						/>
 						<p
-							class="absolute text-center text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-3 xl:bottom-4 left-1 right-1 md:left-2 md:right-2 lg:left-3 lg:right-3 xl:px-3 leading-tight"
+							class="absolute text-center text-[8px] font-medium  sm:text-[10px] md:text-xs lg:text-sm xl:text-[15px] bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-3 xl:bottom-4 left-1 right-1 md:left-2 md:right-2 lg:left-3 lg:right-3 xl:px-3 xl:leading-2"
 						>
 							Early and Exclusive Map & Traffic Update
 						</p>
-					</div>
-				</div>
+					</div>				</div>
 				<div class="flex flex-col gap-1 sm:gap-2">
 					<div
-						class="rounded-lg xl:rounded-2xl flex flex-col gap-2 items-center bg-border border border-border p-5 sm:p-2 md:py-[38.5px] md:px-[41.5px] h-full"
+						class="rounded-lg xl:rounded-2xl flex flex-col md:gap-8  bg-background-light border border-border  items-center p-5 md:py-[38.5px] "
 					>
 						<div
-							class="flex h-[19px] w-[60px] md:h-[30px] md:w-[84px] items-center justify-center gap-1 rounded-2xl font-medium bg-[rgba(155,0,58,0.2)] drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
+							class="flex  h-[30px] w-[50px] md:h-[25px] md:w-[80px] border border-red-bg-surface items-center pl-1 gap-1 rounded-2xl font-medium bg-[rgba(155,0,58,0.2)] "
 						>
 							<img
 								src="3itir.svg"
-								class="h-[15px] w-[15px] rounded-2xl drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
+								class="w-[10px] h-[10px] sm:h-[15px] sm:w-[15px] rounded-2xl drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
 								alt="tier"
 							/>
-							<span class="whitespace-nowrap py-2 text-[10px] sm-text-[15px] font-medium font-inter"
-								>Tier 3</span
+							<span
+								class="whitespace-nowrap text-[#aca9ac] text-[10px] sm:text-[16px]  font-semibold font-inter"
+								>Tier  3</span
 							>
 						</div>
-						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
+						<p
+							class="font-medium text-[8px] md:w-[80px] sm:text-[10px] md:text-xs text-[#EEEDEE] lg:text-[15px] leading-2 xl:text-[15px]"
+						>
 							Tier Badge
 						</p>
 					</div>
 					<div
-						class="rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-4 h-full"
+						class="rounded-lg xl:rounded-2xl flex flex-col  items-center bg-background-light border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-2 h-full"
 					>
-						<div class="py-1 xl:py-2">
+						<div class="py-1 xl:py-1">
 							<img
 								src="/billing/Frame 1.svg"
 								alt="Feature"
 								class="  w-24 h-6 md:w-[171px] md:h-[79px]"
 							/>
 						</div>
-						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-sm">
+						<p class="font-medium text-[8px] sm:text-[10px]  md:text-xs lg:text-sm xl:text-[15px]">
 							Exclusive Tier 3 Cars
 						</p>
 					</div>
@@ -153,17 +161,17 @@
 				{#each options as option}
 					<button
 						on:click={() => (selectedOption = option.key)}
-						class={`w-full items-center text-left border border-border font-inter bg-[#08060A70] bg-[linear-gradient(90deg,rgba(8,6,10,1)_24%,rgba(231,223,216,1)_600%)] flex justify-between p-2 sm:p-3 xl:px-6 xl:py-3 rounded-md transition ${
+						class={`w-full items-center text-left  border border-border font-inter bg-[#08060A70] bg-[linear-gradient(268deg,rgba(8,6,10,0.05)_25.18%,rgba(231,223,216,0.05)_100%)] flex justify-between p-2 sm:p-3 xl:px-6 xl:py-3 rounded-md transition ${
 							selectedOption === option.key
 								? 'border-white r bg-[#08060A70] '
 								: ' border-[#FFFFFF]/5 hover:bg-[#222]'
 						}`}
 					>
 						<div class="flex-1 min-w-0">
-							<span class="font-semibold text-xs leading-2 sm:text-sm xl:text-[18px] block"
+							<span class="font-semibold text-xs leading-3 sm:text-sm xl:text-[18px] block"
 								>{option.title}</span
 							>
-							<p class="text-[10px] sm:text-[14px] text-[gray] mt-1">{option.desc}</p>
+							<p class="text-[10px] sm:text-[14px] text-[gray] leading-1 mt-1">{option.desc}</p>
 						</div>
 
 						<div class="ml-2 sm:ml-3 flex-shrink-0">
@@ -208,13 +216,13 @@
 			<!-- Action buttons -->
 			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 sm:gap-0">
 				<button
-					class="text-xs sm:text-[15px] text-gray-400 leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-md bg-border-light transition-colors"
+					class="text-xs sm:text-[15px] font-semibold text-gray-400 leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-md bg-border-light transition-colors"
 					on:click={close}
 				>
 					Cancel
 				</button>
 				<button
-					class="bg-border-selected font-roboto text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
+					class="bg-border-selected font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
 					on:click={() => {
 						if (selectedOption) showModal = true;
 					}}

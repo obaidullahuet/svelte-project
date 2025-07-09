@@ -12,14 +12,17 @@
 			price: '$2.99',
 			img: '/Vector (1).svg',
 			bg: 'from-[#383737] to-[#08060a] via-[#08060a] via-44%',
-			value: 'tier1'
+			value: 'tier1',
+			dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]',
 		},
 		{
 			name: 'Tier 2',
 			price: '$6.99',
 			img: '/ortire.svg',
 			bg: 'from-[#291814] to-[#08060a] via-[#08060a] via-44%',
-			value: 'tier2'
+			value: 'tier2',
+						dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)] ',
+
 		}
 	];
 
@@ -37,7 +40,7 @@
 		>
 			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4">
 				<h2
-					class="text-[10px] font-inter sm:text-[15px] text-[#FF3059] uppercase leading-2 font-medium sm:mb-0"
+					class="text-[10px] font-inter sm:text-[16px] text-[#FF3059] uppercase leading-2 font-medium sm:mb-0"
 				>
 					Cancel of Tier 3 Subscription
 				</h2>
@@ -65,13 +68,13 @@
 					class="flex w-full flex-col rounded-xl border border-red-bg-surface bg-gradient-to-r from-[#241215] to-[#08060a] via-[#08060a] via-44% p-5"
 				>
 				
-					<div class="flex flex-wrap items-center gap-1">
+					<div class="flex flex-wrap items-center gap-1 drop-shadow-[0_0_20px_rgba(221,3,85,0.7)] ">
 						<img
 							class="h-5 w-5 drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
 							src="/3itir.svg"
 							alt="Tier Badge"
 						/>
-						<span class=" text-[16px] leading-1 font-medium italic text-[#EEEDEE]">Tier 3</span>
+						<span class="font-roboto text-[16px] leading-1 font-medium italic text-[#EEEDEE]">Tier 3</span>
 					</div>
 
 					<div class="mt-6 leading-2 sm:text-[20px] font-semibold italic text-[#EEEDEE]">
@@ -97,6 +100,8 @@
 
 			{#each tiers as tier}
 	<div class="flex justify-center font-inter mb-3">
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div
 			class={`flex w-full flex-col rounded-xl border ${
 				selectedOption === tier.value
@@ -107,19 +112,19 @@
 		>
 			<div class="flex justify-between items-center">
 				<div>
-					<div class="flex flex-wrap items-center gap-1">
+					<div class="flex flex-wrap items-center gap-1 {tier.dp}">
 						<img
-							class="h-5 w-5 drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
+							class="h-5 w-5 drop-shadow-[0_0_20px_rgba(221,3,85,0.7)] {tier.dp}"
 							src={tier.img}
 							alt="Tier Badge"
 						/>
-						<span class="text-[16px] leading-1 font-medium italic text-[#EEEDEE]">{tier.name}</span>
+						<span class="text-[16px] leading-1 font-roboto font-bold italic text-[#EEEDEE]">{tier.name}</span>
 					</div>
 
 					<div class="text-content-secondary py-1 text-[24px] leading-5 font-semibold text-[#EEEDEE]">
 						<span class="title-gradient">
 							{tier.price}
-							<span class="text-[20px] font-medium leading-3 title-gradient">/month</span>
+							<span class="text-[20px] font-medium leading-2 title-gradient">/month</span>
 						</span>
 					</div>
 				</div>
@@ -143,13 +148,13 @@
 
 			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 sm:gap-0">
 				<button
-					class="text-xs sm:text-[15px] text-gray-400 leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-md bg-border-light transition-colors"
+					class="text-xs sm:text-[15px] text-gray-400 font-semibold leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-md bg-border-light transition-colors"
 					on:click={close}
 				>
 					Keep my subscription
 				</button>
 				<button
-					class="bg-border-selected font-roboto text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
+					class="bg-border-selected font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
 					on:click={() => {
 						if (selectedOption) showModal = true;
 					}}

@@ -18,7 +18,7 @@ let showModal = false;
 				>
 					<a href="/Subscription">
 						<button
-							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
+							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-1 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
 						>
 							<img src="/billing/House.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
 
@@ -28,7 +28,7 @@ let showModal = false;
 
 					<a href="/Subscription">
 						<button
-							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
+							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-1 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
 						>
 							<img src="/billing/Crown.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
 							Leaderboard
@@ -37,7 +37,7 @@ let showModal = false;
 
 					<a href="/Subscription">
 						<button
-							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
+							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-1 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
 						>
 							<img src="/billing/Users.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
 
@@ -47,7 +47,7 @@ let showModal = false;
 
 					<a href="/Subscription">
 						<button
-							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
+							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-1 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
 						>
 							<img src="/billing/fi_6557720.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
 
@@ -57,7 +57,7 @@ let showModal = false;
 
 					<a href="/Subscription">
 						<button
-							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
+							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-1 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
 						>
 							<img src="/billing/PencilSimple.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
 
@@ -66,7 +66,7 @@ let showModal = false;
 					</a>
 					<a href="/Subscription">
 						<button
-							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
+							class="font-inter font-normal flex h-9 items-center rounded-md px-2 py-[6px] text-[14px]  leading-1 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
 						>
 							<img src="/billing/Cube.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
 
@@ -75,7 +75,7 @@ let showModal = false;
 					</a>
 					<a href="/Subscription">
 						<button
-							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
+							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-1  transition-colors hover:bg-[#FFFFFF]/5"
 						>
 							<img src="/billing/Cube.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
 
@@ -85,7 +85,7 @@ let showModal = false;
 
 					<a href="/Billing">
 						<button
-							class="font-inter-tight flex h-9 items-center rounded-md border border-[#FFFFFF]/5 px-2 py-[6px] text-[14px] font-medium leading-5 tracking-normal transition-colors hover:bg-[#FFFFFF]/10"
+							class=" flex h-9 font-inter items-center rounded-md border border-[#FFFFFF]/5 px-2 py-[6px] text-[14px] font-semibold leading-1  transition-colors hover:bg-[#FFFFFF]/10"
 						>
 							<img src="/billing/fi_9554529.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
 
@@ -99,7 +99,7 @@ let showModal = false;
 </div>
 
 <div class=" my-10 px-1 sm:px-6 md:px-8 lg:px-9">
-	<p class="text-[39px] font-bold font-roboto text-[#EEEDEE]">Billing</p>
+	<p class="text-[39px] font-inter font-semibold leading-5 text-[#EEEDEE]">Billing</p>
 	
 	<!-- Example div with Tailwind classes -->
 	<div class="w-10 h-[6px] bg-red-500 rounded-full"></div>
@@ -109,37 +109,37 @@ let showModal = false;
 	<div class="flex w-full flex-col rounded-2xl border border-[#FFFFFF]/5 bg-[#0D0B0F] p-4">
 		<!-- Heading -->
 		<div class="py-3">
-			<span class="text-base text-[#EEEDEE] text-[18px] sm:text-lg">Your Subscription</span>
+			<span class=" text-[#EEEDEE] text-[14px] font-medium leading-1 ">Your Subscription</span>
 		</div>
 
 		<!-- Tier -->
-		<div class="py-3 text-[16px] font-bold italic text-[#EEEDEE] sm:text-2xl">
+		<div class="py-3 text-[16px] font-roboto font-bold italic text-[#EEEDEE] leading-1">
 			<span>TIER 3</span>
 		</div>
 
 		<!-- Badge -->
 		<div class="flex flex-wrap items-center gap-3 py-3">
 			<img
-				class="h-10 w-9 drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
+				class="h-12 w-12 drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]"
 				src="/3itir.svg"
 				alt="Tier Badge"
 			/>
-			<span class="md:text-[37px]   font-roboto font-extrabold text-[#EEEDEE] text-xl lg:text-4xl"
+			<span class="md:text-[37px] leading-10   font-roboto font-black text-[#EEEDEE] "
 				>UNDERGROUND</span
 			>
 		</div>
 
 		<!-- Renewal & Actions -->
 		<div
-			class="flex flex-col items-start justify-between gap-4 py-3 text-sm text-[#EEEDEE] sm:flex-row sm:items-center sm:text-base"
+			class="flex flex-col items-start justify-between gap-4 py-3 text-[17px] text-[#EEEDEE] sm:flex-row sm:items-center "
 		>
-			<span class="whitespace-nowrap">
-				New subscription renewal: <span class="font-bold font-inter-tight">28.03.2024</span>
+			<span class="whitespace-nowrap leading-2 font-normal">
+				New subscription renewal: <span class="font-medium font-inter-tight">28.03.2024</span>
 			</span>
 
-			<div class="flex gap-[16px] font-inter-tight justify-end">
+			<div class="flex gap-[16px] font-inter text-[17px] font-medium leading-2 justify-end">
 				<button on:click={() => (showModal = true)} class="text-[#B130FF] ">Upgrade</button>
-				<button class="">Cancel</button>
+				<button class="font-normal">Cancel</button>
 			</div>
 		</div>
 	</div>

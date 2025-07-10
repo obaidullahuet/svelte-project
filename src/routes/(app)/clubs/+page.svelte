@@ -31,7 +31,7 @@
 			members: 420,
 			type: 'Public Club'
 		},
-		
+
 		{
 			id: 3,
 			bgImage: '/club/Rectangle 116 (2).svg',
@@ -183,7 +183,7 @@
 <div
 	class="flex flex-wrap items-center gap-5 md:justify-between my-[18px] px-1 sm:px-6 md:px-8 lg:px-9"
 >
-	<p class="text-[39px] font-inter font-semibold leading-5 text-[#EEEDEE]">Billing</p>
+	<p class="text-[39px] font-inter font-semibold leading-5 text-[#EEEDEE]">Clubs</p>
 
 	<!-- Example div with Tailwind classes -->
 	<div class="flex items-center gap-5 flex-wrap">
@@ -191,7 +191,7 @@
 			<input
 				type="text"
 				placeholder="Search by club name"
-				class="h-[36px] w-auto md:w-[320px] text-[#EEEDEE] rounded-md border border-border-light bg-[#161416] pl-9 pr-3 text-sm placeholder-white/50 focus:outline-none"
+				class="h-[36px] w-auto leading-2 md:w-[320px] text-[#EEEDEE] rounded-md border border-border-light bg-[#161416] pl-9 pr-3 text-sm placeholder-white/50 focus:outline-none"
 			/>
 			<img
 				src="/Search.png"
@@ -202,7 +202,7 @@
 		<button
 			class="h-[36px] items-center gap-1 flex rounded-md font-roboto text-[#EEEDEE] bg-border-light px-4 py-1.5 text-[15px] font-medium leading-1 transition hover:bg-white/20"
 		>
-			<img src="/Plus.svg" class="h-4 w-4" alt="" />
+			<img src="/Plus.svg" class="h-4 w-4 font-semibold" alt="" />
 			Create New Club
 		</button>
 	</div>
@@ -216,26 +216,24 @@
 		</p>
 
 		<div class="my-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 xl:gap-6">
-			
-
 			{#each clubCards as card}
 				<div
 					class="rounded-xl overflow-hidden border border-border-light text-[#EEEDEE] font-inter"
 				>
 					<!-- Background image -->
 					<div class="relative">
-						<img src={card.bgImage} alt="Car" class="w-full h-[244px] object-cover" />
+						<img src={card.bgImage} alt="Car" class="w-full h-[35%] object-cover" />
 						<span
-							class="absolute flex items-center top-[18px] text-[15px] font-medium left-4 bg-[#FFFFFF1A] backdrop-blur-[24px] text-white px-2 py-0.5 rounded-full"
+							class="absolute flex items-center top-[18px] text-[15px] font-medium left-4 bg-[#FFFFFF1A] backdrop-blur-[24px] text-white px-3 py-0.5 rounded-full"
 						>
-							<img src="/purpleribin.svg" alt="Alert Icon" class="mr-2 h-7 w-5" />
+							<img src="/purpleribin.svg" alt="Alert Icon" class="mr-1 h-7 w-5" />
 							Your Clan
 						</span>
 
 						<img
 							src={card.profileImage}
 							alt="Profile"
-							class="w-12 h-12 rounded-full object-cover absolute border-black border-4 bottom-[-8%] left-4"
+							class="w-12 h-12 rounded-full object-cover absolute border-black border-4 bottom-[-20%] left-4"
 						/>
 					</div>
 
@@ -257,7 +255,7 @@
 
 							<div class="flex items-center gap-1 text-sm text-gray-400">
 								<img src="/billing/Users.svg" alt="User Icon" class="mr-2 h-5 w-5" />
-								<span>{card.members}</span>
+								<span class="leading-2 font-[15px]">{card.members}</span>
 								<span class="text-[gray] pl-1 text-[15px] leading-2 font-medium">
 									• <span class="pl-1 text-[#EEEDEE]">{card.type}</span>
 								</span>

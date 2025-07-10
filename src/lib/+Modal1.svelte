@@ -103,7 +103,7 @@
 				</div>
 
 				<div>
-<div
+					<div
 						class="relative rounded-lg xl:rounded-2xl flex flex-col gap-1 items-center bg-border border border-border h-full"
 					>
 						<img
@@ -112,17 +112,18 @@
 							class="h-auto w-auto sm:h-full sm:w-full object-cover rounded-lg xl:rounded-2xl"
 						/>
 						<p
-							class="absolute text-center text-[8px] font-medium  sm:text-[10px] md:text-xs lg:text-sm xl:text-[15px] bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-3 xl:bottom-4 left-1 right-1 md:left-2 md:right-2 lg:left-3 lg:right-3 xl:px-3 xl:leading-2"
+							class="absolute text-center text-[8px] font-medium sm:text-[10px] md:text-xs lg:text-sm xl:text-[15px] bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-3 xl:bottom-4 left-1 right-1 md:left-2 md:right-2 lg:left-3 lg:right-3 xl:px-3 xl:leading-2"
 						>
 							Early and Exclusive Map & Traffic Update
 						</p>
-					</div>				</div>
+					</div>
+				</div>
 				<div class="flex flex-col gap-1 sm:gap-2">
 					<div
-						class="rounded-lg xl:rounded-2xl flex flex-col md:gap-8  bg-background-light border border-border  items-center p-5 md:py-[38.5px] "
+						class="rounded-lg xl:rounded-2xl flex flex-col md:gap-8 bg-background-light border border-border items-center p-5 md:py-[38.5px]"
 					>
 						<div
-							class="flex  h-[30px] w-[50px] md:h-[25px] md:w-[80px] border border-red-bg-surface items-center pl-1 gap-1 rounded-2xl font-medium bg-[rgba(155,0,58,0.2)] "
+							class="flex h-[30px] w-[50px] md:h-[25px] md:w-[80px] border border-red-bg-surface items-center pl-1 gap-1 rounded-2xl font-medium bg-[rgba(155,0,58,0.2)]"
 						>
 							<img
 								src="3itir.svg"
@@ -130,8 +131,8 @@
 								alt="tier"
 							/>
 							<span
-								class="whitespace-nowrap text-[#aca9ac] text-[10px] sm:text-[16px]  font-semibold font-inter"
-								>Tier  3</span
+								class="whitespace-nowrap text-[#aca9ac] text-[10px] sm:text-[16px] font-semibold font-inter"
+								>Tier 3</span
 							>
 						</div>
 						<p
@@ -141,7 +142,7 @@
 						</p>
 					</div>
 					<div
-						class="rounded-lg xl:rounded-2xl flex flex-col  items-center bg-background-light border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-2 h-full"
+						class="rounded-lg xl:rounded-2xl flex flex-col items-center bg-background-light border border-border p-1 sm:p-2 md:p-2 lg:p-3 xl:p-2 h-full"
 					>
 						<div class="py-1 xl:py-1">
 							<img
@@ -150,7 +151,7 @@
 								class="  w-24 h-6 md:w-[171px] md:h-[79px]"
 							/>
 						</div>
-						<p class="font-medium text-[8px] sm:text-[10px]  md:text-xs lg:text-sm xl:text-[15px]">
+						<p class="font-medium text-[8px] sm:text-[10px] md:text-xs lg:text-sm xl:text-[15px]">
 							Exclusive Tier 3 Cars
 						</p>
 					</div>

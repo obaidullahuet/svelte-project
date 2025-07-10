@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fade, scale } from 'svelte/transition';
+	import { fade, scale, slide } from 'svelte/transition';
 	import Done from '$lib/+Pauseaction.svelte';
 
 	export let isOpen = false;
@@ -8,12 +8,7 @@
 
 	let selectedMonth = '1 month'; // default selected
 	let showDropdown = false;
-	const months = [
-		{ month: '1 month' },
-		{ month: '2 months' },
-		{ month: '3 months' }
-		
-	];
+	const months = [{ month: '1 month' }, { month: '2 months' }, { month: '3 months' }];
 
 	let showModal = false;
 </script>
@@ -44,7 +39,7 @@
 			</div>
 
 			<p
-				class="text-sm sm:text-lg xl:text-[22px]  font-roboto uppercase leading-4 font-black mb-2 sm:mb-3"
+				class="text-sm sm:text-lg xl:text-[22px] font-roboto uppercase leading-4 font-black mb-2 sm:mb-3"
 			>
 				Pause My Subscription
 			</p>
@@ -61,45 +56,69 @@
 				When would you like to resume your subscription?
 			</p>
 
-			<div class="relative mb-6">
-				<div
-					class="px-[16px] py-[14px] border border-border-light rounded-md cursor-pointer"
-					on:click={() => (showDropdown = !showDropdown)}
-				>
-					<div class="flex items-center justify-between gap-2 font-inter text-[#EEEDEE]">
-						<p>{selectedMonth}</p>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none"
-						>
-							<path
-								d="M20.2969 9.79586L12.7969 17.2959C12.6924 17.4007 12.5682 17.484 12.4314 17.5407C12.2947 17.5975 12.1481 17.6267 12 17.6267C11.8519 17.6267 11.7053 17.5975 11.5686 17.5407C11.4318 17.484 11.3076 17.4007 11.2031 17.2959L3.70312 9.79586C3.49178 9.58451 3.37305 9.29787 3.37305 8.99898C3.37305 8.7001 3.49178 8.41345 3.70312 8.20211C3.91447 7.99076 4.20111 7.87203 4.5 7.87203C4.79888 7.87203 5.08553 7.99076 5.29687 8.20211L12.0009 14.9062L18.705 8.20117C18.9163 7.98983 19.203 7.87109 19.5019 7.87109C19.8008 7.87109 20.0874 7.98983 20.2987 8.20117C20.5101 8.41252 20.6288 8.69916 20.6288 8.99805C20.6288 9.29693 20.5101 9.58358 20.2987 9.79492L20.2969 9.79586Z"
-								fill="white"
-								fill-opacity="0.3"
-							/>
-						</svg>
-					</div>
-				</div>
+			<!-- Dropdown Wrapper -->
+		<script>
+	import { slide } from 'svelte/transition';
 
-				{#if showDropdown}
-					<div class="absolute z-10 w-full bg-[#1a1a1a] border border-border-light rounded-md mt-1">
-						{#each months as item}
-							<div
-								class="px-[16px] py-[14px] hover:bg-[#333] cursor-pointer"
-								on:click={() => {
-									selectedMonth = item.month;
-									showDropdown = false;
-								}}
-							>
-								{item.month}
-							</div>
-						{/each}
-					</div>
-				{/if}
-			</div>
+	let showDropdown = false;
+	let selectedMonth = '1 Month'; // or default
+	let months = [
+		{ month: '1 Month' },
+		{ month: '3 Months' },
+		{ month: '6 Months' },
+		{ month: '12 Months' },
+	];
+</script>
+
+<!-- Dropdown Wrapper -->
+<div class="relative mb-6">
+	<!-- Clickable Dropdown Header -->
+	<div
+		class="px-[16px] py-[14px] border border-border-light rounded-md cursor-pointer"
+		on:click={() => (showDropdown = !showDropdown)}
+	>
+		<div class="flex items-center justify-between gap-2 font-inter text-[#EEEDEE]">
+			<p>{selectedMonth}</p>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="24"
+				height="24"
+				viewBox="0 0 24 24"
+				fill="none"
+				class="transform transition-transform duration-300"
+				class:rotate-180={showDropdown}
+			>
+				<path
+					d="M20.2969 9.79586L12.7969 17.2959C12.6924 17.4007 12.5682 17.484 12.4314 17.5407C12.2947 17.5975 12.1481 17.6267 12 17.6267C11.8519 17.6267 11.7053 17.5975 11.5686 17.5407C11.4318 17.484 11.3076 17.4007 11.2031 17.2959L3.70312 9.79586C3.49178 9.58451 3.37305 9.29787 3.37305 8.99898C3.37305 8.7001 3.49178 8.41345 3.70312 8.20211C3.91447 7.99076 4.20111 7.87203 4.5 7.87203C4.79888 7.87203 5.08553 7.99076 5.29687 8.20211L12.0009 14.9062L18.705 8.20117C18.9163 7.98983 19.203 7.87109 19.5019 7.87109C19.8008 7.87109 20.0874 7.98983 20.2987 8.20117C20.5101 8.41252 20.6288 8.69916 20.6288 8.99805C20.6288 9.29693 20.5101 9.58358 20.2987 9.79492L20.2969 9.79586Z"
+					fill="white"
+					fill-opacity="0.3"
+				/>
+			</svg>
+		</div>
+	</div>
+
+	<!-- Dropdown Options (animated) -->
+	{#if showDropdown}
+		<div
+			transition:slide
+			class="w-full mt-1 border border-border-light rounded-md bg-[#1a1a1a] max-h-[250px] overflow-y-auto"
+		>
+			{#each months as item}
+				<div
+					class="px-[16px] py-[14px] hover:bg-[#333] cursor-pointer"
+					on:click={() => {
+						selectedMonth = item.month;
+						showDropdown = false;
+					}}
+				>
+					{item.month}
+				</div>
+			{/each}
+		</div>
+	{/if}
+</div>
+
+
 			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 sm:gap-0">
 				<button
 					class="text-xs sm:text-[15px] text-gray-400 leading-1 font-semibold font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-sm bg-border-light transition-colors"
@@ -109,8 +128,8 @@
 				</button>
 				<button
 					class="bg-border-selected font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-sm hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
-						on:click={() => {
-						 showModal = true;
+					on:click={() => {
+						showModal = true;
 					}}
 				>
 					Pause subscription
@@ -119,6 +138,5 @@
 		</div>
 	</div>
 {/if}
-
 
 <Done isOpen={showModal} close={() => (showModal = false)} />

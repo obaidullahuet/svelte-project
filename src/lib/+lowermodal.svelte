@@ -39,7 +39,7 @@
 			</div>
 
 			<p
-				class="text-sm sm:text-lg xl:text-[22px] font-roboto uppercase leading-4 font-black mb-2 sm:mb-3"
+				class="text-sm sm:text-lg xl:text-[22px]   font-roboto uppercase leading-4 font-black mb-2 sm:mb-3"
 			>
 				Pause My Subscription
 			</p>
@@ -52,7 +52,7 @@
 				and you will <br /> be charged $10.99 when it resumes.
 			</p>
 
-			<p class="text-[14px] leading-1 font-inter font-normal mb-1.5">
+			<p class="text-[14px] text-[#D3D3D3]  leading-1 font-inter font-normal mb-1.5">
 				When would you like to resume your subscription?
 			</p>
 
@@ -71,8 +71,10 @@
 </script>
 
 <!-- Dropdown Wrapper -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <div class="relative mb-6">
 	<!-- Clickable Dropdown Header -->
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<div
 		class="px-[16px] py-[14px] border border-border-light rounded-md cursor-pointer"
 		on:click={() => (showDropdown = !showDropdown)}
@@ -104,6 +106,7 @@
 			class="w-full mt-1 border border-border-light rounded-md bg-[#1a1a1a] max-h-[250px] overflow-y-auto"
 		>
 			{#each months as item}
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div
 					class="px-[16px] py-[14px] hover:bg-[#333] cursor-pointer"
 					on:click={() => {

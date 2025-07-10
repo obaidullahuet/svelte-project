@@ -109,7 +109,7 @@ let showModal = false;
 	<div class="flex w-full flex-col rounded-2xl border border-[#FFFFFF]/5 bg-[#0D0B0F] p-4">
 		<!-- Heading -->
 		<div class="py-3">
-			<span class=" text-[#EEEDEE] text-[14px] font-medium leading-1 ">Your Subscription</span>
+			<span class=" text-[gray] text-[14px] font-medium leading-1 ">Your Subscription</span>
 		</div>
 
 		<!-- Tier -->
@@ -124,22 +124,23 @@ let showModal = false;
 				src="/3itir.svg"
 				alt="Tier Badge"
 			/>
-			<span class="md:text-[37px] leading-10   font-roboto font-black text-[#EEEDEE] "
-				>UNDERGROUND</span
+			<p
+			 class="md:text-[37px] leading-10   self-stretch  font-roboto font-black text-[#EEEDEE] "
+				>UNDERGROUND</p
 			>
 		</div>
 
 		<!-- Renewal & Actions -->
 		<div
-			class="flex flex-col items-start justify-between gap-4 py-3 text-[17px] text-[#EEEDEE] sm:flex-row sm:items-center "
+			class="flex flex-col items-start justify-between gap-4 py-3 text-[17px] sm:flex-row sm:items-center "
 		>
-			<span class="whitespace-nowrap leading-2 font-normal">
-				New subscription renewal: <span class="font-medium font-inter-tight">28.03.2024</span>
+			<span class="whitespace-nowrap text-[gray] leading-2 font-normal">
+				New subscription renewal: <span class="font-medium font-inter-tight text-[#EEEDEE] ">28.03.2024</span>
 			</span>
 
 			<div class="flex gap-[16px] font-inter text-[17px] font-medium leading-2 justify-end">
 				<button on:click={() => (showModal = true)} class="text-[#B130FF] ">Upgrade</button>
-				<button class="font-normal">Cancel</button>
+				<button class="font-normal text-[gray] ">Cancel</button>
 			</div>
 		</div>
 	</div>

@@ -186,7 +186,7 @@
 				' monthly public car update',
 				'Help & Faq support'
 			],
-			btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-white ',
+			btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-[gray] ',
 			month: '',
 			discount: '-20%'
 		},
@@ -295,7 +295,7 @@
 		<section
 			class="relative z-10 font-inter flex flex-col   items-center justify-end h-full text-[#FFFFFF] text-center  px-4 sm:px-6 md:px-8"
 		>
-			<p class="xl:text-[39px]  text-[25px] font-inter sm:text-[32px] md:text-5xl text-[#EEEDEE]  font-semibold leading-tight">
+			<p class="xl:text-[39px]  text-[25px] font-inter sm:text-[32px] md:text-5xl text-[#EEEDEE]  font-semibold leading-5">
 				No Hesi is always evolving
 			</p>
 			<p
@@ -306,12 +306,12 @@
 			</p>
 			<div class="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center gap-4 sm:gap-4">
 				<button
-					class="bg-border text-[#EEEDEE] font-medium py-[12px] font-inter sm:py-[14px] px-5 sm:px-6 rounded-full text-sm sm:text-base"
+					class="bg-border text-[#EEEDEE] font-medium py-[12px] font-inter sm:py-[14px] px-5 sm:px-6 leading-2 rounded-full text-sm sm:text-base"
 				>
 					See What’s New
 				</button>
 				<button
-					class="bg-[#FFFFFF] text-[#000000] font-medium py-[12px] font-inter sm:py-[14px] px-5 sm:px-6 border border-[#FFFFFF4D] rounded-full text-sm sm:text-base"
+					class="bg-[#FFFFFF] text-[#000000] font-medium py-[12px] font-inter sm:py-[14px] px-5 sm:px-6 leading-2 border border-[#FFFFFF4D] rounded-full text-sm sm:text-base"
 				>
 					VIPs Get First Access
 				</button>
@@ -320,7 +320,7 @@
 	</div>
 
 	<section class="text-[#EEEDEE] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
-		<p class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold mb-3">Announcements</p>
+		<p class="text-lg sm:text-xl md:text-2xl lg:text-[30px] leading-5 font-semibold mb-3">Announcements</p>
 
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
 			<!-- First Left Card -->
@@ -335,9 +335,9 @@
 						   h-[160px] sm:h-[200px] md:h-[240px] lg:h-[260px]"
 					/>
 					<span
-						class="absolute bottom-1 left-1 px-9 py-4 text-xs sm:text-sm md:text-base font-medium border border-border-light text-[#EEEDEE] rounded-full
-							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center"
-					>
+						class="absolute bottom-1 left-1 px-9 py-4 text-xs sm:text-sm md:text-[30px] font-medium border border-border-light text-[#EEEDEE] rounded-full
+							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center leading-10"
+		 			>
 						Limited Times Event
 					</span>
 				</div>
@@ -381,7 +381,7 @@
 						<div>
 							<p class="text-xs sm:text-sm md:text-base lg:text-[18px]">June 13, 2025</p>
 							<p
-								class="text-sm sm:text-base md:text-lg lg:text-[12px] xl:text-[26px] mt-3 font-semibold leading-snug lg:leading-12"
+								class="text-sm sm:text-base md:text-lg lg:text-[12px] xl:text-[24px] mt-3 font-semibold leading-snug lg:leading-[32px] "
 							>
 								Andy shoes are designed to <br>keeping in mind durability as well<br> as trends, the most
 								stylish range of <br> shoes & sandals
@@ -406,7 +406,7 @@
 							class="w-full h-[160px] sm:h-[200px] md:h-[240px] lg:h-[200px] object-cover rounded-2xl sm:rounded-l-2xl sm:rounded-r-none"
 						/>
 						<span
-							class="absolute bottom-1 xl:bottom-1 border border-border-light left-1 px-6 lg:px-4 xl:px-[26px] py-4 lg:text-[11px] text-xs sm:text-sm md:text-sm font-medium xl:text-[16px] whitespace-nowrap text-[#EEEDEE] rounded-full
+							class="absolute bottom-1 xl:bottom-1 border border-border-light left-1 px-6 lg:px-4 xl:px-[24px] py-4 lg:text-[11px] text-xs sm:text-sm md:text-sm font-medium xl:text-[16px] whitespace-nowrap text-[#EEEDEE] rounded-full
 							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center"
 						>
 							Exclusive Gateways
@@ -438,7 +438,7 @@
 	<Test />
 
 	<section class="text-[#EEEDEE] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
-		<p class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold mb-3">VIP-Only Updates</p>
+		<p class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold leading-10 mb-3">VIP-Only Updates</p>
 
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
 			<!-- First Left Card -->
@@ -455,7 +455,7 @@
 
 					<span
 						class="absolute top-1 left-1 px-2 py-2 md:px-9 md:py-3 text-[8px] sm:text-sm md:text-base font-medium text-[#EEEDEE] rounded-full
-							   bg-[#FFFFFF1A] border border-border-light backdrop-blur-[24px] text-center"
+							   bg-[#FFFFFF1A] border border-border-light leading-1 backdrop-blur-[24px] text-center"
 					>
 						Vip Access Car Releases
 					</span>
@@ -535,7 +535,7 @@
 					class="absolute top-[40%] md:top-1/2 left-1/2 lg:left-[58%] transform -translate-x-1/2 -translate-y-1/2 text-center"
 				>
 					<div
-						class="text-[20px] md:text-[30px] whitespace-nowrap font-semibold text-[#EEEDEE] mb-4"
+						class="text-[20px] md:text-[30px] whitespace-nowrap leading-[48px] font-semibold text-[#EEEDEE] mb-4"
 					>
 						Join VIP to Unlock
 					</div>
@@ -544,9 +544,9 @@
 						class="relative inline-flex border border-border-light items-center justify-between bg-[#FFFFFF1A] backdrop-blur-[24px] rounded-full"
 					>
 						<span
-							class="px-6 py-4 text-xs text-[10px] md:text-base font-medium text-[#EEEDEE] rounded-full whitespace-nowrap"
+							class="px-6 py-4 text-xs text-[10px] leading-1 md:text-base font-medium text-[#EEEDEE] rounded-full whitespace-nowrap"
 						>
-							Get VIP Access
+							Get Vip Access
 						</span>
 
 						<!-- Arrow Button -->
@@ -655,7 +655,7 @@
 	</section>
 
 	<section class="px-1 py-2 sm:px-6 md:px-8 lg:px-9">
-						<p class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl lg:text-[30px] font-semibold mb-3">Under The Hood: Devlogs and Patch Notes</p>
+						<p class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl leading-[48px] lg:text-[30px] font-semibold mb-3">Under The Hood: Devlogs and Patch Notes</p>
 
 		{#each devlogCards as log}
 			<div
@@ -673,7 +673,7 @@
 						class="flex gap-6 relative items-center text-sm sm:text-sm md:text-md lg:text-lg xl:text-[22px] font-semibold flex-1 leading-snug"
 					>
 						{#if log.img}
-							<img src={log.img} alt="" class=" h-17 w-20 xl:w-[240px] xl:h-[135px]" />
+							<img src={log.img} alt="" class=" h-17 w-20 xl:w-[240px] leading-[48px] xl:h-[135px]" />
 
 							<!-- Button only shows when image exists -->
 							<button
@@ -689,7 +689,7 @@
 
 				<!-- Right Tag -->
 				<span
-					class="px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-[16px] text-[#EEEDEE] font-inter bg-border-light border border-border-light rounded-full flex items-center gap-2 w-max self-start sm:self-center"
+					class="px-3 py-1.5 sm:px-4 sm:py-2 text-sm sm:text-[16px] text-[#EEEDEE] font-medium font-inter bg-border-light border border-border-light rounded-full flex items-center gap-2 w-max self-start sm:self-center"
 				>
 					<img src={log.icon} alt={log.tag} class="w-4 h-4" />
 					{log.tag}
@@ -703,7 +703,7 @@
 	<section
 		class=" font-inter flex flex-col items-center justify-end h-full text-[#FFFFFF] text-center  sm:px-6 md:px-8"
 	>
-		<p class="text-[30px] sm:text-[32px] md:text-5xl text-[#EEEDEE] font-bold leading-tight py-2">
+		<p class="text-[30px] sm:text-[32px] md:text-[30px] text-[#EEEDEE] font-semibold leading-[48px] py-2">
 			Unlock More Features With VIP
 		</p>
 
@@ -712,7 +712,7 @@
 				<div class="flex items-center justify-center">
 					<div class="relative z-[2] flex rounded-lg p-1">
 						<button
-							class="btn cursor-pointer rounded-md font-inter px-4 py-2 transition-colors delay-150 duration-300"
+							class="btn cursor-pointer rounded-md font-inter text-[15px] font-medium leading-1 px-4 py-2 transition-colors delay-150 duration-300"
 							class:bg-[#FFFFFF]={selected === 'month'}
 							class:text-black={selected === 'month'}
 							class:bg-border={selected !== 'month'}
@@ -723,7 +723,7 @@
 						</button>
 
 						<button
-							class="btn cursor-pointer rounded-md px-4 py-2 transition-colors duration-300"
+							class="btn cursor-pointer rounded-md px-4 py-2 text-[15px] font-medium leading-1 transition-colors duration-300"
 							class:bg-[#FFFFFF]={selected === 'annualy'}
 							class:text-black={selected === 'annualy'}
 							class:bg-border={selected !== 'annualy'}
@@ -741,7 +741,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="group inline-flex cursor-pointer items-center gap-1">
+				<div class="group inline-flex cursor-pointer items-center gap-1 text-[15px] font-medium leading-1">
 					Can't choose? Compare plans
 					<img
 						src="/leftarrow.png"
@@ -750,8 +750,16 @@
 					/>
 				</div>
 
-				<div
-					class=" mt-12 grid grid-cols-1 gap-3  sm:grid-cols-2  lg:grid-cols-2 lg:gap-1 xl:grid-cols-4"
+				
+			</div>
+		</div>
+	</section>
+
+
+
+	<section 		class=" font-inter flex flex-col  justify-end h-full text-[#FFFFFF] text-center  px-1 sm:px-6 md:px-8"
+><div
+					class="  grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:gap-1 xl:grid-cols-4"
 				>
 					{#each plans as plan}
 						<Tiercard
@@ -760,11 +768,9 @@
 							selectedType={selected}
 						/>
 					{/each}
-				</div>
-			</div>
-		</div>
-	</section>
+				</div></section>
 </div>
+
 
 <style>
 	.carousel-container {

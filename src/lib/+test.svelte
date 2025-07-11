@@ -221,7 +221,7 @@ function getScrollAmount(): number {
 
 <section class="px-1 sm:px-6 md:px-8 lg:px-9">
 	<div class="flex items-center justify-between mb-6">
-				<p class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl lg:text-[30px] font-semibold mb-3">Public Updates</p>
+				<p class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl lg:text-[30px] leading-[48px] font-semibold mb-3">Public Updates</p>
 
 		<div class="flex items-center gap-3">
 			<button on:click={scrollLeft} class="w-9 h-9 bg-border-light rounded-full text-white flex items-center justify-center">
@@ -256,7 +256,7 @@ function getScrollAmount(): number {
 						</span>
 					</div>
 					<div class="py-4 px-4 md:px-6 font-inter pr-[58px]">
-						<p class="text-sm lg:text-[18px] text-[#EEEDEE] font-inter mt-2">{card.date}</p>
+						<p class="text-sm lg:text-[18px] text-[#EEEDEE] leading-2 font-inter mt-2">{card.date}</p>
 						<p class="mt-3 text-base sm:text-lg md:text-[18px] font-inter whitespace-pre-line text-[#EEEDEE]  lg:text-[20px] xl:text-[24px] font-semibold leading-snug lg:leading-8">
 							{card.title}
 					</p>
@@ -272,8 +272,8 @@ function getScrollAmount(): number {
 				<div
 					class="bg-border text-[#EEEDEE] font-inter min-w-[85%] lg:w-full sm:min-w-[320px] max-w-[360px] w-full md:w-[48%] xl:w-[366px] h-[400px] lg:h-[455px] rounded-2xl shadow-md p-4 flex flex-col justify-between shrink-0 transition-all duration-300"
 				>
-					<p class="text-[18px] font-inter mb-4">{card.date}</p>
-					<p class="text-[24px] font-semibold font-inter mb-4 leading-8">{card.title}</p>
+					<p class="text-[18px] font-inter leading-2 mb-4">{card.date}</p>
+					<p class="text-[24px] font-semibold font-inter mb-4 leading-9">{card.title}</p>
 					<span class="text-[16px] mb-4 leading-2  font-inter">{card.description}</span>
 					<button class="mt-auto bg-border font-inter text-[16px] px-9 py-2 rounded-full w-max">{card.buttonText}</button>
 				</div>

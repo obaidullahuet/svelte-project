@@ -80,7 +80,7 @@
 						class:roll-down={selectedPrice !== 'Free' && selectedType === 'month'}
 					>
 						<!-- Always visible main price -->
-						<div class="title-gradient font-inter text-4xl font-semibold leading-[48px]">
+						<div class="{selectedPrice !== 'Free' ? 'title-gradient' : ''} font-inter text-4xl font-semibold leading-[48px]">
 							{selectedPrice}
 						</div>
 

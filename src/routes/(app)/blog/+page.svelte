@@ -186,7 +186,7 @@
 				' monthly public car update',
 				'Help & Faq support'
 			],
-			btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-[gray] ',
+			btn: 'bg-[rgba(72,71,76,0.79)] p-[16px_28px] text-[#B0B0B0] ',
 			month: '',
 			discount: '-20%'
 		},

@@ -218,7 +218,7 @@
 		<div class="my-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 xl:gap-6">
 			{#each clubCards as card}
 				<div
-					class="rounded-xl overflow-hidden border border-border-light text-[#EEEDEE] font-inter"
+					class="rounded-xl overflow-hidden border border-border-light hover:border-4 hover:border-[#9747FF33] text-[#EEEDEE] font-inter"
 				>
 					<!-- Background image -->
 					<div class="relative">
@@ -242,7 +242,7 @@
 							<div class="flex items-center gap-[6px]">
 								<p class="font-semibold">{card.clanName}</p>
 								<span
-									class="flex items-center gap-1 bg-background-light border border-border text-[16px] font-medium leading-2 font-inter"
+									class="flex items-center px-2 gap-1 rounded-lg bg-border border border-border text-[16px] font-medium leading-2 font-inter"
 								>
 									<img src={card.clanIcon} alt="Icon" class="w-4 h-4" />
 									{card.clanTag}

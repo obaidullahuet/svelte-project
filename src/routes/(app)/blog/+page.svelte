@@ -295,7 +295,7 @@
 		<section
 			class="relative z-10 font-inter flex flex-col   items-center justify-end h-full text-[#FFFFFF] text-center  px-4 sm:px-6 md:px-8"
 		>
-			<p class="xl:text-[39px]  text-[25px] font-inter sm:text-[32px] md:text-5xl text-[#EEEDEE]  font-semibold leading-5">
+			<p class="xl:text-[39px]  text-[25px] font-inter sm:text-[32px] md:text-5xl text-[#EEEDEE]  font-semibold sm:leading-5">
 				No Hesi is always evolving
 			</p>
 			<p
@@ -335,7 +335,7 @@
 						   h-[160px] sm:h-[200px] md:h-[240px] lg:h-[260px]"
 					/>
 					<span
-						class="absolute bottom-1 left-1 px-9 py-4 text-xs sm:text-sm md:text-[20px] font-medium border border-border-light text-[#EEEDEE] rounded-full
+						class="absolute bottom-1 left-1 px-9 py-4 text-xs sm:text-sm md:text-[16px] font-medium border border-border-light text-[#EEEDEE] rounded-full
 							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center leading-1"
 		 			>
 						Limited Times Event

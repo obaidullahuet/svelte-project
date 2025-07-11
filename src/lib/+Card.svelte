@@ -29,7 +29,7 @@
 <div class="relative">
 	{#if tier === 'Tier 3'}
 		<div
-			class="font-roboto text-md absolute left-0 top-[-34px] z-10 h-[50px] w-[100%] rounded-t-lg bg-[#dd0355] pl-5 pt-[6px] font-[1000] text-white"
+			class="font-roboto text-start text-md leading-1  absolute left-0 top-[-34px] z-10 h-[50px] w-[100%] rounded-t-lg bg-[#dd0355] pl-5 pt-[6px] font-[1000] text-white"
 		>
 			MOST POPULAR
 		</div>
@@ -40,13 +40,7 @@
           p-5 pb-6
            sm:h-[636px] sm:gap-6 sm:p-5 {bg}  backdrop-blur-2xl"
 	>
-		<!-- {#if tier === 'Tier 3'}
-			<div
-				class="font-roboto text-md absolute left-0 top-[-34px] h-[50px] w-[100%] rounded-t-lg bg-[#dd0355] pl-5 pt-[6px] font-bold text-white"
-			>
-				MOST POPULAR
-			</div>
-		{/if} -->
+		
 
 		{#if selectedType === 'annualy' && selectedPrice !== 'Free'}
 			<div

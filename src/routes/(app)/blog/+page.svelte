@@ -335,8 +335,8 @@
 						   h-[160px] sm:h-[200px] md:h-[240px] lg:h-[260px]"
 					/>
 					<span
-						class="absolute bottom-1 left-1 px-9 py-4 text-xs sm:text-sm md:text-[30px] font-medium border border-border-light text-[#EEEDEE] rounded-full
-							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center leading-10"
+						class="absolute bottom-1 left-1 px-9 py-4 text-xs sm:text-sm md:text-[20px] font-medium border border-border-light text-[#EEEDEE] rounded-full
+							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center leading-1"
 		 			>
 						Limited Times Event
 					</span>

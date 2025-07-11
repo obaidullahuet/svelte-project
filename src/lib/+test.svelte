@@ -11,15 +11,16 @@
 		{
 			type: 'image-card',
 			date: 'June 13, 2025',
-			title: 'The beautiful range of Apple Naturalé that  has an exciting mix of natural ingredients.',
-					label: 'Public Car Releases',
+			title:
+				'The beautiful range of Apple Naturalé that  has an exciting mix of natural ingredients.',
+			label: 'Public Car Releases',
 			image: '/blog/Rectangle 165 (2) 1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
 		},
 		{
 			type: 'text-card',
 			date: 'June 13, 2025',
-		title: 'The beautiful range of\nApplee`s Naturalé that has an\nexciting mix of',
+			title: 'The beautiful range of\nApplee`s Naturalé that has an\nexciting mix of',
 
 			description:
 				'Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals',
@@ -29,23 +30,25 @@
 		{
 			type: 'image-card',
 			date: 'June 13, 2025',
-			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
-					label: 'Public Car Releases',
+			title:
+				'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
+			label: 'Public Car Releases',
 			image: '/blog/Rectangle 165 (3) 1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
 		},
 		{
 			type: 'image-card',
 			date: 'June 13, 2025',
-			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
-				label: 'Public Car Releases',
+			title:
+				'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
+			label: 'Public Car Releases',
 			image: '/blog/car1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
 		},
 		{
 			type: 'text-card',
 			date: 'June 13, 2025',
-		title: 'The beautiful range of\nApplee`s Naturalé that has an\nexciting mix of',
+			title: 'The beautiful range of\nApplee`s Naturalé that has an\nexciting mix of',
 			description:
 				'Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals',
 			buttonText: 'General Bug Fixes'
@@ -54,23 +57,25 @@
 		{
 			type: 'image-card',
 			date: 'June 13, 2025',
-			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
-					label: 'Public Car Releases',
+			title:
+				'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
+			label: 'Public Car Releases',
 			image: '/blog/car1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
 		},
 		{
 			type: 'image-card',
 			date: 'June 13, 2025',
-			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
-					label: 'Public Car Releases',
+			title:
+				'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
+			label: 'Public Car Releases',
 			image: '/blog/car1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
 		},
 		{
 			type: 'text-card',
 			date: 'June 13, 2025',
-		title: 'The beautiful range of\nApplee`s Naturalé that has an\nexciting mix of',
+			title: 'The beautiful range of\nApplee`s Naturalé that has an\nexciting mix of',
 			description:
 				'Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals',
 			buttonText: 'General Bug Fixes'
@@ -79,7 +84,8 @@
 		{
 			type: 'image-card',
 			date: 'June 13, 2025',
-			title: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
+			title:
+				'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients.',
 			label: 'Public Car Releases',
 			image: '/blog/car1.svg',
 			buttonIcon: '/blog/ArrowUpRight.svg'
@@ -101,36 +107,34 @@
 	});
 
 	function scrollLeft() {
-	if (!sliderEl) return;
-	const scrollAmount = getScrollAmount();
-	sliderEl.scrollLeft -= scrollAmount;
-	triggerBounce('left');
-	updateActiveIndex();
-}
-
-function scrollRight() {
-	if (!sliderEl) return;
-	const scrollAmount = getScrollAmount();
-	sliderEl.scrollLeft += scrollAmount;
-	triggerBounce('right');
-	updateActiveIndex();
-}
-function getScrollAmount(): number {
-	const screenWidth = window.innerWidth;
-
-	if (screenWidth < 640) {
-		// Mobile
-		return sliderEl.clientWidth * 1;
-	} else if (screenWidth < 1024) {
-		// Tablet
-		return sliderEl.clientWidth * 1;
-	} else {
-		// Desktop and above
-		return sliderEl.clientWidth * 1; // You can tweak this
+		if (!sliderEl) return;
+		const scrollAmount = getScrollAmount();
+		sliderEl.scrollLeft -= scrollAmount;
+		triggerBounce('left');
+		updateActiveIndex();
 	}
-}
 
+	function scrollRight() {
+		if (!sliderEl) return;
+		const scrollAmount = getScrollAmount();
+		sliderEl.scrollLeft += scrollAmount;
+		triggerBounce('right');
+		updateActiveIndex();
+	}
+	function getScrollAmount(): number {
+		const screenWidth = window.innerWidth;
 
+		if (screenWidth < 640) {
+			// Mobile
+			return sliderEl.clientWidth * 1;
+		} else if (screenWidth < 1024) {
+			// Tablet
+			return sliderEl.clientWidth * 1;
+		} else {
+			// Desktop and above
+			return sliderEl.clientWidth * 1; // You can tweak this
+		}
+	}
 
 	function updateActiveIndex() {
 		if (!sliderEl) return;
@@ -140,24 +144,23 @@ function getScrollAmount(): number {
 	}
 
 	function scrollToIndex(index: number) {
-	if (!sliderEl) return;
-	const scrollAmount = getScrollAmount();
-	sliderEl.scrollLeft = index * scrollAmount;
-	activeIndex = index;
-	triggerBounce('right');
-}
-
+		if (!sliderEl) return;
+		const scrollAmount = getScrollAmount();
+		sliderEl.scrollLeft = index * scrollAmount;
+		activeIndex = index;
+		triggerBounce('right');
+	}
 
 	function triggerBounce(direction: 'left' | 'right') {
-	// Only trigger animation on large screens and above (≥1024px)
-	if (window.innerWidth < 1024) return;
+		// Only trigger animation on large screens and above (≥1024px)
+		if (window.innerWidth < 1024) return;
 
-	animClass = direction === 'left' ? 'animate-bounce-pulse-left' : 'animate-bounce-pulse-right';
+		animClass = direction === 'left' ? 'animate-bounce-pulse-left' : 'animate-bounce-pulse-right';
 
-	setTimeout(() => {
-		animClass = '';
-	}, 700);
-}
+		setTimeout(() => {
+			animClass = '';
+		}, 700);
+	}
 
 	function handleScroll() {
 		if (!sliderEl) return;
@@ -168,6 +171,97 @@ function getScrollAmount(): number {
 		updateActiveIndex();
 	}
 </script>
+
+<section class="px-1 sm:px-6 md:px-8 lg:px-9">
+	<div class="flex items-center justify-between mb-6">
+		<p
+			class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl lg:text-[30px] leading-[48px] font-semibold"
+		>
+			Public Updates
+		</p>
+
+		<div class="flex items-center gap-3">
+			<button
+				on:click={scrollLeft}
+				class="w-9 h-9 bg-border-light rounded-full text-white flex items-center justify-center"
+			>
+				<img src="/blog/CaretRight.svg" alt="Left" class=" w-4 h-4" />
+			</button>
+			<button
+				on:click={scrollRight}
+				class="w-9 h-9 bg-border-light rounded-full text-white flex items-center justify-center"
+			>
+				<img src="/blog/CaretRight (1).svg" alt="Right" class="w-4 h-4" />
+			</button>
+		</div>
+	</div>
+
+	<!-- Scrollable Slider -->
+	<div
+		bind:this={sliderEl}
+		class={`flex gap-3 overflow-x-auto scroll-smooth no-scrollbar ${animClass}`}
+		on:scroll={handleScroll}
+	>
+		{#each cards as card}
+			{#if card.type === 'image-card'}
+				<!-- Image Card -->
+				<div
+					class="bg-border sm:w-[360px] md:w-[49%] w-full xl:w-[497px] lg:w-[60%] h-[400px] lg:h-[455px] rounded-3xl p-2 overflow-hidden shadow-md relative flex flex-col shrink-0 transition-all duration-300"
+				>
+					<div class="relative">
+						<img
+							src={card.image}
+							alt="card"
+							class="w-full object-cover rounded-2xl h-[160px] sm:h-[200px] md:h-[200px] lg:h-[260px]"
+						/>
+						<span
+							class="absolute bottom-1 border border-border-light left-1 px-7 py-3 text-sm font-medium text-[#EEEDEE] rounded-full bg-border backdrop-blur-[24px]"
+						>
+							{card.label}
+						</span>
+					</div>
+					<div class="py-4 px-4 md:px-6 font-inter pr-[58px]">
+						<p class="text-sm lg:text-[18px] text-[#EEEDEE] leading-2 font-inter mt-2">
+							{card.date}
+						</p>
+						<p
+							class="mt-3 text-base sm:text-lg md:text-[18px] font-inter whitespace-pre-line text-[#EEEDEE] lg:text-[20px] xl:text-[24px] font-semibold leading-snug lg:leading-8"
+						>
+							{card.title}
+						</p>
+					</div>
+					<!-- <button
+					class="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
+				>
+					<img src="/blog/ArrowUpRight.svg" alt="" />
+				</button> -->
+				</div>
+			{:else}
+				<!-- Text Card -->
+				<div
+					class="bg-border text-[#EEEDEE] font-inter min-w-[85%] lg:w-full sm:min-w-[320px] max-w-[360px] w-full md:w-[48%] xl:w-[366px] h-[400px] lg:h-[455px] rounded-2xl shadow-md p-4 flex flex-col justify-between shrink-0 transition-all duration-300"
+				>
+					<p class="text-[18px] font-inter leading-2 mb-4">{card.date}</p>
+					<p class="text-[24px] font-semibold font-inter mb-4 leading-9">{card.title}</p>
+					<span class="text-[16px] mb-4 leading-2 font-inter">{card.description}</span>
+					<button
+						class="mt-auto bg-border font-inter text-[16px] px-9 py-2 leading-1 rounded-full w-max"
+						>{card.buttonText}</button
+					>
+				</div>
+			{/if}
+		{/each}
+	</div>
+
+	<!-- Dots -->
+	<div class="flex justify-center mt-6 gap-2">
+		{#each dots as _, i}
+			<!-- svelte-ignore a11y-click-events-have-key-events -->
+			<!-- svelte-ignore a11y-no-static-element-interactions -->
+			<span class="dot {i === activeIndex ? 'active' : ''}" on:click={() => scrollToIndex(i)} />
+		{/each}
+	</div>
+</section>
 
 <style>
 	.dot {
@@ -180,7 +274,7 @@ function getScrollAmount(): number {
 	.dot.active {
 		background-color: #ffffff;
 	}
-    @keyframes bouncePulseLeft {
+	@keyframes bouncePulseLeft {
 		0% {
 			transform: translateX(0);
 			opacity: 1;
@@ -218,75 +312,3 @@ function getScrollAmount(): number {
 		animation: bouncePulseRight 0.7s ease-in-out;
 	}
 </style>
-
-<section class="px-1 sm:px-6 md:px-8 lg:px-9">
-	<div class="flex items-center justify-between mb-6">
-				<p class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl lg:text-[30px] leading-[48px] font-semibold mb-3">Public Updates</p>
-
-		<div class="flex items-center gap-3">
-			<button on:click={scrollLeft} class="w-9 h-9 bg-border-light rounded-full text-white flex items-center justify-center">
-				<img src="/blog/CaretRight.svg" alt="Left" class=" w-4 h-4" />
-			</button>
-			<button on:click={scrollRight} class="w-9 h-9 bg-border-light rounded-full text-white flex items-center justify-center">
-				<img src="/blog/CaretRight (1).svg" alt="Right" class="w-4 h-4" />
-			</button>
-		</div>
-	</div>
-
-	<!-- Scrollable Slider -->
-	<div
-	bind:this={sliderEl}
-	class={`flex gap-3 overflow-x-auto scroll-smooth no-scrollbar ${animClass}`}
-	on:scroll={handleScroll}
->
-		{#each cards as card}
-			{#if card.type === 'image-card'}
-				<!-- Image Card -->
-				<div
-					class="bg-border  sm:w-[360px] md:w-[49%] w-full xl:w-[497px] lg:w-[60%] h-[400px] lg:h-[455px]  rounded-3xl p-2 overflow-hidden shadow-md relative flex flex-col shrink-0 transition-all duration-300"
-				>
-					<div class="relative">
-						<img
-							src={card.image}
-							alt="card"
-							class="w-full object-cover rounded-2xl h-[160px] sm:h-[200px] md:h-[200px] lg:h-[260px]"
-						/>
-						<span class="absolute bottom-1 border border-border-light left-1 px-7 py-3 text-sm font-medium text-[#EEEDEE] rounded-full bg-border backdrop-blur-[24px]">
-							{card.label}
-						</span>
-					</div>
-					<div class="py-4 px-4 md:px-6 font-inter pr-[58px]">
-						<p class="text-sm lg:text-[18px] text-[#EEEDEE] leading-2 font-inter mt-2">{card.date}</p>
-						<p class="mt-3 text-base sm:text-lg md:text-[18px] font-inter whitespace-pre-line text-[#EEEDEE]  lg:text-[20px] xl:text-[24px] font-semibold leading-snug lg:leading-8">
-							{card.title}
-					</p>
-					</div>
-						<!-- <button
-					class="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
-				>
-					<img src="/blog/ArrowUpRight.svg" alt="" />
-				</button> -->
-				</div>
-			{:else}
-				<!-- Text Card -->
-				<div
-					class="bg-border text-[#EEEDEE] font-inter min-w-[85%] lg:w-full sm:min-w-[320px] max-w-[360px] w-full md:w-[48%] xl:w-[366px] h-[400px] lg:h-[455px] rounded-2xl shadow-md p-4 flex flex-col justify-between shrink-0 transition-all duration-300"
-				>
-					<p class="text-[18px] font-inter leading-2 mb-4">{card.date}</p>
-					<p class="text-[24px] font-semibold font-inter mb-4 leading-9">{card.title}</p>
-					<span class="text-[16px] mb-4 leading-2  font-inter">{card.description}</span>
-					<button class="mt-auto bg-border font-inter text-[16px] px-9 py-2 rounded-full w-max">{card.buttonText}</button>
-				</div>
-			{/if}
-		{/each}
-	</div>
-
-	<!-- Dots -->
-	<div class="flex justify-center mt-6 gap-2">
-		{#each dots as _, i}
-			<!-- svelte-ignore a11y-click-events-have-key-events -->
-			<!-- svelte-ignore a11y-no-static-element-interactions -->
-			<span class="dot {i === activeIndex ? 'active' : ''}" on:click={() => scrollToIndex(i)}></span>
-		{/each}
-	</div>
-</section>

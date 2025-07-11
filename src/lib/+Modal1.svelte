@@ -118,6 +118,7 @@
 						</p>
 					</div>
 				</div>
+				
 				<div class="flex flex-col gap-1 sm:gap-2">
 					<div
 						class="rounded-lg xl:rounded-2xl flex flex-col md:gap-8 bg-background-light border border-border items-center p-5 md:py-[38.5px]"

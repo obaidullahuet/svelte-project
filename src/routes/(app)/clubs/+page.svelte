@@ -218,7 +218,7 @@
 		<div class="my-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 xl:gap-6">
 			{#each clubCards as card}
 				<div
-					class="rounded-xl overflow-hidden border border-border-light hover:border-4 hover:border-[#9747FF33] text-[#EEEDEE] font-inter"
+					class="rounded-xl overflow-hidden border border-border-light hover:border-4 hover:border-[#9747FF33] transition-all duration-400 text-[#EEEDEE] font-inter"
 				>
 					<!-- Background image -->
 					<div class="relative">

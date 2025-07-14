@@ -1,8 +1,9 @@
-<script>
+<script lang="ts">
 	import { fade, scale } from 'svelte/transition';
 	import PauseModal from '$lib/+lowermodal.svelte';
 	import SwitchModal from '$lib/+SwitchModal.svelte';
 	import CancelModal from '$lib/+CancelModal.svelte';
+	export let label: string;
 	export let isOpen = false;
 	export let close = () => {};
 	let selectedOption = '';
@@ -28,19 +29,26 @@
 </script>
 
 {#if isOpen}
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
+	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 	<div
-		class="fixed inset-0 z-40 text-[#EEEDEE] backdrop-blur-sm p-4 bg-black/60 flex items-center justify-center"
+		class="fixed inset-0 top-20 text-[#EEEDEE] backdrop-blur-sm p-4 bg-black/60 flex items-center justify-center"
 		transition:fade
+		role="dialog"
+		aria-modal="true"
+		on:click={close}
 	>
 		<div
-			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto p-3 sm:p-4 xl:p-6 border border-border relative z-50 backdrop-blur-[64px] bg-border"
+			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto p-3 sm:p-4 xl:p-6 border border-border relative z-50 backdrop-blur-[100%] bg-border"
 			transition:scale
+			on:click|stopPropagation
+			role="document"
 		>
 			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4">
 				<h2
 					class="text-[10px] font-inter sm:text-[15px] text-[#DD0355] uppercase leading-2 font-medium sm:mb-0"
 				>
-					Tier 3 Cancellation
+					Tier {label} Cancellation
 				</h2>
 				<div class="flex items-center gap-1 sm:gap-2">
 					<div class="w-5 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-[#DD0355] rounded-full" />
@@ -198,9 +206,9 @@
 {/if}
 
 {#if showModal && selectedOption === 'pause'}
-	<PauseModal isOpen={showModal} close={() => (showModal = false)} />
+	<PauseModal isOpen={showModal} close={() => (showModal = false)} label={label} bg='[#DD0355]'  />
 {:else if showModal && selectedOption === 'switch'}
-	<SwitchModal isOpen={showModal} close={() => (showModal = false)} />
+	<SwitchModal isOpen={showModal} close={() => (showModal = false)} label={label} bg='[#DD0355]' />
 {:else if showModal && selectedOption === 'cancel'}
-	<CancelModal isOpen={showModal} close={() => (showModal = false)} />
+	<CancelModal isOpen={showModal} close={() => (showModal = false)} label={label} bg='[#DD0355]' />
 {/if}

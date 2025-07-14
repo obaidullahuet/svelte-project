@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { fade, scale } from 'svelte/transition';
 	import Confirm from '$lib/+Confirmcancelmodal.svelte';
-
+	export let label: string;
+	export let bg: string;
 	export let isOpen = false;
 	export let close = () => {};
 	let selectedOption = '';
@@ -46,23 +47,23 @@
 </script>
 
 {#if isOpen}
-	<div
-		class="fixed inset-0 z-40 text-[#EEEDEE] backdrop-blur-sm p-4 bg-black/60 flex items-center justify-center"
+<div
+		class="fixed inset-0  text-[#EEEDEE] backdrop-blur-sm p-4 bg-black/60 flex items-center justify-center"
 		transition:fade
 	>
 		<div
-			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto p-3 sm:p-4 xl:p-6 border border-border relative z-50 backdrop-blur-[64px] bg-border"
+			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto p-3 sm:p-4 xl:p-6 border border-border relative z-50 backdrop-blur-[100%] bg-border"
 			transition:scale
 		>
 			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4">
 				<h2
-					class="text-[10px] font-inter sm:text-[15px] text-[#FF3059] uppercase leading-2 font-medium sm:mb-0"
+					class="text-[10px] font-inter sm:text-[15px] text-{bg} uppercase leading-2 font-medium sm:mb-0"
 				>
-					Cancel of Tier 3 Subscription
+					Cancel of {label} Subscription
 				</h2>
 				<div class="flex items-center gap-1 sm:gap-2">
-					<div class="w-5 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-[#FF3059] rounded-full" />
-					<div class="w-5 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-[#FF3059] rounded-full" />
+					<div class="w-5 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-{bg} rounded-full" />
+					<div class="w-5 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-{bg} rounded-full" />
 
 					<div
 						class="w-5 sm:w-6 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-border border border-border rounded-full"
@@ -188,4 +189,4 @@
 	</div>
 {/if}
 
-<Confirm isOpen={showModal} close={() => (showModal = false)} />
+<Confirm isOpen={showModal} close={() => (showModal = false)} label={label} bg={bg} />

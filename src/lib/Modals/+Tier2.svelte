@@ -1,9 +1,11 @@
-<script>
+<script lang="ts">
 	import { fade, scale } from 'svelte/transition';
 	import PauseModal from '$lib/+lowermodal.svelte';
 	import SwitchModal from '$lib/+SwitchModal.svelte';
 	import CancelModal from '$lib/+CancelModal.svelte';
+	export let label: string;
 	export let isOpen = false;
+
 	export let close = () => {};
 	let selectedOption = '';
 	let showModal = false;
@@ -28,19 +30,26 @@
 </script>
 
 {#if isOpen}
+	<!-- svelte-ignore a11y-click-events-have-key-events -->
+	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 	<div
-		class="fixed inset-0 z-40 text-[#EEEDEE] backdrop-blur-sm p-4 bg-black/60 flex items-center justify-center"
+		class="fixed inset-0 top-20 text-[#EEEDEE] backdrop-blur-sm p-4 bg-black/60 flex items-center justify-center"
 		transition:fade
+		role="dialog"
+		aria-modal="true"
+		on:click={close}
 	>
 		<div
-			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto p-3 sm:p-4 xl:p-6 border border-border relative z-50 backdrop-blur-[64px] bg-border"
+			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto p-3 sm:p-4 xl:p-6 border border-border relative z-50 backdrop-blur-[100%] bg-border"
 			transition:scale
+			on:click|stopPropagation
+			role="document"
 		>
 			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4">
 				<h2
 					class="text-[10px] font-inter sm:text-[15px] text-[#FF8126] uppercase leading-2 font-medium sm:mb-0"
 				>
-					Tier 2 Cancellation
+					Tier {label} Cancellation
 				</h2>
 				<div class="flex items-center gap-1 sm:gap-2">
 					<div class="w-5 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-[#FF8126] rounded-full" />
@@ -63,44 +72,79 @@
 				Canceling now means losing access to:
 			</p>
 
-			<div class="grid grid-cols-[33%_66%] gap-2 font-inter text-white my-5">
-				<div class="grid grid-rows-[40%_58%] gap-2">
-					<!-- <div class="bg-[#181818] rounded-xl flex flex-col justify-between" /></div>
-					<div class="bg-[#181818] rounded-xl flex items-center justify-center text-center" /> </div> -->
+			<div class="md:grid flex flex-wrap md:grid-cols-3 gap-2 font-inter text-white my-5">
+				<!-- Left Column -->
+				<div class="grid grid-cols-2 gap-2 md:grid-cols-1">
+					<!-- <div class="bg-background rounded-lg ">
 						<img
 							src="/modals/Frame 2577.svg"
 							alt="Exclusive Cars"
-							class=" object-cover rounded-lg xl:rounded-2xl"
+							class="  md:h-auto md:w-full  object-cover rounded-lg xl:rounded-2xl"
 						/>
-					<div class=" rounded-xl border-x border-border-light">
+					</div> -->
+									<div>
+					<div
+						class=" rounded-lg xl:rounded-2xl p-4 md:p-6 flex flex-col gap-5  bg-background-light  items-center border border-border h-full"
+					>
+						<img
+							src="/modals/JDM, VTEC.svg"
+							alt="Exclusive Cars"
+							class="h-auto w-auto  object-cover rounded-lg xl:rounded-2xl"
+						/>
+						<!-- <p class="font-inter text-[35px] font-bold" >JDM,VTEC</p> -->
+						<p
+							class="text-center text-[8px] font-medium sm:text-[10px] md:text-xs lg:text-sm xl:text-[15px] bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-3 xl:bottom-4 left-1 right-1 md:left-2 md:right-2 lg:left-3 lg:right-3 xl:px-3 xl:leading-2"
+						>
+							% Manual Servers
+						</p>
+					</div>
+				</div>
+					<div class="rounded-xl border-x border-border-light">
 						<img
 							src="/modals/Frame 2574 (1).svg"
 							alt="Exclusive Cars"
-							class="h-full w-full object-cover rounded-lg xl:rounded-2xl"
+							class="md:h-full md:w-full object-cover rounded-lg xl:rounded-2xl"
 						/>
 					</div>
 				</div>
 
-				<div class="grid grid-rows-[45%_55%] gap-2">
-					<div class="rounded-xl flex gap-2">
+				<!-- Right Column -->
+				<div class="grid grid-rows-2 md:grid-rows-2 gap-2 md:col-span-2">
+					<div class="grid grid-cols-2 gap-2">
+						<!-- <div class=" bg-background-light rounded-lg">
 							<img
 								src="/modals/Frame 2572.svg"
 								alt="Exclusive Cars"
-								class=" object-cover rounded-lg xl:rounded-2xl"
+								class="h-auto w-full object-cover rounded-lg xl:rounded-2xl"
 							/>
-							<img
-								src="/modals/Frame 2570.svg"
-								alt="Exclusive Cars"
-								class=" object-cover rounded-lg xl:rounded-2xl"
-							/>
-					</div>
+						</div> -->
 
-				
+						<div
+						class=" rounded-lg xl:rounded-2xl p-4  flex flex-col gap-5  bg-background-light  items-center border border-border h-full"
+					>
 						<img
-							src="/modals/Frame 2578.svg"
+							src="/modals/clipart4495578 2.svg"
 							alt="Exclusive Cars"
-							class=" object-cover rounded-lg xl:rounded-2xl"
+							class="h-auto w-auto  object-cover rounded-lg xl:rounded-2xl"
 						/>
+						<!-- <p class="font-inter text-[35px] font-bold" >JDM,VTEC</p> -->
+						<p
+							class="text-center text-[8px] font-medium sm:text-[10px] md:text-xs lg:text-sm xl:text-[15px] bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-3 xl:bottom-4 left-1 right-1 md:left-2 md:right-2 lg:left-3 lg:right-3 xl:px-3 xl:leading-2"
+						>
+					        New Monthly Spec Cars in Spec Servers
+						</p>
+					</div>
+						<img
+							src="/modals/Frame 2570.svg"
+							alt="Exclusive Cars"
+							class="h-full w-full object-cover rounded-lg xl:rounded-2xl"
+						/>
+					</div>
+					<img
+						src="/modals/Frame 2578.svg"
+						alt="Exclusive Cars"
+						class="w-uto md:h-full md:w-full object-cover rounded-lg xl:rounded-2xl"
+					/>
 				</div>
 			</div>
 
@@ -183,9 +227,9 @@
 {/if}
 
 {#if showModal && selectedOption === 'pause'}
-	<PauseModal isOpen={showModal} close={() => (showModal = false)} />
+	<PauseModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" />
 {:else if showModal && selectedOption === 'switch'}
-	<SwitchModal isOpen={showModal} close={() => (showModal = false)} />
+	<SwitchModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" />
 {:else if showModal && selectedOption === 'cancel'}
-	<CancelModal isOpen={showModal} close={() => (showModal = false)} />
+	<CancelModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" />
 {/if}

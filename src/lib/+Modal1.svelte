@@ -237,10 +237,10 @@
 	</div>
 {/if}
 
-{#if showModal && selectedOption === 'pause'}
+<!-- {#if showModal && selectedOption === 'pause'}
 	<PauseModal isOpen={showModal} close={() => (showModal = false)} />
 {:else if showModal && selectedOption === 'switch'}
 	<SwitchModal isOpen={showModal} close={() => (showModal = false)} />
 {:else if showModal && selectedOption === 'cancel'}
 	<CancelModal isOpen={showModal} close={() => (showModal = false)} />
-{/if}
+{/if} -->

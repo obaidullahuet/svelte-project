@@ -76,6 +76,9 @@
 		const key = (tier || urlTier) as TierKey;
 		currentTier = key in tiers ? tiers[key] : undefined;
 	}
+	const closeAll = () => {
+    showModal = false;
+};
 </script>
 
 {#if currentTier}
@@ -117,6 +120,8 @@
 				isOpen={showModal}
 				close={() => (showModal = false)}
                 label={currentTier.label}
+				closeAll={closeAll}
+
 			/>
 		{/if}
 	</div>

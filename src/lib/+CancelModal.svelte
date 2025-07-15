@@ -5,6 +5,7 @@
 	export let bg: string;
 	export let isOpen = false;
 	export let close = () => {};
+	export let closeAll = () => {};
 	let selectedOption = '';
 	import { slide } from 'svelte/transition';
 
@@ -42,13 +43,13 @@
 		expandedIndex = expandedIndex === index ? null : index;
 		selectedOption = options[index].title;
 	}
-
+let reasonText = '';
 	let showModal = false;
 </script>
 
 {#if isOpen}
-<div
-		class="fixed inset-0  text-[#EEEDEE] backdrop-blur-sm p-4 bg-black/60 flex items-center justify-center"
+	<div
+		class="fixed inset-0 text-[#EEEDEE] backdrop-blur-sm p-4 bg-black/60 flex items-center justify-center"
 		transition:fade
 	>
 		<div
@@ -71,9 +72,7 @@
 				</div>
 			</div>
 
-			<p
-				class="text-[14px]  xl:text-[22px] leading-4 font-roboto uppercase font-black mb-2 sm:mb-3"
-			>
+			<p class="text-[14px] xl:text-[22px] leading-4 font-roboto uppercase font-black mb-2 sm:mb-3">
 				Why are you canceling?
 			</p>
 
@@ -157,6 +156,7 @@
 									<div class="bg-background w-full h-full rounded-md">
 										<textarea
 											rows="3"
+											bind:value={reasonText}
 											placeholder="Type your reason here..."
 											class="w-full mt-6 bg-border border border-border rounded-md p-4 text-sm text-white placeholder-gray-500 resize-none"
 										/>
@@ -180,7 +180,9 @@
 					on:click={() => {
 						if (selectedOption) showModal = true;
 					}}
-					disabled={!selectedOption}
+					disabled={
+		!selectedOption || (selectedOption === 'Other Reason' && reasonText.trim().length === 0)
+	}
 				>
 					Next Step
 				</button>
@@ -189,4 +191,4 @@
 	</div>
 {/if}
 
-<Confirm isOpen={showModal} close={() => (showModal = false)} label={label} bg={bg} />
+<Confirm isOpen={showModal} close={() => (showModal = false)} {label} {bg} {closeAll} />

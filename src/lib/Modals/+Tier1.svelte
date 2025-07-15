@@ -5,7 +5,8 @@
 	import CancelModal from '$lib/+CancelModal.svelte';
 	export let label: string;
 	export let isOpen = false;
-	export let close = () => {};
+export let close = () => {};
+	export let closeAll = () => {};
 	let selectedOption = '';
 	let showModal = false;
 
@@ -179,9 +180,9 @@
 {/if}
 
 {#if showModal && selectedOption === 'pause'}
-	<PauseModal isOpen={showModal} close={() => (showModal = false)} label={label} bg='[#EEEDEE]'  />
+    <PauseModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" {closeAll} />
 {:else if showModal && selectedOption === 'switch'}
-	<SwitchModal isOpen={showModal} close={() => (showModal = false)} label={label} bg='[#EEEDEE]' />
+    <SwitchModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" {closeAll} />
 {:else if showModal && selectedOption === 'cancel'}
-	<CancelModal isOpen={showModal} close={() => (showModal = false)} label={label} bg='[#EEEDEE]' />
+    <CancelModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" {closeAll} />
 {/if}

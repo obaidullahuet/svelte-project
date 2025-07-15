@@ -5,15 +5,16 @@
 	export let bg: string;
 	export let isOpen = false;
 	export let close = () => {};
+	export let closeAll = () => {};
 	const features = [
 		{
 			text: 'Priority queue + max player slots'
 		},
 		{
-			text: 'Advanced anti-cheat system'
+			text: 'Exclusive Tier 3 cars'
 		},
 		{
-			text: 'Daily automated backups'
+			text: 'New map releases before anyone else'
 		}
 	];
 
@@ -143,6 +144,7 @@
 					class="bg-border-selected font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
                     	on:click={() => {
 						 showModal = true;
+						
 					}}
 				>
 					Continue
@@ -152,4 +154,4 @@
 	</div>
 {/if}
 
-<Done isOpen={showModal} close={() => (showModal = false)}  />
+<Done isOpen={showModal} close={() => (showModal = false)}  {closeAll}  />

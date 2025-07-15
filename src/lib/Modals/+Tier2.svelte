@@ -6,9 +6,10 @@
 	export let label: string;
 	export let isOpen = false;
 
-	export let close = () => {};
 	let selectedOption = '';
 	let showModal = false;
+	export let close = () => {};
+	export let closeAll = () => {};
 
 	const options = [
 		{
@@ -72,16 +73,20 @@
 				Canceling now means losing access to:
 			</p>
 
-			<div class="md:grid flex  md:grid-cols-3 gap-2 font-inter text-white my-5">
+			<div class="md:grid flex md:grid-cols-3 gap-2 font-inter text-white my-5">
 				<!-- Left Column -->
-				<div class="grid grid-cols-2 gap-2 md:grid-cols-1">
-					<div class=" sm:leading-4 py-3 flex flex-wrap sm:flex-col items-center  font-bold sm:text-[28px] bg-gradient-to-br from-[#FF8126] to-[#FA3E18] [background-clip:text] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] text-transparent">
-					
-						<p >Mnaual, JDM</p>
+				<div class="grid grid-rows-2 gap-2 md:grid-cols-1">
+					<div
+						class="w-full text-center px-2 sm:px-3 py-3 sm:py-5 border border-border-light rounded-lg
+        text-[12px] sm:text-[20px] md:text-[24px] xl:text-[28px] font-bold
+        bg-gradient-to-br from-[#FF8126] to-[#FA3E18]
+        [background-clip:text] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] text-transparent"
+					>
+						<p>Manual, JDM</p>
 						<p>And VTEC</p>
 						<p>Servers</p>
 					</div>
-					<div class="rounded-xl border-x border-border-light">
+					<div class="rounded-xl">
 						<img
 							src="/modals/Frame 2574 (1).svg"
 							alt="Exclusive Cars"
@@ -92,13 +97,14 @@
 
 				<!-- Right Column -->
 				<div class="grid grid-rows-2 md:grid-rows-2 gap-2 md:col-span-2">
-					<div class="grid grid-cols-2 gap-2">
-						<div class=" bg-background rounded-lg">
-							<img
-								src="/modals/Frame 2572.svg"
-								alt="Exclusive Cars"
-								class="h-auto w-full object-cover rounded-lg xl:rounded-2xl"
-							/>
+					<div class=" grid grid-cols-2 gap-2">
+						<div class="relative   rounded-lg" style="
+						 background-image: url('/modals/car.png');
+						 background-size: cover;
+						 background-repeat: no-repeat;
+						 background-color: transparent;
+						" >
+							<p class="text-center absolute bottom-2 font-inter text-[15px] font-medium leading-1">New Monthly Spec Cars in Spec Servers</p>
 						</div>
 						<img
 							src="/modals/Frame 2570.svg"
@@ -181,7 +187,7 @@
 				<button
 					class="bg-border-selected font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
 					on:click={() => {
-						if (selectedOption) showModal = true;
+						if (selectedOption)  showModal = true;
 					}}
 					disabled={!selectedOption}
 				>
@@ -193,9 +199,9 @@
 {/if}
 
 {#if showModal && selectedOption === 'pause'}
-	<PauseModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" />
+    <PauseModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" {closeAll} />
 {:else if showModal && selectedOption === 'switch'}
-	<SwitchModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" />
+    <SwitchModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" {closeAll} />
 {:else if showModal && selectedOption === 'cancel'}
-	<CancelModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" />
+    <CancelModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" {closeAll} />
 {/if}

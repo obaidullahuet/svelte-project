@@ -12,6 +12,8 @@
 	const months = [{ month: '1 month' }, { month: '2 months' }, { month: '3 months' }];
 
 	let showModal = false;
+	export let closeAll = () => {};
+
 </script>
 
 {#if isOpen}
@@ -151,4 +153,4 @@
 	</div>
 {/if}
 
-<Done isOpen={showModal} close={() => (showModal = false)}  />
+<Done isOpen={showModal} close={() => (showModal = false)} {closeAll} />

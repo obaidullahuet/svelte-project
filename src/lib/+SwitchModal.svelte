@@ -6,6 +6,7 @@
 	export let bg: string;
 	export let isOpen = false;
 	export let close = () => {};
+		export let closeAll = () => {};
 
 	let selectedOption = '';
 	let showModal = false;
@@ -114,7 +115,7 @@ const mappedLabel = `tier${label}`;
 				</div>
 			{/if}
 			<p class="text-[16px] text-[#EEEDEE] mb-3">
-				Your can choose from the following subscription types
+				You can choose from the following subscription types
 			</p>
 
 			{#each otherTiers as tier}
@@ -203,4 +204,4 @@ const mappedLabel = `tier${label}`;
 	</div>
 {/if}
 
-<Done isOpen={showModal} close={() => (showModal = false)} />
+<Done isOpen={showModal} close={() => (showModal = false)}  {closeAll}  />

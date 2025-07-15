@@ -238,9 +238,9 @@
 {/if}
 
 <!-- {#if showModal && selectedOption === 'pause'}
-	<PauseModal isOpen={showModal} close={() => (showModal = false)} />
+	<PauseModal isOpen={showModal} close={() => (showModal = false)} label={label} bg='[#DD0355]'  />
 {:else if showModal && selectedOption === 'switch'}
-	<SwitchModal isOpen={showModal} close={() => (showModal = false)} />
+	<SwitchModal isOpen={showModal} close={() => (showModal = false)} label={label} bg='[#DD0355]' />
 {:else if showModal && selectedOption === 'cancel'}
-	<CancelModal isOpen={showModal} close={() => (showModal = false)} />
+	<CancelModal isOpen={showModal} close={() => (showModal = false)} label={label} bg='[#DD0355]' />
 {/if} -->

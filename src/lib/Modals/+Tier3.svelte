@@ -6,6 +6,7 @@
 	export let label: string;
 	export let isOpen = false;
 	export let close = () => {};
+	export let closeAll = () => {};
 	let selectedOption = '';
 	let showModal = false;
 
@@ -194,8 +195,10 @@
 				<button
 					class="bg-border-selected font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
 					on:click={() => {
-						if (selectedOption) showModal = true;
+						if (selectedOption) showModal = true;   
+						
 					}}
+				
 					disabled={!selectedOption}
 				>
 					Next Step
@@ -206,9 +209,9 @@
 {/if}
 
 {#if showModal && selectedOption === 'pause'}
-	<PauseModal isOpen={showModal} close={() => (showModal = false)} label={label} bg='[#DD0355]'  />
+    <PauseModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" {closeAll} />
 {:else if showModal && selectedOption === 'switch'}
-	<SwitchModal isOpen={showModal} close={() => (showModal = false)} label={label} bg='[#DD0355]' />
+    <SwitchModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" {closeAll} />
 {:else if showModal && selectedOption === 'cancel'}
-	<CancelModal isOpen={showModal} close={() => (showModal = false)} label={label} bg='[#DD0355]' />
+    <CancelModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" {closeAll} />
 {/if}

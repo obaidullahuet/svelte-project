@@ -97,7 +97,7 @@
 			<p
 				class="text-sm sm:text-lg xl:text-[22px] leading-8 font-roboto uppercase font-black mb-2 sm:mb-3"
 			>
-				Your subscription has <br /> paused
+				Your subscription has been<br /> paused
 			</p>
 
 			<p class="text-[16px] font-inter py-[2px] text-[#EEEDEE] mb-3">

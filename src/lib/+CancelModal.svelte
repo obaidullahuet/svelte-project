@@ -60,7 +60,7 @@ let reasonText = '';
 				<h2
 					class="text-[10px] font-inter sm:text-[15px] text-{bg} uppercase leading-2 font-medium sm:mb-0"
 				>
-					Cancel of tier {label} Subscription
+					Cancel of tier &nbsp; {label} Subscription
 				</h2>
 				<div class="flex items-center gap-1 sm:gap-2">
 					<div class="w-5 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-{bg} rounded-full" />
@@ -157,7 +157,7 @@ let reasonText = '';
 										<textarea
 											rows="3"
 											bind:value={reasonText}
-											placeholder="Type your reason here..."
+											placeholder="Your feeback mateters!"
 											class="w-full mt-6 bg-border border border-border rounded-md p-4 text-sm text-white placeholder-gray-500 resize-none"
 										/>
 									</div>
@@ -170,7 +170,7 @@ let reasonText = '';
 
 			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 sm:gap-0">
 				<button
-					class="text-xs sm:text-[15px] text-gray-400 font-semibold leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-md bg-border-light transition-colors"
+					class="text-xs sm:text-[15px] text-gray-400 font-semibold leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-sm bg-border-light transition-colors"
 					on:click={close}
 				>
 					Back

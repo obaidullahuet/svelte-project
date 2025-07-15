@@ -100,7 +100,7 @@
 			<p
 				class="text-[14px] sm:text-[20px] xl:text-[22px] leading-4 font-roboto uppercase font-black mb-2 sm:mb-3"
 			>
-				Your subscription has <br /> been canceled
+				Your subscription has been <br /> been canceled
 			</p>
 
 			<p class="text-[16px] font-inter py-[2px] text-[#EEEDEE] mb-3">We're sorry to see you go!</p>

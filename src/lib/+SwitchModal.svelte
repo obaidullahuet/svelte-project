@@ -66,7 +66,7 @@ const mappedLabel = `tier${label}`;
 				<h2
 					class="text-[10px] font-inter sm:text-[16px] text-{bg} uppercase leading-2 font-medium sm:mb-0"
 				>
-					Cancel of tier  {label} Subscription
+					Cancel of tier &nbsp; {label} Subscription
 				</h2>
 				<div class="flex items-center gap-1 sm:gap-2">
 					<div class="w-5 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-{bg} rounded-full" />

@@ -40,12 +40,12 @@
 		on:click={close}
 	>
 		<div
-			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto p-3 sm:p-4 xl:p-6 border border-border relative z-50 backdrop-blur-[100%] bg-border"
+			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto p-3 sm:p-4 xl:p-3 border border-border relative z-50 backdrop-blur-[100%] bg-border"
 			transition:scale
 			on:click|stopPropagation
 			role="document"
 		>
-			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4">
+			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 sm:mb-2">
 				<h2
 					class="text-[10px] font-inter sm:text-[15px] text-[#DD0355] uppercase leading-2 font-medium sm:mb-0"
 				>
@@ -63,17 +63,17 @@
 			</div>
 
 			<p
-				class="text-sm sm:text-lg xl:text-[22px] leading-9 font-roboto uppercase font-black mb-2 sm:mb-3"
+				class="text-sm sm:text-lg xl:text-[22px] leading-9 font-roboto uppercase font-black mb-2 sm:mb-2"
 			>
 				Wait! Want to Keep Driving?
 			</p>
 
-			<p class="text-xs sm:text-[16px] leading-2 text-[gray] mb-3 sm:mb-4">
+			<p class="text-xs sm:text-[16px] leading-2 text-[gray] mb-2 sm:mb-2">
 				Canceling now means losing access to:
 			</p>
 
-			<div class="grid grid-rows-2 gap-2 font-inter text-white my-5">
-				<div class="grid grid-cols-[62%_36%] gap-2 ">
+			<div class="grid grid-rows-2  gap-1 mb-2 font-inter text-white ">
+				<div class="grid grid-cols-[62%_36%] gap-1 ">
 					<div
 						class="    "
 					>
@@ -110,25 +110,10 @@
 							class=" object-cover rounded-lg xl:rounded-2xl"
 						/>
 				</div>
-				<!-- <div class="grid grid-rows-2 gap-2">
-					<div class=" rounded-xl border-x border-border-light">
-						<img
-							src="/modals/Frame 2574 (1).svg"
-							alt="Exclusive Cars"
-							class="h-full w-full object-cover rounded-lg xl:rounded-2xl"
-						/>
-					</div>
-					<div class=" rounded-xl border-x border-border-light">
-						<img
-							src="/modals/Frame 2577.svg"
-							alt="Exclusive Cars"
-							class="h-full w-full object-cover rounded-lg xl:rounded-2xl"
-						/>
-					</div>
-				</div> -->
+				
 			</div>
 
-			<div class="space-y-1 sm:space-y-2 mb-4 sm:mb-5">
+			<div class="space-y-1 sm:space-y-1 mb-3 sm:mb-3">
 				{#each options as option}
 					<button
 						on:click={() => (selectedOption = option.key)}

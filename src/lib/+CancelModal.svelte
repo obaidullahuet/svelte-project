@@ -49,7 +49,7 @@ let reasonText = '';
 
 {#if isOpen}
 	<div
-		class="fixed inset-0 text-[#EEEDEE] backdrop-blur-sm p-4 bg-black/60 flex items-center justify-center"
+		class="fixed inset-0  text-[#EEEDEE] backdrop-blur-sm p-4 bg-black/60 flex items-center justify-center"
 		transition:fade
 	>
 		<div
@@ -60,7 +60,7 @@ let reasonText = '';
 				<h2
 					class="text-[10px] font-inter sm:text-[15px] text-{bg} uppercase leading-2 font-medium sm:mb-0"
 				>
-					Cancel of {label} Subscription
+					Cancel of tier {label} Subscription
 				</h2>
 				<div class="flex items-center gap-1 sm:gap-2">
 					<div class="w-5 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-{bg} rounded-full" />
@@ -176,7 +176,7 @@ let reasonText = '';
 					Back
 				</button>
 				<button
-					class="bg-border-selected font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
+					class="bg-[#8800F0]  font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
 					on:click={() => {
 						if (selectedOption) showModal = true;
 					}}

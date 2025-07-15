@@ -119,7 +119,7 @@
 				</div>
 			</div>
 
-			<div class="space-y-1 sm:space-y-2 mb-4 sm:mb-5">
+			<div class="space-y-1 sm:space-y-2 mb-0.5 sm:mb-5">
 				{#each options as option}
 					<button
 						on:click={() => (selectedOption = option.key)}
@@ -133,7 +133,7 @@
 							<span class="font-semibold text-xs leading-3 sm:text-sm xl:text-[18px] block"
 								>{option.title}</span
 							>
-							<p class="text-[10px] sm:text-[14px] text-[gray] leading-1 mt-1">{option.desc}</p>
+							<p class="text-[10px] sm:text-[14px] text-[gray] leading-1 sm:mt-1">{option.desc}</p>
 						</div>
 
 						<div class="ml-2 sm:ml-3 flex-shrink-0">
@@ -176,7 +176,7 @@
 			</div>
 
 			<!-- Action buttons -->
-			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 sm:gap-0">
+			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-1 sm:gap-2">
 				<button
 					class="text-xs sm:text-[15px] font-semibold text-gray-400 leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-md bg-border-light transition-colors"
 					on:click={close}
@@ -184,7 +184,7 @@
 					Cancel
 				</button>
 				<button
-					class="bg-border-selected font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
+					class="bg-[#8800F0]  font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
 					on:click={() => {
 						if (selectedOption)  showModal = true;
 					}}

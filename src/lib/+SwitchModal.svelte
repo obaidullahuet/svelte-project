@@ -13,7 +13,7 @@
 
 	const tiers = [
 		{
-			name: 'Tier 1',
+			name: 'TIER 1',
 			price: '$2.99',
 			img: '/Vector (1).svg',
 			bg: 'from-[#383737] to-[#08060a] via-[#08060a] via-44%',
@@ -22,7 +22,7 @@
 			label: "PUBLIC+	"
 		},
 		{
-			name: 'Tier 2',
+			name: 'TIER 2',
 			price: '$6.99',
 			img: '/ortire.svg',
 			bg: 'from-[#291814] to-[#08060a] via-[#08060a] via-44%',
@@ -31,7 +31,7 @@
 			label: "MIDNIGHT"
 		},
 		{
-			name: 'Tier 3',
+			name: 'TIER 3',
 			price: '$10.99',
 			img: '/3itir.svg',
 			bg: 'from-[#241215] to-[#08060a] via-[#08060a] via-44%',
@@ -66,7 +66,7 @@ const mappedLabel = `tier${label}`;
 				<h2
 					class="text-[10px] font-inter sm:text-[16px] text-{bg} uppercase leading-2 font-medium sm:mb-0"
 				>
-					Cancel of {label} Subscription
+					Cancel of tier  {label} Subscription
 				</h2>
 				<div class="flex items-center gap-1 sm:gap-2">
 					<div class="w-5 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-{bg} rounded-full" />
@@ -85,7 +85,7 @@ const mappedLabel = `tier${label}`;
 			</p>
 
 		
-			<p class="text-xs sm:text-sm text-[gray] mb-3 sm:mb-4">Your current subscription</p>
+			<p class="text-xs sm:text-sm text-[#EEEDEE] mb-3 sm:mb-4">Your current subscription</p>
 
 			{#if current}
 				<div class="flex justify-center font-inter mb-3">
@@ -94,7 +94,7 @@ const mappedLabel = `tier${label}`;
 					>
 						<div class={`flex flex-wrap items-center gap-1 ${current.dp}`}>
 							<img class={`h-5 w-5 ${current.dp}`} src={current.img} alt="Tier Badge" />
-							<span class="font-roboto text-[16px] leading-1 font-medium italic text-[#EEEDEE]">
+							<span class="font-roboto text-[16px] leading-1 font-medium  text-[#EEEDEE]">
 								{current.name}
 							</span>
 						</div>
@@ -190,7 +190,7 @@ const mappedLabel = `tier${label}`;
 					Keep my subscription
 				</button>
 				<button
-					class="bg-border-selected font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
+					class="bg-[#8800F0]  font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
 					on:click={() => {
 						if (selectedOption) showModal = true;
 					

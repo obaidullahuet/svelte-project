@@ -112,7 +112,7 @@
 	<p class="text-[39px] font-inter font-semibold leading-5 text-[#EEEDEE]">Billing</p>
 </div>
 
- <div class=" flex justify-center px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
+ <!-- <div class=" flex justify-center px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
 
 	<div class="flex w-full flex-col rounded-2xl border border-[#FFFFFF]/5 bg-[#0D0B0F] p-4">
 		<div class="py-3">
@@ -147,7 +147,7 @@
 			</div>
 		</div>
 	</div>
-</div> 
+</div>  -->
 <!-- <div class=" flex justify-center px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
 	<div class="flex w-full flex-col rounded-2xl border border-[#FFFFFF]/5 bg-[#0D0B0F] p-4">
 		<div class="py-3">
@@ -264,4 +264,4 @@
 <CancelModal3 isOpen={showModal3} close={() => (showModal3 = false)} /> -->
 
 
-	<SubscriptionTier tier='2' />
+	<SubscriptionTier tier='3' />

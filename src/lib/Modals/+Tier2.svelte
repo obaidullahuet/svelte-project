@@ -72,33 +72,15 @@
 				Canceling now means losing access to:
 			</p>
 
-			<div class="md:grid flex flex-wrap md:grid-cols-3 gap-2 font-inter text-white my-5">
+			<div class="md:grid flex  md:grid-cols-3 gap-2 font-inter text-white my-5">
 				<!-- Left Column -->
 				<div class="grid grid-cols-2 gap-2 md:grid-cols-1">
-					<!-- <div class="bg-background rounded-lg ">
-						<img
-							src="/modals/Frame 2577.svg"
-							alt="Exclusive Cars"
-							class="  md:h-auto md:w-full  object-cover rounded-lg xl:rounded-2xl"
-						/>
-					</div> -->
-									<div>
-					<div
-						class=" rounded-lg xl:rounded-2xl p-4 md:p-6 flex flex-col gap-5  bg-background-light  items-center border border-border h-full"
-					>
-						<img
-							src="/modals/JDM, VTEC.svg"
-							alt="Exclusive Cars"
-							class="h-auto w-auto  object-cover rounded-lg xl:rounded-2xl"
-						/>
-						<!-- <p class="font-inter text-[35px] font-bold" >JDM,VTEC</p> -->
-						<p
-							class="text-center text-[8px] font-medium sm:text-[10px] md:text-xs lg:text-sm xl:text-[15px] bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-3 xl:bottom-4 left-1 right-1 md:left-2 md:right-2 lg:left-3 lg:right-3 xl:px-3 xl:leading-2"
-						>
-							% Manual Servers
-						</p>
+					<div class=" sm:leading-4 py-3 flex flex-wrap sm:flex-col items-center  font-bold sm:text-[28px] bg-gradient-to-br from-[#FF8126] to-[#FA3E18] [background-clip:text] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] text-transparent">
+					
+						<p >Mnaual, JDM</p>
+						<p>And VTEC</p>
+						<p>Servers</p>
 					</div>
-				</div>
 					<div class="rounded-xl border-x border-border-light">
 						<img
 							src="/modals/Frame 2574 (1).svg"
@@ -111,29 +93,13 @@
 				<!-- Right Column -->
 				<div class="grid grid-rows-2 md:grid-rows-2 gap-2 md:col-span-2">
 					<div class="grid grid-cols-2 gap-2">
-						<!-- <div class=" bg-background-light rounded-lg">
+						<div class=" bg-background rounded-lg">
 							<img
 								src="/modals/Frame 2572.svg"
 								alt="Exclusive Cars"
 								class="h-auto w-full object-cover rounded-lg xl:rounded-2xl"
 							/>
-						</div> -->
-
-						<div
-						class=" rounded-lg xl:rounded-2xl p-4  flex flex-col gap-5  bg-background-light  items-center border border-border h-full"
-					>
-						<img
-							src="/modals/clipart4495578 2.svg"
-							alt="Exclusive Cars"
-							class="h-auto w-auto  object-cover rounded-lg xl:rounded-2xl"
-						/>
-						<!-- <p class="font-inter text-[35px] font-bold" >JDM,VTEC</p> -->
-						<p
-							class="text-center text-[8px] font-medium sm:text-[10px] md:text-xs lg:text-sm xl:text-[15px] bottom-1 sm:bottom-2 md:bottom-3 lg:bottom-3 xl:bottom-4 left-1 right-1 md:left-2 md:right-2 lg:left-3 lg:right-3 xl:px-3 xl:leading-2"
-						>
-					        New Monthly Spec Cars in Spec Servers
-						</p>
-					</div>
+						</div>
 						<img
 							src="/modals/Frame 2570.svg"
 							alt="Exclusive Cars"

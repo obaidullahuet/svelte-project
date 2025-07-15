@@ -13,18 +13,18 @@
 	const options = [
 		{
 			key: 'pause',
-			title: 'Pause My Subscription',
-			desc: 'Temporarily stop payments & keep your data'
+			title: 'Take a break, keep your data',
+			desc: 'Pause payments, and keep your presets for when you return.'
 		},
 		{
 			key: 'switch',
 			title: 'Switch to a Lower Tier',
-			desc: 'Stay on Tier 1 for just $2.99/month,'
+			desc: 'Tier 1 let`s you stay connected for just $2.99'
 		},
 		{
 			key: 'cancel',
 			title: 'Continue to Cancel',
-			desc: 'Still want to cancel'
+			desc: 'I’m okay permanently losing all my created presets.'
 		}
 	];
 </script>

@@ -12,28 +12,25 @@
 	const options = [
 		{
 			title: 'Too expensive',
-			description: 'You can pause your subscription and resume at any time without losing data.'
+			description: 'Looking for a more affordable option? You can switch to a lower-tier plan and still keep access to core features. Choose a cheaper plan'
 		},
 		{
 			title: 'I don’t have time',
-			description: 'Lower your plan to reduce costs while keeping essential features.'
+			description: 'Life gets busy — we get it. But you can always pause your subscription and return anytime! Pause instead of canceling'
 		},
 		{
 			title: 'I only wanted to try it out',
 			description:
-				'We’re constantly adding new content and features. You might like what’s coming next! See what’s coming soon.'
+				'We’re constantly adding new content and features. You might like what’s coming next! See what’s coming soon'
 		},
 		{
 			title: 'Technical issues / bugs',
-			description: 'If you still want to cancel, we’ll guide you through the final steps.'
+			description: 'Did you know you can open a ticket in our discord and get direct support from a support member to assist you with your problem? Open Discord Channel'
 		},
+		
 		{
 			title: 'Didn’t enjoy the content',
-			description: 'If you still want to cancel, we’ll guide you through the final steps.'
-		},
-		{
-			title: 'Other Reason',
-			description: 'Your feedback matters!'
+			description: 'We’re always improving and would love your feedback.'
 		}
 	];
 
@@ -132,12 +129,12 @@ let reasonText = '';
 								in:slide
 								out:slide
 								class={`mt-[-8px]  gap-2.5 flex items-center rounded-sm text-xs sm:text-smspace-y-3 ${
-									option.title !== 'Other Reason'
+									option.title !== 'Didn’t enjoy the content'
 										? 'bg-[linear-gradient(0deg,rgba(255,214,67,0.05)_0%,rgba(255,214,67,0)_100%)] h-[58px] bg-border-light p-4'
 										: 'bg-background text-white px-4 h-[136px] rounded-md'
 								}`}
 							>
-								{#if option.title !== 'Other Reason'}
+								{#if option.title !== 'Didn’t enjoy the content'}
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										width="18"
@@ -181,7 +178,7 @@ let reasonText = '';
 						if (selectedOption) showModal = true;
 					}}
 					disabled={
-		!selectedOption || (selectedOption === 'Other Reason' && reasonText.trim().length === 0)
+		!selectedOption || (selectedOption === 'Didn’t enjoy the content' && reasonText.trim().length === 0)
 	}
 				>
 					Next Step

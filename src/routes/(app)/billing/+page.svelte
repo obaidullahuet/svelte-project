@@ -10,16 +10,14 @@
 	let showModal2 = false;
 	let showModal3 = false;
 
-
-
 	function closeModal() {
 		showModal = false;
 	}
 
+	let isOpen = false;
 </script>
 
-// @ts-nocheck
-<div class="mt-[100px] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
+<div class="hidden lg:block   mt-[100px] px-2 sm:px-6 md:px-8 lg:px-9 font-inter">
 	<nav class="rounded-2xl py-3">
 		<div class="flex flex-wrap items-center text-[#EEEDEE] justify-start lg:justify-end">
 			<div class="px-2 bg-border border border-[#FFFFFF]/5 rounded-2xl py-2 font-inter-tight">
@@ -108,11 +106,180 @@
 	</nav>
 </div>
 
-<div class=" my-10 px-1 sm:px-6 md:px-8 lg:px-9">
+<!-- Sidebar Wrapper -->
+
+
+<!-- <div class=" my-10  px-2 sm:px-6 md:px-8 lg:px-9">
+	<div
+		class="w-full text-[#EEEDEE] max-w-xs bg-border border border-border-light rounded-2xl p-4 space-y-2"
+	>
+		<div
+			class="flex items-center justify-between px-3 py-2 rounded-lg bg-border border border-[#333] cursor-pointer"
+			on:click={() => (isOpen = !isOpen)}
+		>
+			<div class="flex items-center gap-2">
+				<img src="/billing/Crown.svg" alt="Crown" class="h-5 w-5" />
+				<span class="text-sm sm:text-base font-bold uppercase">Leaderboard</span>
+			</div>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="h-4 w-4 text-white transform transition-transform duration-300 {isOpen
+					? 'rotate-180'
+					: ''}"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+			</svg>
+		</div>
+
+		{#if isOpen}
+			<div  class="space-y-1 mt-2">
+				<a
+					href="/home"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 "
+				>
+					<img src="/billing/House.svg" alt="Home" class="h-5 w-5" />
+					<span class="text-sm sm:text-base font-bold uppercase">Home</span>
+				</a>
+
+				<a
+					href="/leaderboard"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
+					<img src="/billing/Crown.svg" alt="Leaderboard" class="h-5 w-5" />
+					<span class="text-sm sm:text-base font-bold uppercase">Leaderboard</span>
+				</a>
+
+				<a
+					href="/friends"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 "
+				>
+					<img src="/billing/Users.svg" alt="Friends" class="h-5 w-5" />
+					<span class="text-sm sm:text-base font-bold uppercase">Friends</span>
+				</a>
+
+				<a
+					href="/clients"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
+					<img src="/billing/fi_6557720.svg" alt="Clients" class="h-5 w-5" />
+					<span class="text-sm sm:text-base font-bold uppercase">Clients</span>
+				</a>
+
+				<a
+					href="/edit-profile"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
+					<img src="/billing/PencilSimple.svg" alt="Edit" class="h-5 w-5" />
+					<span class="text-sm sm:text-base font-bold uppercase">Edit Profile</span>
+				</a>
+
+				<a
+					href="/subscriptions"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 "
+				>
+					<img src="/billing/Cube.svg" alt="Subscriptions" class="h-5 w-5" />
+					<span class="text-sm sm:text-base font-bold uppercase">Subscriptions</span>
+				</a>
+
+				<a
+					href="/transactions"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 "
+				>
+					<img src="/billing/Cube.svg" alt="Transactions" class="h-5 w-5" />
+					<span class="text-sm sm:text-base font-bold uppercase">Transactions</span>
+				</a>
+
+				<a
+					href="/billing"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 "
+				>
+					<img src="/billing/fi_9554529.svg" alt="Billing" class="h-5 w-5" />
+					<span class="text-sm sm:text-base font-bold uppercase">Billing</span>
+				</a>
+			</div>
+		{/if}
+	</div>
+</div> -->
+
+
+<div class="relative  mt-[100px] px-2 sm:px-6 md:px-8 lg:px-9 lg:hidden">
+	<!-- Wrapper with z-index to bring it above others -->
+	<div
+		class="relative z-50 text-[#EEEDEE] max-w-xs bg-background border border-border-light rounded-2xl p-4"
+	>
+		<!-- Header Button -->
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
+		<div
+			class="flex items-center justify-between px-3 py-2 rounded-lg bg-border border border-[#333] cursor-pointer"
+			on:click={() => (isOpen = !isOpen)}
+		>
+			<div class="flex items-center gap-2">
+				<img src="/billing/Crown.svg" alt="Crown" class="h-5 w-5" />
+				<span class="text-sm sm:text-base font-bold uppercase">Leaderboard</span>
+			</div>
+
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class={`h-4 w-4 text-white transform transition-transform duration-300 ${
+					isOpen ? 'rotate-180' : ''
+				}`}
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+			</svg>
+		</div>
+
+		{#if isOpen}
+			<div
+				class="absolute left-0 right-0 top-[80px]  bg-background border border-border-light rounded-xl p-2 shadow-xl space-y-1"
+			>
+				<a href="/home" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+					<img src="/billing/House.svg" alt="Home" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Home</span>
+				</a>
+				<a href="/leaderboard" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+					<img src="/billing/Crown.svg" alt="Leaderboard" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Leaderboard</span>
+				</a>
+				<a href="/friends" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+					<img src="/billing/Users.svg" alt="Friends" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Friends</span>
+				</a>
+				<a href="/clients" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+					<img src="/billing/fi_6557720.svg" alt="Clients" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Clients</span>
+				</a>
+				<a href="/edit-profile" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+					<img src="/billing/PencilSimple.svg" alt="Edit" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Edit Profile</span>
+				</a>
+				<a href="/subscriptions" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+					<img src="/billing/Cube.svg" alt="Subscriptions" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Subscriptions</span>
+				</a>
+				<a href="/transactions" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+					<img src="/billing/Cube.svg" alt="Transactions" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Transactions</span>
+				</a>
+				<a href="/billing" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+					<img src="/billing/fi_9554529.svg" alt="Billing" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Billing</span>
+				</a>
+			</div>
+		{/if}
+	</div>
+</div>
+<div class=" my-10 px-2 sm:px-6 md:px-8 lg:px-9">
 	<p class="text-[39px] font-inter font-semibold leading-5 text-[#EEEDEE]">Billing</p>
 </div>
 
- <!-- <div class=" flex justify-center px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
+<!-- <div class=" flex justify-center px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
 
 	<div class="flex w-full flex-col rounded-2xl border border-[#FFFFFF]/5 bg-[#0D0B0F] p-4">
 		<div class="py-3">
@@ -263,5 +430,4 @@
 <CancelModal2 isOpen={showModal2} close={() => (showModal2 = false)} />
 <CancelModal3 isOpen={showModal3} close={() => (showModal3 = false)} /> -->
 
-
-	<SubscriptionTier tier='3' />
+<SubscriptionTier tier="3" />

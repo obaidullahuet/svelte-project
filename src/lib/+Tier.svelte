@@ -42,7 +42,7 @@
 	</div>
 
 	<!-- Tier -->
-	<div class="py-3 text-[16px] font-roboto font-bold italic text-[#EEEDEE] leading-1">
+	<div class="py-3 text-[16px] font-roboto font-bold  text-[#EEEDEE] leading-1">
 		<span>{current.tier}</span>
 	</div>
 

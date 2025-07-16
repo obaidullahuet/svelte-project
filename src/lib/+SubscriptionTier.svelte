@@ -103,13 +103,13 @@
 				class="flex flex-col items-start justify-between gap-4 py-3 text-[17px] sm:flex-row sm:items-center"
 			>
 				<span class="whitespace-nowrap text-[gray] leading-2 font-normal">
-					New subscription renewal:
+					Next subscription renewal:
 					<span class="font-medium font-inter-tight text-[#EEEDEE]">28.03.2024</span>
 				</span>
 
 				<div class="flex gap-[16px] font-inter text-[17px] font-medium leading-2 justify-end">
 					<button on:click={() => (showModal = true)} class="text-[#B130FF]">Upgrade</button>
-					<button class="font-normal text-[gray]">Cancel</button>
+					<button class="font-normal text-[#D3D3D3]">Cancel</button>
 				</div>
 			</div>
 		</div>

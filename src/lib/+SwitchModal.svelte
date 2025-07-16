@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { fade, scale } from 'svelte/transition';
 	import Done from '$lib/+Changeaction.svelte';
+	import { text } from '@sveltejs/kit';
 
 	export let label: string; // your current tier (e.g. 'tier2')
 	export let bg: string;
@@ -19,7 +20,8 @@
 			bg: 'from-[#383737] to-[#08060a] via-[#08060a] via-44%',
 			value: 'tier1',
 			dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]',
-			label: "PUBLIC+	"
+			label: "Public+	",
+			text:'text-[#D3D3D3]'
 		},
 		{
 			name: 'TIER 2',
@@ -28,7 +30,8 @@
 			bg: 'from-[#291814] to-[#08060a] via-[#08060a] via-44%',
 			value: 'tier2',
 			dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)]',
-			label: "MIDNIGHT"
+			label: "Midnight",
+			text:'text-[#EEEDEE]'
 		},
 		{
 			name: 'TIER 3',
@@ -37,7 +40,8 @@
 			bg: 'from-[#241215] to-[#08060a] via-[#08060a] via-44%',
 			value: 'tier3',
 			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
-			label: "UNDERGROUND"
+			label: "Underground",
+			text: 'text-[#EEEDEE]'
 		}
 	];
 const mappedLabel = `tier${label}`;
@@ -94,12 +98,12 @@ const mappedLabel = `tier${label}`;
 					>
 						<div class={`flex flex-wrap items-center gap-1 ${current.dp}`}>
 							<img class={`h-5 w-5 ${current.dp}`} src={current.img} alt="Tier Badge" />
-							<span class="font-roboto text-[16px] leading-1 font-medium  text-[#EEEDEE]">
+							<span class={`font-roboto text-[16px] leading-1 font-medium  text-[#EEEDEE] `}>
 								{current.name}
 							</span>
 						</div>
 
-						<div class="mt-6 leading-2 sm:text-[20px] font-semibold italic text-[#EEEDEE]">
+						<div class="mt-6 leading-2 sm:text-[20px] font-semibold  text-[#EEEDEE]">
 							<span>{current.label}</span>
 						</div>
 
@@ -136,7 +140,7 @@ const mappedLabel = `tier${label}`;
 										src={tier.img}
 										alt="Tier Badge"
 									/>
-									<span class="text-[16px] leading-1 font-roboto font-bold italic text-[#EEEDEE]"
+									<span class="text-[16px] leading-1 font-roboto font-bold italic {tier.text}"
 										>{tier.name}</span
 									>
 								</div>

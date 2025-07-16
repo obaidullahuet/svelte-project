@@ -107,7 +107,7 @@
 
 		<form
 			use:enhance={handleSubmit}
-			class="w-full text-[#EEEDEE] flex flex-col justify-between h-full rounded-xl border border-border-light bg-[#0D0B0F] px-2 py-5 sm:px-4"
+			class="w-full text-[#EEEDEE] flex flex-col gap-5  justify-between h-full rounded-xl border border-border-light bg-[#0D0B0F] px-2 py-5 sm:px-4"
 		>
 			<!-- <div class="text-md rounded border border-yellow-500 bg-yellow-500/20 p-1 text-yellow-400">
 				⚠️ We may take up to 24–78 hours to reply

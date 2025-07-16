@@ -48,14 +48,13 @@
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 	<div
-		class="fixed inset-0 z-10 top-[10%] text-[#EEEDEE] backdrop-blur-sm p-4 bg-black/80 flex items-center justify-center"
-		transition:fade
+class="fixed inset-0 z-10 top-[10%] md:top-[8%] xl:top-[4%] text-[#EEEDEE] backdrop-blur-sm p-4 bg-background flex items-center justify-center"		transition:fade
 		role="dialog"
 		aria-modal="true"
 		on:click={close}
 	>
 		<div
-			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto p-3 sm:p-4 xl:p-3 border border-border relative z-50 backdrop-blur-[100%] bg-border"
+			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[85vh] overflow-y-auto p-3 sm:p-4 xl:p-3 border border-border relative z-50 backdrop-blur-[100%] bg-border"
 			transition:scale
 			on:click|stopPropagation
 			role="document"
@@ -118,7 +117,7 @@
 						 background-repeat: no-repeat;
 						 background-color: transparent;
 						" >
-							<p class="text-center absolute bottom-2 font-inter text-[15px] font-medium leading-1">New Monthly Spec Cars in Spec Servers</p>
+							<!-- <p class="text-center absolute bottom-2 font-inter text-[15px] font-medium leading-1">New Monthly Spec Cars in Spec Servers</p> -->
 						</div>
 						<img
 							src="/modals/Frame 2570.svg"
@@ -138,7 +137,7 @@
 				{#each options as option}
 					<button
 						on:click={() => (selectedOption = option.key)}
-						class={`w-full items-center text-left  border border-border font-inter bg-[#08060A70] bg-[linear-gradient(268deg,rgba(8,6,10,0.05)_25.18%,rgba(231,223,216,0.05)_100%)] flex justify-between p-2 sm:p-3 xl:px-6 xl:py-3 rounded-md transition ${
+						class={`w-full items-center text-left  border border-border font-inter bg-[#08060A70] bg-[linear-gradient(268deg,rgba(8,6,10,0.05)_25.18%,rgba(231,223,216,0.05)_100%)] flex justify-between p-1 sm:p-3 xl:px-6 xl:py-3 rounded-md transition ${
 							selectedOption === option.key
 								? 'border-white r bg-[#08060A70] '
 								: ' border-[#FFFFFF]/5 hover:bg-[#222]'
@@ -148,7 +147,7 @@
 							<span class="font-semibold text-xs leading-3 sm:text-sm xl:text-[18px] block"
 								>{option.title}</span
 							>
-							<p class="text-[10px] sm:text-[14px] text-[gray] leading-1 sm:mt-1">{option.desc}</p>
+							<p class="text-[10px] sm:text-[14px] text-[gray] sm:leading-1 sm:mt-1">{option.desc}</p>
 						</div>
 
 						<div class="ml-2 sm:ml-3 flex-shrink-0">

@@ -1,8 +1,6 @@
 <script lang="ts">
 	import CancelModal from '$lib/+Modal1.svelte';
-	import CancelModal1 from '$lib/Modals/+Tier1.svelte';
-	import CancelModal2 from '$lib/Modals/+Tier2.svelte';
-	import CancelModal3 from '$lib/Modals/+Tier3.svelte';
+
 	import SubscriptionTier from '$lib/+SubscriptionTier.svelte';
 	import { fade, scale } from 'svelte/transition';
 	let showModal = false;
@@ -206,18 +204,18 @@
 <div class="relative  mt-[100px] px-2 sm:px-6 md:px-8 lg:px-9 lg:hidden">
 	<!-- Wrapper with z-index to bring it above others -->
 	<div
-		class="relative z-10 text-[#EEEDEE] max-w-[230px] bg-background border border-border-light rounded-2xl p-4"
+		class="relative  text-[#EEEDEE] max-w-[230px] bg-background border border-border-light rounded-2xl p-4"
 	>
 		<!-- Header Button -->
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div
-			class="flex items-center justify-between px-3 py-2 rounded-lg bg-border border border-[#333] cursor-pointer"
+			class="flex items-center justify-between px-3 py-2 rounded-lg bg-background border border-[#333] cursor-pointer"
 			on:click={() => (isOpen = !isOpen)}
 		>
 			<div class="flex items-center gap-2">
-				<img src="/billing/Crown.svg" alt="Crown" class="h-5 w-5" />
-				<span class="text-sm sm:text-base font-bold uppercase">Leaderboard</span>
+				<img src="/billing/fi_9554529.svg" alt="Billing" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Billing</span>
 			</div>
 
 			<svg
@@ -428,4 +426,4 @@
 <CancelModal2 isOpen={showModal2} close={() => (showModal2 = false)} />
 <CancelModal3 isOpen={showModal3} close={() => (showModal3 = false)} /> -->
 
-<SubscriptionTier tier="3" />
+<SubscriptionTier tier="1" />

@@ -5,6 +5,7 @@
 	import CancelModal from '$lib/+CancelModal.svelte';
 	export let label: string;
 	export let isOpen = false;
+	import { onMount } from 'svelte';
 	export let close = () => {};
 	export let closeAll = () => {};
 	let selectedOption = '';
@@ -27,13 +28,27 @@
 			desc: 'I’m okay permanently losing all my created presets.'
 		}
 	];
+
+	// Handle body scroll prevention
+	$: if (isOpen) {
+		document.body.style.overflow = 'hidden';
+	} else {
+		document.body.style.overflow = 'auto';
+	}
+
+	// Cleanup on component destroy
+	onMount(() => {
+		return () => {
+			document.body.style.overflow = 'auto';
+		};
+	});
 </script>
 
 {#if isOpen}
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 	<div
-		class="fixed inset-0 top-20 text-[#EEEDEE] backdrop-blur-sm p-4 bg-black/60 flex items-center justify-center"
+		class="fixed inset-0 z-10 top-[10%] text-[#EEEDEE] backdrop-blur-sm p-4 bg-black/80 flex items-center justify-center"
 		transition:fade
 		role="dialog"
 		aria-modal="true"

@@ -25,7 +25,7 @@
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 	<div
-		class="fixed inset-0 text-[#EEEDEE] backdrop-blur-sm p-4 bg-background flex items-center justify-center"
+		class="fixed inset-0 z-30 top-20 text-[#EEEDEE] backdrop-blur-sm p-4 bg-background flex items-center justify-center"
 		transition:fade
 		role="dialog"
 		aria-modal="true"
@@ -41,7 +41,7 @@
 				<h2
 					class="text-[10px] font-inter sm:text-[15px] text-{bg} uppercase leading-2 font-medium sm:mb-0"
 				>
-					Cancel of {label} Subscription
+					Cancel of tier &nbsp;{label} Subscription
 				</h2>
 				<div class="flex items-center gap-1 sm:gap-2">
 					<div class="w-5 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] {bg} rounded-full" />

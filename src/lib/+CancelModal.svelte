@@ -11,26 +11,39 @@
 
 	const options = [
 		{
+			key: '1',
 			title: 'Too expensive',
-			description: 'Looking for a more affordable option? You can switch to a lower-tier plan and still keep access to core features. Choose a cheaper plan'
+			description:
+				'Looking for a more affordable option? You can switch to a lower-tier plan and still keep access to core features. Choose a cheaper plan'
 		},
 		{
+			key: '2',
 			title: 'I don’t have time',
-			description: 'Life gets busy — we get it. But you can always pause your subscription and return anytime! Pause instead of canceling'
+			description:
+				'Life gets busy — we get it. But you can always pause your subscription and return anytime! Pause instead of canceling'
 		},
 		{
+			key: '3',
 			title: 'I only wanted to try it out',
 			description:
 				'We’re constantly adding new content and features. You might like what’s coming next! See what’s coming soon'
 		},
 		{
+			key: '4',
 			title: 'Technical issues / bugs',
-			description: 'Did you know you can open a ticket in our discord and get direct support from a support member to assist you with your problem? Open Discord Channel'
+			description:
+				'Did you know you can open a ticket in our discord and get direct support from a support member to assist you with your problem? Open Discord Channel'
 		},
-		
+
 		{
+			key: '5',
 			title: 'Didn’t enjoy the content',
 			description: 'We’re always improving and would love your feedback.'
+		},
+		{
+			key: '6',
+			title: 'Other Reason',
+			description: 'Your feedback matters!'
 		}
 	];
 
@@ -40,17 +53,17 @@
 		expandedIndex = expandedIndex === index ? null : index;
 		selectedOption = options[index].title;
 	}
-let reasonText = '';
+	let reasonText = '';
 	let showModal = false;
 </script>
 
 {#if isOpen}
 	<div
-		class="fixed inset-0  text-[#EEEDEE] backdrop-blur-sm p-4 bg-black/60 flex items-center justify-center"
+		class="fixed inset-0 z-20 top-20 text-[#EEEDEE] backdrop-blur-sm p-4 bg-background flex items-center justify-center"
 		transition:fade
 	>
 		<div
-			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto p-3 sm:p-4 xl:p-6 border border-border relative z-50 backdrop-blur-[100%] bg-border"
+			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[90vh] overflow-y-auto p-3 sm:p-4 xl:p-6 border border-border relative z-50 backdrop-blur-[100%] bg-background"
 			transition:scale
 		>
 			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-3 sm:mb-4">
@@ -78,11 +91,11 @@ let reasonText = '';
 					<div>
 						<button
 							on:click={() =>
-								selectedOption === option.title
+								selectedOption === option.key
 									? (selectedOption = '')
-									: (selectedOption = option.title)}
-							class={`relative w-full items-center text-left font-inter border border-border-light bg-background flex justify-between p-2 sm:p-3 xl:p-4 rounded-md transition ${
-								selectedOption === option.title
+									: (selectedOption = option.key)}
+							class={`relative w-full items-center text-left font-inter border border-border-light bg-background flex justify-between p-2 sm:p-3 xl:p-4 rounded-md transition  ${
+								selectedOption === option.key
 									? 'border-white bg-[#08060A70]'
 									: 'border-[#FFFFFF]/5 hover:bg-[#222]'
 							}`}
@@ -94,7 +107,7 @@ let reasonText = '';
 							</div>
 
 							<div class="ml-2 sm:ml-3 flex-shrink-0">
-								{#if selectedOption === option.title}
+								{#if selectedOption === option.key}
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										width="16"
@@ -123,18 +136,18 @@ let reasonText = '';
 							</div>
 						</button>
 
-						{#if selectedOption === option.title}
+						{#if selectedOption === option.key}
 							<!-- Accordion content -->
 							<div
 								in:slide
 								out:slide
 								class={`mt-[-8px]  gap-2.5 flex items-center rounded-sm text-xs sm:text-smspace-y-3 ${
-									option.title !== 'Didn’t enjoy the content'
+									option.key !== '5' && option.key !== '6'
 										? 'bg-[linear-gradient(0deg,rgba(255,214,67,0.05)_0%,rgba(255,214,67,0)_100%)] h-[58px] bg-border-light p-4'
 										: 'bg-background text-white px-4 h-[136px] rounded-md'
 								}`}
 							>
-								{#if option.title !== 'Didn’t enjoy the content'}
+								{#if option.key !== '5' && option.key !== '6'}
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
 										width="18"
@@ -173,13 +186,12 @@ let reasonText = '';
 					Back
 				</button>
 				<button
-					class="bg-[#8800F0]  font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
+					class="bg-[#8800F0] font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
 					on:click={() => {
 						if (selectedOption) showModal = true;
 					}}
-					disabled={
-		!selectedOption || (selectedOption === 'Didn’t enjoy the content' && reasonText.trim().length === 0)
-	}
+					disabled={!selectedOption ||
+						((selectedOption === '5' || selectedOption === '6') && reasonText.trim().length === 0)}
 				>
 					Next Step
 				</button>

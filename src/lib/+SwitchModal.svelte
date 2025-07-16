@@ -54,7 +54,7 @@ const mappedLabel = `tier${label}`;
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 	<div
-		class="fixed inset-0 text-[#EEEDEE] backdrop-blur-sm p-4 bg-background flex items-center justify-center"
+			class="fixed inset-0 z-20 top-20 text-[#EEEDEE] backdrop-blur-sm p-4 bg-background flex items-center justify-center"
 		transition:fade
 		role="dialog"
 		aria-modal="true"

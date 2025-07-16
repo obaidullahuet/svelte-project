@@ -96,7 +96,7 @@
 
 			<button class="px-7 py-4 items-start border-2 border-border-light rounded-lg">
 				<a
-					href="/faq"
+					href="/"
 					target="_blank"
 					class="text-[#EEEDEE] font-semibold text-[16px] leading-1 font-inter"
 				>
@@ -131,14 +131,14 @@
 							type="text"
 							bind:value={name}
 							placeholder="John Doe"
-							class="bg-top-light-2 w-full rounded border border-border-light py-3 pl-11 text-sm focus:outline-none"
+							class="bg-top-light-2 w-full rounded border border-border-light py-3 pl-11 text-sm focus:outline-none placeholder-[gray]"
 						/>
 					</div>
 				</div>
 				<div>
 					<!-- svelte-ignore a11y_label_has_associated_control -->
 					<!-- svelte-ignore a11y-label-has-associated-control -->
-					<label class="mb-1 block text-sm">Discord Username</label>
+					<label class="mb-1 block text-sm ">Discord Username</label>
 					<div class="align-center relative flex justify-center">
 						<span class="absolute left-3 top-2">
 							<img src="/DiscordLogo.svg" alt="icon" class="icon-img" />
@@ -147,7 +147,7 @@
 							type="text"
 							bind:value={email}
 							placeholder="@ffuffymonkey"
-							class="bg-top-light-2 w-full rounded border border-border-light py-3 pl-11 text-sm focus:outline-none"
+							class="bg-top-light-2 w-full rounded border border-border-light py-3 pl-11 text-sm focus:outline-none placeholder-[gray]"
 						/>
 					</div>
 				</div>
@@ -165,7 +165,7 @@
 								maxlength={400}
 								bind:value={question}
 								placeholder="Drop some lines here"
-								class=" bg-top-light-2 h-50 flex w-full min-h-[150px] rounded border border-border-light py-2 pl-11 text-sm focus:outline-none"
+								class=" bg-top-light-2 h-50 flex w-full min-h-[150px] rounded border border-border-light py-2 px-11 text-sm focus:outline-none placeholder-[gray]"
 							/>
 						</div>
 						<div class="absolute bottom-2 right-3 text-xs text-[#484848]">{questionLength}/400</div>

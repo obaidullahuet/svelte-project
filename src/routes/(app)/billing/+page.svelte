@@ -6,9 +6,7 @@
 	import SubscriptionTier from '$lib/+SubscriptionTier.svelte';
 	import { fade, scale } from 'svelte/transition';
 	let showModal = false;
-	let showModal1 = false;
-	let showModal2 = false;
-	let showModal3 = false;
+	
 
 	function closeModal() {
 		showModal = false;
@@ -208,7 +206,7 @@
 <div class="relative  mt-[100px] px-2 sm:px-6 md:px-8 lg:px-9 lg:hidden">
 	<!-- Wrapper with z-index to bring it above others -->
 	<div
-		class="relative z-50 text-[#EEEDEE] max-w-xs bg-background border border-border-light rounded-2xl p-4"
+		class="relative z-10 text-[#EEEDEE] max-w-[230px] bg-background border border-border-light rounded-2xl p-4"
 	>
 		<!-- Header Button -->
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -237,7 +235,7 @@
 
 		{#if isOpen}
 			<div
-				class="absolute left-0 right-0 top-[80px]  bg-background border border-border-light rounded-xl p-2 shadow-xl space-y-1"
+				class="absolute left-0 right-0 top-[71px]  bg-background border border-border-light rounded-xl p-2 shadow-xl space-y-1"
 			>
 				<a href="/home" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
 					<img src="/billing/House.svg" alt="Home" class="h-5 w-5" />

@@ -20,7 +20,7 @@
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 	<div
-		class="fixed inset-0 text-[#EEEDEE] backdrop-blur-sm p-4 bg-background flex items-center justify-center"
+		class="fixed inset-0 z-20 top-20 text-[#EEEDEE] backdrop-blur-sm p-4 bg-background flex items-center justify-center"
 		transition:fade
 		role="dialog"
 		aria-modal="true"
@@ -115,7 +115,7 @@
 				{#if showDropdown}
 					<div
 						transition:slide
-						class="w-full mt-1 border border-border-light rounded-md bg-[#1a1a1a] max-h-[250px] overflow-y-auto"
+						class="w-full mt-1 border border-border-light rounded-md  max-h-[250px] overflow-y-auto"
 					>
 						{#each months as item}
 							<!-- svelte-ignore a11y-click-events-have-key-events -->

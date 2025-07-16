@@ -176,10 +176,8 @@
 			<button
 				type="submit"
 				disabled={!formValid || $isPending}
-				class=" w-full rounded-lg py-4 px-7 font-bold uppercase tracking-wide text-white drop-shadow-[0_0_8px_#8800f0] transition"
-				style="background: #8800F0;
-       hover:box-shadow: 0px 4px 12px 4px rgba(136, 0, 240, 0.2);
-             "
+				class=" w-full rounded-lg py-4 px-7 font-bold uppercase tracking-wide text-white bg-[#8800F0] shadow-[0px_4px_12px_4px_rgba(136,0,240,0.2)] transition"
+				
 			>
 				{$isPending ? 'Sending...' : 'Send'}
 			</button>

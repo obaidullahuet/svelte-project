@@ -92,27 +92,27 @@ const mappedLabel = `tier${label}`;
 			<p class="text-xs sm:text-sm text-[#EEEDEE] mb-3 sm:mb-4">Your current subscription</p>
 
 			{#if current}
-				<div class="flex justify-center font-inter mb-3">
+				<div class="flex justify-center font-inter mb-1 md:mb-3">
 					<div
-						class={`flex w-full flex-col rounded-xl   bg-gradient-to-r ${current.bg} p-5`}
+						class={`flex w-full flex-col rounded-xl   bg-gradient-to-r ${current.bg} px-5 py-1 md:p-5`}
 					>
 						<div class={`flex flex-wrap items-center gap-1 ${current.dp}`}>
 							<img class={`h-5 w-5 ${current.dp}`} src={current.img} alt="Tier Badge" />
-							<span class={`font-roboto text-[16px] leading-1 font-medium  text-[#EEEDEE] `}>
+							<span class={`font-roboto text-[16px] md:leading-1 font-medium  text-[#EEEDEE] `}>
 								{current.name}
 							</span>
 						</div>
 
-						<div class="mt-6 leading-2 sm:text-[20px] font-semibold  text-[#EEEDEE]">
+						<div class=" mt-2  md:mt-6 md:leading-2 sm:text-[20px] font-semibold  text-[#EEEDEE]">
 							<span>{current.label}</span>
 						</div>
 
 						<div
-							class="text-content-secondary py-1 text-[38px] leading-5 font-semibold text-[#EEEDEE]"
+							class="text-content-secondary md:py-1 text-[38px] md:leading-5 font-semibold text-[#EEEDEE]"
 						>
 							<span class="title-gradient">
 								{current.price}
-								<span class="text-[20px] font-medium leading-3 title-gradient">/month</span>
+								<span class="text-[20px] font-medium md:leading-3 title-gradient">/month</span>
 							</span>
 						</div>
 					</div>
@@ -123,13 +123,13 @@ const mappedLabel = `tier${label}`;
 			</p>
 
 			{#each otherTiers as tier}
-				<div class="flex justify-center font-inter mb-3">
+				<div class="flex justify-center font-inter mb-1 md-mb-3">
 					<!-- svelte-ignore a11y-click-events-have-key-events -->
 					<!-- svelte-ignore a11y-no-static-element-interactions -->
 					<div
 						class={`flex w-full flex-col rounded-xl border ${
 							selectedOption === tier.value ? 'border-white' : 'border-transparent'
-						} bg-gradient-to-r ${tier.bg} py-6 px-5 cursor-pointer`}
+						} bg-gradient-to-r ${tier.bg} py-2 md:py-6 px-5 cursor-pointer`}
 						on:click={() => (selectedOption = tier.value)}
 					>
 						<div class="flex justify-between items-center">
@@ -140,13 +140,13 @@ const mappedLabel = `tier${label}`;
 										src={tier.img}
 										alt="Tier Badge"
 									/>
-									<span class="text-[16px] leading-1 font-roboto font-bold italic {tier.text}"
+									<span class="text-[16px] md:leading-1 font-roboto font-bold italic {tier.text}"
 										>{tier.name}</span
 									>
 								</div>
 
 								<div
-									class="text-content-secondary py-1 text-[24px] leading-5 font-semibold text-[#EEEDEE]"
+									class="text-content-secondary  text-[24px] leading-5 font-semibold text-[#EEEDEE]"
 								>
 									<span class="title-gradient">
 										{tier.price}

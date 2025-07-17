@@ -87,11 +87,11 @@
 			
 
 			<div
-				class=" bg-gradient-to-r from-[#FFFFFF] to-[#8c8f93] bg-clip-text text-transparent font-inter flex  flex-col md:gap-6 text-[25px] md:text-[31px] max-w-[440px] font-light md:font-semibold md:leading-4 "
+				class=" text-[rgba(238,237,238,0.87)] bg-clip-text  font-inter flex  flex-col md:gap-6 text-[25px] md:text-[31px] max-w-[440px] font-light md:font-semibold md:leading-4 "
 			>
-				<p>Just ping us, feel free!</p>
+				<p class="text-[rgba(238,237,238,0.87)]">Just ping us, feel free!</p>
 				<p>...</p>
-				<p>Or read our FAQ. Who knows, maybe you can find answer by yourself</p>
+				<p class="text-[rgba(238,237,238,0.87)]">Or read our FAQ. Who knows, maybe you can find answer by yourself</p>
 			</div>
 
 			<button class="px-7 py-4 items-start border border-[#FFFFFF] rounded-md">

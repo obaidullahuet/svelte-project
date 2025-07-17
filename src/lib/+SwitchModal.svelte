@@ -21,7 +21,7 @@
 			value: 'tier1',
 			dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]',
 			label: "Public+	",
-			text:'text-[#D3D3D3]'
+			text:'text-[rgba(238,237,238,0.68)]'
 		},
 		{
 			name: 'TIER 2',
@@ -31,7 +31,7 @@
 			value: 'tier2',
 			dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)]',
 			label: "Midnight",
-			text:'text-[#EEEDEE]'
+			text:'text-[rgba(238,237,238,0.87)]'
 		},
 		{
 			name: 'TIER 3',
@@ -42,7 +42,7 @@
 			value: 'tier3',
 			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
 			label: "Underground",
-			text: 'text-[#EEEDEE]'
+			text:'text-[rgba(238,237,238,0.68)]'
 		}
 	];
 const mappedLabel = `tier${label}`;
@@ -97,9 +97,9 @@ const mappedLabel = `tier${label}`;
 					<div
 						class={`flex w-full flex-col rounded-xl border border-border-light    ${current.bg} px-5 py-1 md:p-5`}
 					>
-						<div class={`flex flex-wrap items-center gap-1 ${current.dp}`}>
+						<div class={`flex flex-wrap items-center gap-1 `}>
 							<img class={`h-5 w-5 ${current.dp}`} src={current.img} alt="Tier Badge" />
-							<span class={`font-roboto text-[16px] md:leading-1 font-medium  italic text-[#EEEDEE] `}>
+							<span class={`font-roboto text-[16px] md:leading-1 font-medium  italic ${current.text} `}>
 								{current.name}
 							</span>
 						</div>

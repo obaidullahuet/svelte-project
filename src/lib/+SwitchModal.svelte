@@ -95,7 +95,7 @@ const mappedLabel = `tier${label}`;
 			{#if current}
 				<div class="flex justify-center font-inter mb-1 md:mb-3">
 					<div
-						class={`flex w-full flex-col rounded-xl border border-border-light   bg-gradient-to-r ${current.bg} px-5 py-1 md:p-5`}
+						class={`flex w-full flex-col rounded-xl border border-border-light    ${current.bg} px-5 py-1 md:p-5`}
 					>
 						<div class={`flex flex-wrap items-center gap-1 ${current.dp}`}>
 							<img class={`h-5 w-5 ${current.dp}`} src={current.img} alt="Tier Badge" />
@@ -124,12 +124,12 @@ const mappedLabel = `tier${label}`;
 			</p>
 
 			{#each otherTiers as tier}
-				<div class="flex justify-center font-inter mb-1 md-mb-3">
+				<div class={`flex justify-center font-inter rounded-lg  mb-1 md-mb-3 ${tier.bg}`}>
 					<!-- svelte-ignore a11y-click-events-have-key-events -->
 					<!-- svelte-ignore a11y-no-static-element-interactions -->
 					<div
-						class={`flex w-full flex-col rounded-xl border ${
-							selectedOption === tier.value ? 'border-white' : 'border-border-light'
+						class={`flex w-full flex-col rounded-lg    ${tier.bg} ${
+							selectedOption === tier.value ? 'border border-white' :  'border border-border-light'
 						} bg-gradient-to-r ${tier.bg} py-2 md:py-6 px-5 cursor-pointer`}
 						on:click={() => (selectedOption = tier.value)}
 					>

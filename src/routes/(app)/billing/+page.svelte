@@ -5,15 +5,14 @@
 	import SubscriptionTier from '$lib/+SubscriptionTier.svelte';
 	import { fade, scale } from 'svelte/transition';
 	let showModal = false;
-	
 
 	function closeModal() {
 		showModal = false;
 	}
-let isOpen = false;
+	let isOpen = false;
 	let dropdownRef: HTMLDivElement;
 
-	function handleClickOutside(event: { target: any; }) {
+	function handleClickOutside(event: { target: any }) {
 		if (dropdownRef && !dropdownRef.contains(event.target)) {
 			isOpen = false;
 		}
@@ -21,14 +20,14 @@ let isOpen = false;
 
 	onMount(() => {
 		document.addEventListener('click', handleClickOutside);
-		
+
 		return () => {
 			document.removeEventListener('click', handleClickOutside);
 		};
 	});
 </script>
 
-<div class="hidden lg:block   mt-[100px] px-2 sm:px-6 md:px-8 lg:px-9 font-inter">
+<div class="hidden lg:block mt-[100px] px-2 sm:px-6 md:px-8 lg:px-9 font-inter">
 	<nav class="rounded-2xl py-3">
 		<div class="flex flex-wrap items-center text-[#EEEDEE] justify-start lg:justify-end">
 			<div class="px-2 bg-border border border-[#FFFFFF]/5 rounded-2xl py-2 font-inter-tight">
@@ -118,7 +117,6 @@ let isOpen = false;
 </div>
 
 <!-- Sidebar Wrapper -->
-
 
 <!-- <div class=" my-10  px-2 sm:px-6 md:px-8 lg:px-9">
 	<div
@@ -215,8 +213,6 @@ let isOpen = false;
 	</div>
 </div> -->
 
-
-
 <div class="relative mt-[100px] px-2 sm:px-6 md:px-8 lg:px-9 lg:hidden">
 	<!-- Wrapper with z-index to bring it above others -->
 	<div
@@ -256,31 +252,52 @@ let isOpen = false;
 					<img src="/billing/House.svg" alt="Home" class="h-5 w-5" />
 					<span class="text-sm font-bold uppercase">Home</span>
 				</a>
-				<a href="/leaderboard" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+				<a
+					href="/leaderboard"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
 					<img src="/billing/Crown.svg" alt="Leaderboard" class="h-5 w-5" />
 					<span class="text-sm font-bold uppercase">Leaderboard</span>
 				</a>
-				<a href="/friends" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+				<a
+					href="/friends"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
 					<img src="/billing/Users.svg" alt="Friends" class="h-5 w-5" />
 					<span class="text-sm font-bold uppercase">Friends</span>
 				</a>
-				<a href="/clients" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+				<a
+					href="/clients"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
 					<img src="/billing/fi_6557720.svg" alt="Clients" class="h-5 w-5" />
 					<span class="text-sm font-bold uppercase">Clients</span>
 				</a>
-				<a href="/edit-profile" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+				<a
+					href="/edit-profile"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
 					<img src="/billing/PencilSimple.svg" alt="Edit" class="h-5 w-5" />
 					<span class="text-sm font-bold uppercase">Edit Profile</span>
 				</a>
-				<a href="/subscriptions" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+				<a
+					href="/subscriptions"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
 					<img src="/billing/Cube.svg" alt="Subscriptions" class="h-5 w-5" />
 					<span class="text-sm font-bold uppercase">Subscriptions</span>
 				</a>
-				<a href="/transactions" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+				<a
+					href="/transactions"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
 					<img src="/billing/Cube.svg" alt="Transactions" class="h-5 w-5" />
 					<span class="text-sm font-bold uppercase">Transactions</span>
 				</a>
-				<a href="/billing" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+				<a
+					href="/billing"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
 					<img src="/billing/fi_9554529.svg" alt="Billing" class="h-5 w-5" />
 					<span class="text-sm font-bold uppercase">Billing</span>
 				</a>

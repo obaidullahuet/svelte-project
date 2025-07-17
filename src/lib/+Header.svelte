@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { fade, slide } from 'svelte/transition';
 	import logo from '../lib/assets/NO HESI.svg';
 	import logo2 from '../lib/assets/Vector.png';
@@ -9,6 +9,7 @@
 	import Bell from '../lib/assets/Bell.png';
 	import Avatar from '../lib/assets/9fbd4972fc0c3ffddfc14a8b901a6aa53a99193c.jpg';
 	import Arrow from '../lib/assets/Arrow.png';
+	import { onMount } from 'svelte';
 
 	let isOpen = false;
 	let isMobileMenuOpen = false;
@@ -22,6 +23,22 @@
 			isMobileMenuOpen = false;
 		}
 	};
+
+	let dropdownRef: HTMLDivElement;
+
+	function handleClickOutside(event: { target: any }) {
+		if (dropdownRef && !dropdownRef.contains(event.target)) {
+			isOpen = false;
+		}
+	}
+
+	onMount(() => {
+		document.addEventListener('click', handleClickOutside);
+
+		return () => {
+			document.removeEventListener('click', handleClickOutside);
+		};
+	});
 </script>
 
 <div class="flex w-full justify-center px-4 sm:px-6 lg:px-8">
@@ -41,7 +58,7 @@
 
 			<!-- Desktop Navigation Links - Show on large screens -->
 			<div class="ml-6 hidden items-center gap-1 xl:flex xl:gap-2">
-				<a href="/get-started" class="nav-link">
+				<a href="/billing" class="nav-link">
 					<button class="nav-button">Get started</button>
 				</a>
 				<a href="/shop" class="nav-link">
@@ -54,6 +71,9 @@
 				<a href="/contacts" class="nav-link">
 					<button class="nav-button">Contacts</button>
 				</a>
+				<a href="/clubs" class="nav-link">
+					<button class="nav-button">Club</button>
+				</a>
 			</div>
 		</div>
 
@@ -65,7 +85,13 @@
 					class="rounded-full border border-[#ffffff]/10 px-3 text-[#ffffff] flex items-center justify-between gap-2"
 				>
 					<!-- Subscription Button - Show on md+ -->
-					<a href="/subscription" class="action-link hidden py-3 xl:block">
+					<a href="/blog" class="action-link hidden py-3 xl:block">
+						<button class="flex items-center gap-2">
+							<img src={Star} alt="Subscription" class="h-[13px] w-[14px] flex-shrink-0" />
+							<span class="action-text">Blog</span>
+						</button>
+					</a>
+					<a href="/blog" class="action-link hidden py-3 xl:block">
 						<button class="flex items-center gap-2">
 							<img src={Star} alt="Subscription" class="h-[13px] w-[14px] flex-shrink-0" />
 							<span class="action-text">Subscription</span>
@@ -73,7 +99,7 @@
 					</a>
 					<!-- Servers Button - Show on lg+ -->
 					<span class="w-[1px] h-full text-border">|</span>
-					<a href="/server" class=" hidden bg-border rounded-full py-1 w-full px-2 xl:block">
+					<a href="/Server" class=" hidden bg-border rounded-full py-1 w-full px-2 xl:block">
 						<button class=" flex items-center gap-2">
 							<img src="/beli.svg" alt="Servers" class="h-[13px] w-3 flex-shrink-0" />
 							<span class="action-text">Servers</span>
@@ -103,23 +129,84 @@
 						</button>
 					</a>
 
-					<!-- User Profile -->
-					<div
-						class="   items-center content-center h-11 gap-2 ml-3 rounded-full px-5 hidden xl:flex sm:px-3"
-					>
-						<!-- <img
-						src={Avatar}
-						alt="User Avatar"
-						class="h-6 w-6 rounded-full border border-white/10 sm:h-7 sm:w-7"
-					/> -->
-						<span class="hidden text-sm font-medium text-white lg:inline xl:text-base">
-							JohnDoe_911
-						</span>
-						<img
-							src="/downar (1).svg"
-							alt="Dropdown"
-							class="ml-1 hidden h-[6px] w-[11px] lg:inline"
-						/>
+					<!-- User Profile with Dropdown -->
+					<div class="relative" bind:this={dropdownRef}>
+						<button
+							class="items-center content-center h-11 gap-2 ml-3 rounded-full px-5 hidden xl:flex sm:px-3 cursor-pointer transition-colors hover:bg-white/10"
+							on:click={() => (isOpen = !isOpen)}
+						>
+							<span class="hidden text-sm font-medium text-white lg:inline xl:text-base">
+								JohnDoe_911
+							</span>
+							<img
+								src="/downar (1).svg"
+								alt="Dropdown"
+								class={`ml-1 hidden h-[6px] w-[11px] lg:inline transform transition-transform duration-300 ${
+									isOpen ? 'rotate-180' : ''
+								}`}
+							/>
+						</button>
+
+						{#if isOpen}
+							<div
+								class="absolute right-0 top-[60px] w-[250px] text-[#EEEDEE]  bg-background border border-border-light rounded-xl p-2 shadow-xl space-y-1 z-50"
+								transition:slide={{ duration: 200 }}
+							>
+								<a href="/home" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors">
+									<img src="/billing/House.svg" alt="Home" class="h-5 w-5" />
+									<span class="text-sm font-bold uppercase">Home</span>
+								</a>
+								<a
+									href="/leaderboard"
+									class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors"
+								>
+									<img src="/billing/Crown.svg" alt="Leaderboard" class="h-5 w-5" />
+									<span class="text-sm font-bold uppercase">Leaderboard</span>
+								</a>
+								<a
+									href="/friends"
+									class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors"
+								>
+									<img src="/billing/Users.svg" alt="Friends" class="h-5 w-5" />
+									<span class="text-sm font-bold uppercase">Friends</span>
+								</a>
+								<a
+									href="/clients"
+									class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors"
+								>
+									<img src="/billing/fi_6557720.svg" alt="Clients" class="h-5 w-5" />
+									<span class="text-sm font-bold uppercase">Clients</span>
+								</a>
+								<a
+									href="/edit-profile"
+									class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors"
+								>
+									<img src="/billing/PencilSimple.svg" alt="Edit" class="h-5 w-5" />
+									<span class="text-sm font-bold uppercase">Edit Profile</span>
+								</a>
+								<a
+									href="/subscriptions"
+									class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors"
+								>
+									<img src="/billing/Cube.svg" alt="Subscriptions" class="h-5 w-5" />
+									<span class="text-sm font-bold uppercase">Subscriptions</span>
+								</a>
+								<a
+									href="/transactions"
+									class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors"
+								>
+									<img src="/billing/Cube.svg" alt="Transactions" class="h-5 w-5" />
+									<span class="text-sm font-bold uppercase">Transactions</span>
+								</a>
+								<a
+									href="/billing"
+									class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors"
+								>
+									<img src="/billing/fi_9554529.svg" alt="Billing" class="h-5 w-5" />
+									<span class="text-sm font-bold uppercase">Billing</span>
+								</a>
+							</div>
+						{/if}
 					</div>
 				</div>
 			</div>
@@ -169,8 +256,6 @@
 			class="fixed left-4 font-inter right-4 top-[15%] z-50 max-h-[calc(100vh-120px)] overflow-y-auto rounded-2xl border border-white/20 xl:hidden bg-background"
 			transition:slide={{ duration: 300 }}
 		>
-		
-
 			<!-- Navigation Links -->
 			<div class="space-y-2">
 				{#each [{ href: '/get-started', label: 'Get started' }, { href: '/about', label: 'About us' }, { href: '/news', label: 'Partners' }, { href: '/contacts', label: 'Contacts' }] as link}
@@ -238,11 +323,6 @@
 		}
 	}
 
-	/* .mobile-menu-item:hover,
-	.mobile-menu-item:focus {
-		background-color: rgba(255, 255, 255, 0.1);
-	} */
-
 	/* Smooth transitions */
 	* {
 		transition-property: background-color, border-color, color, transform;
@@ -269,13 +349,6 @@
 		background: rgba(255, 255, 255, 0.3);
 	}
 
-	/* Focus styles for accessibility */
-	/* button:focus,
-	a:focus {
-		outline: 2px solid rgba(255, 255, 255, 0.5);
-		outline-offset: 2px;
-	} */
-
 	/* Ensure proper text contrast */
 	.text-white {
 		color: #ffffff;
@@ -296,9 +369,6 @@
 		backdrop-filter: blur(20px);
 		-webkit-backdrop-filter: blur(20px);
 	}
-
-	/* Mobile menu glass effect */
-
 
 	/* Prevent horizontal scroll */
 	.nav-container {

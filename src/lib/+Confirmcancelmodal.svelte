@@ -11,7 +11,7 @@
 			text: 'Priority queue + max player slots'
 		},
 		{
-			text: 'Exclusive Tier 3 cars'
+			text: `Exclusive Tier ${label} cars`
 		},
 		{
 			text: 'New map releases before anyone else'

@@ -110,7 +110,7 @@
 
 				<div class="flex gap-[16px] font-inter text-[17px] font-medium leading-2 justify-end">
 					<button on:click={() => (showModal = true)} class="text-[#B130FF]">Upgrade</button>
-					<button class="font-normal text-[#D3D3D3]">Cancel</button>
+					<button  on:click={() => (showModal = true)} class="font-normal text-[#D3D3D3]">Cancel</button>
 				</div>
 			</div>
 		</div>

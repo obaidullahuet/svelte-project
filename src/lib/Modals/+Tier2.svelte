@@ -48,18 +48,19 @@
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 	<div
-class="fixed inset-0 z-10 top-[10%] md:top-[8%] xl:top-[4%] text-[#EEEDEE] backdrop-blur-sm p-4 bg-background flex items-center justify-center"		transition:fade
+		class="fixed inset-0 z-10 top-[10%] md:top-[8%] xl:top-[7%] text-[#EEEDEE] backdrop-blur-sm bg-background flex items-center justify-center"
+		transition:fade
 		role="dialog"
 		aria-modal="true"
 		on:click={close}
 	>
 		<div
-			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[85vh] overflow-y-auto p-3 sm:p-4 xl:p-3 border border-border relative z-50 backdrop-blur-[100%] bg-border"
+			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[87vh] overflow-y-auto p-3 sm:px-2 sm:py-2 border border-border relative z-50 backdrop-blur-[100%] bg-border"
 			transition:scale
 			on:click|stopPropagation
 			role="document"
 		>
-			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 sm:mb-2">
+			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center sm:mb-1">
 				<h2
 					class="text-[10px] font-inter sm:text-[15px] text-[#FF8126] uppercase leading-2 font-medium sm:mb-0"
 				>
@@ -86,9 +87,9 @@ class="fixed inset-0 z-10 top-[10%] md:top-[8%] xl:top-[4%] text-[#EEEDEE] backd
 				Canceling now means losing access to:
 			</p>
 
-			<div class="md:grid flex md:grid-cols-3 gap-2 font-inter text-white my-3">
+			<div class="md:grid flex md:grid-cols-3 gap-2 font-inter text-white my-1">
 				<!-- Left Column -->
-				<div class="grid grid-rows-2 gap-2 md:grid-cols-1">
+				<div class="grid grid-rows-2 gap-1 md:grid-cols-1">
 					<div
 						class="w-full text-center px-2 sm:px-3 py-3 sm:py-5 border border-border-light rounded-lg
         text-[12px] sm:text-[20px] md:text-[24px] xl:text-[28px] font-bold
@@ -111,12 +112,15 @@ class="fixed inset-0 z-10 top-[10%] md:top-[8%] xl:top-[4%] text-[#EEEDEE] backd
 				<!-- Right Column -->
 				<div class="grid grid-rows-2 md:grid-rows-2 gap-2 md:col-span-2">
 					<div class=" grid grid-cols-2 gap-2">
-						<div class="relative   rounded-lg" style="
+						<div
+							class="relative rounded-lg"
+							style="
 						 background-image: url('/modals/car.png');
 						 background-size: cover;
 						 background-repeat: no-repeat;
 						 background-color: transparent;
-						" >
+						"
+						>
 							<!-- <p class="text-center absolute bottom-2 font-inter text-[15px] font-medium leading-1">New Monthly Spec Cars in Spec Servers</p> -->
 						</div>
 						<img
@@ -133,7 +137,7 @@ class="fixed inset-0 z-10 top-[10%] md:top-[8%] xl:top-[4%] text-[#EEEDEE] backd
 				</div>
 			</div>
 
-				<div class="space-y-1 sm:space-y-1 mb-3 sm:mb-3">
+			<div class="space-y-1 sm:space-y-1 mb-3 sm:mb-3">
 				{#each options as option}
 					<button
 						on:click={() => (selectedOption = option.key)}
@@ -147,7 +151,9 @@ class="fixed inset-0 z-10 top-[10%] md:top-[8%] xl:top-[4%] text-[#EEEDEE] backd
 							<span class="font-semibold text-xs leading-3 sm:text-sm xl:text-[18px] block"
 								>{option.title}</span
 							>
-							<p class="text-[10px] sm:text-[14px] text-[gray] sm:leading-1 sm:mt-1">{option.desc}</p>
+							<p class="text-[10px] sm:text-[14px] text-[gray] sm:leading-1 sm:mt-1">
+								{option.desc}
+							</p>
 						</div>
 
 						<div class="ml-2 sm:ml-3 flex-shrink-0">
@@ -198,9 +204,9 @@ class="fixed inset-0 z-10 top-[10%] md:top-[8%] xl:top-[4%] text-[#EEEDEE] backd
 					Cancel
 				</button>
 				<button
-					class="bg-[#8800F0]  font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
+					class="bg-[#8800F0] font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
 					on:click={() => {
-						if (selectedOption)  showModal = true;
+						if (selectedOption) showModal = true;
 					}}
 					disabled={!selectedOption}
 				>
@@ -212,9 +218,27 @@ class="fixed inset-0 z-10 top-[10%] md:top-[8%] xl:top-[4%] text-[#EEEDEE] backd
 {/if}
 
 {#if showModal && selectedOption === 'pause'}
-    <PauseModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" {closeAll} />
+	<PauseModal
+		isOpen={showModal}
+		close={() => (showModal = false)}
+		{label}
+		bg="[#FF8126]"
+		{closeAll}
+	/>
 {:else if showModal && selectedOption === 'switch'}
-    <SwitchModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" {closeAll} />
+	<SwitchModal
+		isOpen={showModal}
+		close={() => (showModal = false)}
+		{label}
+		bg="[#FF8126]"
+		{closeAll}
+	/>
 {:else if showModal && selectedOption === 'cancel'}
-    <CancelModal isOpen={showModal} close={() => (showModal = false)} {label} bg="[#FF8126]" {closeAll} />
+	<CancelModal
+		isOpen={showModal}
+		close={() => (showModal = false)}
+		{label}
+		bg="[#FF8126]"
+		{closeAll}
+	/>
 {/if}

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import CancelModal from '$lib/+Modal1.svelte';
+	import { onMount } from 'svelte';
 
 	import SubscriptionTier from '$lib/+SubscriptionTier.svelte';
 	import { fade, scale } from 'svelte/transition';
@@ -9,8 +10,22 @@
 	function closeModal() {
 		showModal = false;
 	}
+let isOpen = false;
+	let dropdownRef: HTMLDivElement;
 
-	let isOpen = false;
+	function handleClickOutside(event: { target: any; }) {
+		if (dropdownRef && !dropdownRef.contains(event.target)) {
+			isOpen = false;
+		}
+	}
+
+	onMount(() => {
+		document.addEventListener('click', handleClickOutside);
+		
+		return () => {
+			document.removeEventListener('click', handleClickOutside);
+		};
+	});
 </script>
 
 <div class="hidden lg:block   mt-[100px] px-2 sm:px-6 md:px-8 lg:px-9 font-inter">
@@ -201,10 +216,12 @@
 </div> -->
 
 
-<div class="relative  mt-[100px] px-2 sm:px-6 md:px-8 lg:px-9 lg:hidden">
+
+<div class="relative mt-[100px] px-2 sm:px-6 md:px-8 lg:px-9 lg:hidden">
 	<!-- Wrapper with z-index to bring it above others -->
 	<div
-		class="relative  z-10 text-[#EEEDEE] max-w-[230px] bg-background border border-border-light rounded-2xl p-4"
+		bind:this={dropdownRef}
+		class="relative z-10 text-[#EEEDEE] max-w-[230px] bg-background border border-border-light rounded-2xl p-4"
 	>
 		<!-- Header Button -->
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -215,7 +232,7 @@
 		>
 			<div class="flex items-center gap-2">
 				<img src="/billing/fi_9554529.svg" alt="Billing" class="h-5 w-5" />
-					<span class="text-sm font-bold uppercase">Billing</span>
+				<span class="text-sm font-bold uppercase">Billing</span>
 			</div>
 
 			<svg
@@ -233,7 +250,7 @@
 
 		{#if isOpen}
 			<div
-				class="absolute left-0 right-0 top-[71px]  bg-background border border-border-light rounded-xl p-2 shadow-xl space-y-1"
+				class="absolute left-0 right-0 top-[71px] bg-background border border-border-light rounded-xl p-2 shadow-xl space-y-1"
 			>
 				<a href="/home" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
 					<img src="/billing/House.svg" alt="Home" class="h-5 w-5" />
@@ -426,4 +443,4 @@
 <CancelModal2 isOpen={showModal2} close={() => (showModal2 = false)} />
 <CancelModal3 isOpen={showModal3} close={() => (showModal3 = false)} /> -->
 
-<SubscriptionTier tier="3" />
+<SubscriptionTier tier="2" />

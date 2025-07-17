@@ -187,7 +187,7 @@ const mappedLabel = `tier${label}`;
 				</div>
 			{/each}
 
-			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 mt-4 sm:gap-0">
+			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 md:mt-5 sm:gap-0">
 				<button
 					class="text-xs sm:text-[15px] text-gray-400 font-semibold leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-sm bg-border-light transition-colors"
 					on:click={close}

@@ -48,25 +48,25 @@
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 	<div
-		class="fixed inset-0 z-10 top-[10%] md:top-[8%] xl:top-[4%] text-[#EEEDEE] backdrop-blur-sm p-4 bg-background flex items-center justify-center"
+		class="fixed inset-0 z-10 top-[10%] md:top-[8%] xl:top-[4%] 2xl:top-[6%] text-[#EEEDEE] backdrop-blur-sm p-4 bg-background flex items-center justify-center"
 		transition:fade
 		role="dialog"
 		aria-modal="true"
 		on:click={close}
 	>
 		<div
-			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[85vh] overflow-y-auto p-3 sm:p-4 xl:p-3 border border-border relative z-50 backdrop-blur-[100%] bg-border"
+			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[80vh] overflow-y-auto p-3 sm:p-4 xl:p-3 border border-border relative z-50 backdrop-blur-[100%] bg-border"
 			transition:scale
 			on:click|stopPropagation
 			role="document"
 		>
-			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-2 sm:mb-2">
+			<div class="flex flex-col sm:flex-row sm:justify-between sm:items-center sm:mb-2">
 				<h2
 					class="text-[10px] font-inter sm:text-[15px] text-[#DD0355] uppercase leading-2 font-medium sm:mb-0"
 				>
 					Tier {label} Cancellation
 				</h2>
-				<div class="flex items-center gap-1 sm:gap-2">
+				<div class="flex items-center gap-1 mb-1 sm:gap-2">
 					<div class="w-5 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-[#DD0355] rounded-full" />
 					<div
 						class="w-5 sm:w-6 xl:w-10 h-[3px] sm:h-[4px] xl:h-[6px] bg-border border border-border rounded-full"
@@ -78,7 +78,7 @@
 			</div>
 
 			<p
-				class="text-sm sm:text-lg xl:text-[22px] leading-9 font-roboto uppercase font-black mb-2 sm:mb-2"
+				class="text-sm sm:text-lg xl:text-[22px] sm:leading-9 font-roboto uppercase font-black  sm:mb-2"
 			>
 				Wait! Want to Keep Driving?
 			</p>
@@ -186,7 +186,7 @@
 			</div>
 
 			<!-- Action buttons -->
-			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 sm:gap-0">
+			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 md:mt-6 sm:gap-0">
 				<button
 					class="text-xs sm:text-[15px] font-semibold text-gray-400 leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-sm bg-border-light transition-colors"
 					on:click={close}

@@ -54,7 +54,7 @@ class="fixed inset-0 z-10 top-[10%] md:top-[8%] xl:top-[4%] text-[#EEEDEE] backd
 		on:click={close}
 	>
 		<div
-			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[85vh] overflow-y-auto p-3 sm:p-4 xl:p-3 border border-border relative z-50 backdrop-blur-[100%] bg-border"
+			class="text-[#EEEDEE] font-inter rounded-2xl w-full max-w-[668px] max-h-[80vh] overflow-y-auto p-3 sm:p-4 xl:p-3 border border-border relative z-50 backdrop-blur-[100%] bg-border"
 			transition:scale
 			on:click|stopPropagation
 			role="document"

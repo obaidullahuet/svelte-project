@@ -79,19 +79,19 @@
 	<div class=" max-w-full grid  sm:grid-cols-2 items-start  gap-7 lg:flex-row">
 		<div class="flex flex-col gap-10 items-start title-gradient text-left">
 			
-			<div
-				class="bg-gradient-to-r from-[#FFFFFF] to-[#8c8f93] bg-clip-text text-transparent  uppercase text-xl sm:text-3xl md:text-5xl font-roboto lg:text-[64px] lg:leading-7    font-bold"
+			<h1
+				class="bg-gradient-to-r from-[#FFFFFF] to-[#8c8f93] bg-clip-text text-transparent  uppercase text-xl sm:text-3xl md:text-5xl font-roboto  lg:text-[64px] lg:leading-7    "
 			>
 				Questions?<br> No problem, <br>we have the <br> answers
-			</div>
+			</h1>
 			
 
 			<div
-				class=" text-[rgba(238,237,238,0.87)] bg-clip-text  font-inter flex  flex-col md:gap-6 text-[25px] md:text-[31px] max-w-[440px] font-light md:font-semibold md:leading-4 "
+				class=" text-[rgba(238,237,238,0.87)]   font-inter flex  flex-col md:gap-6 text-[25px] md:text-[31px] max-w-[440px] font-light md:font-semibold md:leading-4 "
 			>
-				<p class="text-[rgba(238,237,238,0.87)]">Just ping us, feel free!</p>
+				<p class="text-[rgba(238,237,238,0.87)] ">Just ping us, feel free!</p>
 				<p>...</p>
-				<p class="text-[rgba(238,237,238,0.87)]">Or read our FAQ. Who knows, maybe you can find answer by yourself</p>
+				<p class="text-[rgba(238,237,238,0.97)]">Or read our FAQ. Who knows, maybe you can find answer by yourself</p>
 			</div>
 
 			<button class="px-7 py-4 items-start border border-[#FFFFFF] rounded-md">

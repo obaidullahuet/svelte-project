@@ -204,7 +204,7 @@
 <div class="relative  mt-[100px] px-2 sm:px-6 md:px-8 lg:px-9 lg:hidden">
 	<!-- Wrapper with z-index to bring it above others -->
 	<div
-		class="relative  text-[#EEEDEE] max-w-[230px] bg-background border border-border-light rounded-2xl p-4"
+		class="relative  z-10 text-[#EEEDEE] max-w-[230px] bg-background border border-border-light rounded-2xl p-4"
 	>
 		<!-- Header Button -->
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -426,4 +426,4 @@
 <CancelModal2 isOpen={showModal2} close={() => (showModal2 = false)} />
 <CancelModal3 isOpen={showModal3} close={() => (showModal3 = false)} /> -->
 
-<SubscriptionTier tier="3" />
+<SubscriptionTier tier="1" />

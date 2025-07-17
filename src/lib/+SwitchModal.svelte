@@ -97,15 +97,15 @@ const mappedLabel = `tier${label}`;
 					<div
 						class={`flex w-full flex-col rounded-xl border border-border-light    ${current.bg} px-5 py-1 md:p-5`}
 					>
-						<div class={`flex flex-wrap items-center gap-1 `}>
+						<div class={`flex flex-wrap items-center gap-1 ${current.dp}`}>
 							<img class={`h-5 w-5 ${current.dp}`} src={current.img} alt="Tier Badge" />
 							<span class={`font-roboto text-[16px] md:leading-1 font-medium  italic ${current.text} `}>
 								{current.name}
 							</span>
 						</div>
 
-						<div class=" mt-2  md:mt-6 md:leading-2 sm:text-[20px] font-semibold  text-[#EEEDEE]">
-							<span>{current.label}</span>
+						<div class=" mt-2  md:mt-6 md:leading-2 sm:text-[20px] font-semibold  ">
+							<span class={`${current.text} `} >{current.label}</span>
 						</div>
 
 						<div
@@ -135,7 +135,7 @@ const mappedLabel = `tier${label}`;
 					>
 						<div class="flex justify-between items-center">
 							<div>
-								<div class="flex flex-wrap items-center gap-1 ">
+								<div class="flex flex-wrap items-center gap-1 {tier.dp} ">
 									<img
 										class="h-5 w-5 drop-shadow-[0_0_20px_rgba(221,3,85,0.7)] {tier.dp}"
 										src={tier.img}
@@ -187,15 +187,15 @@ const mappedLabel = `tier${label}`;
 				</div>
 			{/each}
 
-			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 sm:gap-0">
+			<div class="flex flex-col-reverse sm:flex-row sm:justify-between gap-2 mt-4 sm:gap-0">
 				<button
-					class="text-xs sm:text-[15px] text-gray-400 font-semibold leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-md bg-border-light transition-colors"
+					class="text-xs sm:text-[15px] text-gray-400 font-semibold leading-1 font-roboto py-2 sm:py-3 px-3 sm:px-4 xl:px-7 rounded-sm bg-border-light transition-colors"
 					on:click={close}
 				>
 					Keep my subscription
 				</button>
 				<button
-					class="bg-[#8800F0]  font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-md hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
+					class="bg-[#8800F0]  font-roboto font-semibold text-white px-3 sm:px-4 xl:px-6 py-2 sm:py-3 xl:py-2 rounded-sm hover:bg-fuchsia-700 transition-colors text-xs sm:text-sm xl:text-[15px] leading-1"
 					on:click={() => {
 						if (selectedOption) showModal = true;
 					

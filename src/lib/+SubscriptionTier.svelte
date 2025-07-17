@@ -82,7 +82,7 @@
 </script>
 
 {#if currentTier}
-	<div class="flex justify-center px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
+	<div class="flex justify-center px-2 sm:px-6 md:px-8 lg:px-9 font-inter">
 		<div class="flex w-full flex-col rounded-2xl border border-[#FFFFFF]/5 bg-[#0D0B0F] p-4">
 			<div class="py-3">
 				<span class="text-[rgba(238,237,238,0.68)] text-[14px] font-medium leading-1">Your subscription</span>
@@ -102,7 +102,7 @@
 			<div
 				class="flex flex-col items-start justify-between gap-4 py-3 text-[17px] sm:flex-row sm:items-center"
 			>
-				<span class="whitespace-nowrap text-[gray] leading-2 font-normal">
+				<span class="whitespace-nowrap text-[16px] text-[gray] lg:leading-2 font-normal">
 					Next subscription renewal:
 					<span class="font-medium font-inter-tight text-[#EEEDEE]">28.03.2024</span>
 				</span>

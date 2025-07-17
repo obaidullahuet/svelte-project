@@ -426,4 +426,4 @@
 <CancelModal2 isOpen={showModal2} close={() => (showModal2 = false)} />
 <CancelModal3 isOpen={showModal3} close={() => (showModal3 = false)} /> -->
 
-<SubscriptionTier tier="1" />
+<SubscriptionTier tier="3" />

@@ -85,10 +85,10 @@
 	<div class="flex justify-center px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
 		<div class="flex w-full flex-col rounded-2xl border border-[#FFFFFF]/5 bg-[#0D0B0F] p-4">
 			<div class="py-3">
-				<span class="text-[gray] text-[14px] font-medium leading-1">Your Subscription</span>
+				<span class="text-[rgba(238,237,238,0.68)] text-[14px] font-medium leading-1">Your Subscription</span>
 			</div>
 
-			<div class="py-3 text-[16px] font-roboto font-bold italic text-[#EEEDEE] leading-1">
+			<div class="py-3 text-[16px] font-roboto font-bold italic text-[rgba(238,237,238,0.87)] leading-1">
 				<span>TIER {currentTier.label}</span>
 			</div>
 

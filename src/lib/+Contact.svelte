@@ -80,25 +80,25 @@
 		<div class="flex flex-col gap-10 items-start title-gradient text-left">
 			
 			<div
-				class="bg-gradient-to-b from-[#FFFFFF] to-[#8c8f93] bg-clip-text text-transparent  uppercase text-xl sm:text-3xl md:text-5xl font-roboto lg:text-[64px] lg:leading-7"
+				class="bg-gradient-to-r from-[#FFFFFF] to-[#8c8f93] bg-clip-text text-transparent  uppercase text-xl sm:text-3xl md:text-5xl font-roboto lg:text-[64px] lg:leading-7    font-bold"
 			>
 				Questions?<br> No problem, <br>we have the <br> answers
 			</div>
 			
 
 			<div
-				class="font-inter flex  flex-col md:gap-6 text-[25px] md:text-[31px] max-w-[440px] font-light md:font-semibold md:leading-4 text-[#EEEDEE]"
+				class=" bg-gradient-to-r from-[#FFFFFF] to-[#8c8f93] bg-clip-text text-transparent font-inter flex  flex-col md:gap-6 text-[25px] md:text-[31px] max-w-[440px] font-light md:font-semibold md:leading-4 "
 			>
 				<p>Just ping us, feel free!</p>
 				<p>...</p>
 				<p>Or read our FAQ. Who knows, maybe you can find answer by yourself</p>
 			</div>
 
-			<button class="px-7 py-4 items-start border-2 border-border-light rounded-lg">
+			<button class="px-7 py-4 items-start border border-[#FFFFFF] rounded-md">
 				<a
 					href="/"
 					target="_blank"
-					class="text-[#EEEDEE] font-semibold text-[16px] leading-1 font-inter"
+					class="text-[#EEEDEE] font-semibold text-[16px] italic leading-1 font-inter"
 				>
 					GO TO FAQ
 				</a>
@@ -115,7 +115,7 @@
 
 			<div class="flex flex-col gap-5">
 				<p
-					class="title-gradiant text-3xl py-2 leading-[56px] font-semibold md:text-5xl lg:text-[64px]"
+					class="bg-gradient-to-r from-[#FFFFFF] to-[#8c8f93] bg-clip-text text-transparent text-3xl py-2 leading-[56px] font-semibold md:text-5xl lg:text-[64px]"
 				>
 					Contact us
 				</p>
@@ -176,7 +176,7 @@
 			<button
 				type="submit"
 				disabled={!formValid || $isPending}
-				class=" w-full rounded-lg py-4 px-7 font-bold uppercase tracking-wide text-white bg-[#8800F0] shadow-[0px_4px_12px_4px_rgba(136,0,240,0.2)] transition"
+				class=" w-full rounded-md py-4 px-7 font-bold uppercase tracking-wide text-white bg-[#8800F0] shadow-[0px_4px_12px_4px_rgba(136,0,240,0.2)] transition"
 				
 			>
 				{$isPending ? 'Sending...' : 'Send'}

@@ -17,7 +17,7 @@
 			name: 'TIER 1',
 			price: '$2.99',
 			img: '/Vector (1).svg',
-			bg: 'from-[#383737] to-[#08060a] via-[#08060a] via-44%',
+			bg: 'bg-[linear-gradient(90deg,#151314,#0a0a0a)]',
 			value: 'tier1',
 			dp: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]',
 			label: "Public+	",
@@ -27,7 +27,7 @@
 			name: 'TIER 2',
 			price: '$6.99',
 			img: '/ortire.svg',
-			bg: 'from-[#291814] to-[#08060a] via-[#08060a] via-44%',
+			bg: 'bg-[linear-gradient(90deg,#2a1c17,#0d0d0d)]',
 			value: 'tier2',
 			dp: 'drop-shadow-[0_0_20px_rgba(255,129,38,0.7)]',
 			label: "Midnight",
@@ -37,7 +37,8 @@
 			name: 'TIER 3',
 			price: '$10.99',
 			img: '/3itir.svg',
-			bg: 'from-[#241215] to-[#08060a] via-[#08060a] via-44%',
+			// bg: 'from-[#241215] to-[#08060a] via-[#08060a] via-44%',
+			bg: 'bg-[linear-gradient(90deg,#1f0d12,#0d0d0d)]',
 			value: 'tier3',
 			dp: 'drop-shadow-[0_0_20px_rgba(221,3,85,0.7)]',
 			label: "Underground",
@@ -94,11 +95,11 @@ const mappedLabel = `tier${label}`;
 			{#if current}
 				<div class="flex justify-center font-inter mb-1 md:mb-3">
 					<div
-						class={`flex w-full flex-col rounded-xl   bg-gradient-to-r ${current.bg} px-5 py-1 md:p-5`}
+						class={`flex w-full flex-col rounded-xl border border-border-light   bg-gradient-to-r ${current.bg} px-5 py-1 md:p-5`}
 					>
 						<div class={`flex flex-wrap items-center gap-1 ${current.dp}`}>
 							<img class={`h-5 w-5 ${current.dp}`} src={current.img} alt="Tier Badge" />
-							<span class={`font-roboto text-[16px] md:leading-1 font-medium  text-[#EEEDEE] `}>
+							<span class={`font-roboto text-[16px] md:leading-1 font-medium  italic text-[#EEEDEE] `}>
 								{current.name}
 							</span>
 						</div>
@@ -128,13 +129,13 @@ const mappedLabel = `tier${label}`;
 					<!-- svelte-ignore a11y-no-static-element-interactions -->
 					<div
 						class={`flex w-full flex-col rounded-xl border ${
-							selectedOption === tier.value ? 'border-white' : 'border-transparent'
+							selectedOption === tier.value ? 'border-white' : 'border-border-light'
 						} bg-gradient-to-r ${tier.bg} py-2 md:py-6 px-5 cursor-pointer`}
 						on:click={() => (selectedOption = tier.value)}
 					>
 						<div class="flex justify-between items-center">
 							<div>
-								<div class="flex flex-wrap items-center gap-1 {tier.dp}">
+								<div class="flex flex-wrap items-center gap-1 ">
 									<img
 										class="h-5 w-5 drop-shadow-[0_0_20px_rgba(221,3,85,0.7)] {tier.dp}"
 										src={tier.img}

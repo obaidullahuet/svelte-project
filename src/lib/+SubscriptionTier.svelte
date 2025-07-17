@@ -43,9 +43,10 @@
 		'1': {
 			label: '1',
 			img: '/Vector (1).svg',
-			shadow: '',
+			shadow: 'drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]',
 			name: 'PUBLIC+',
 			modalComponent: 'CancelModal1'
+
 		},
 		'2': {
 			label: '2',

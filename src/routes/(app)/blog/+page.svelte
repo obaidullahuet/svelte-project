@@ -261,7 +261,11 @@
 
 	let currentImageIndex = 0;
 
-	const images = ['/blog/c872020f786b7f4e7710ed9bb6cd00c692f130f4.png', '/blog/fa17ea44cbdef5f9b7a21cb932028cb96dbc349a.png', '/blog/c88be13019a9d7bd6501b2836ffffd9f620369dd.png'];
+	const images = [
+		'/blog/c872020f786b7f4e7710ed9bb6cd00c692f130f4.png',
+		'/blog/fa17ea44cbdef5f9b7a21cb932028cb96dbc349a.png',
+		'/blog/c88be13019a9d7bd6501b2836ffffd9f620369dd.png'
+	];
 
 	function prevImage() {
 		currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
@@ -287,15 +291,17 @@
 		<img
 			src="/blog/ANIMATION (1).svg"
 			alt="Background"
-			class="absolute  w-full h-full object-cover "
+			class="absolute w-full h-full object-cover"
 		/>
 
-		<div class="absolute inset-0 bg-[rgba(8, 6, 10, 0.30)] backdrop-blur-[50px] " />
+		<div class="absolute inset-0 bg-[rgba(8, 6, 10, 0.30)] backdrop-blur-[50px]" />
 
 		<section
-			class="relative z-10 font-inter flex flex-col   items-center justify-end h-full text-[#FFFFFF] text-center  px-4 sm:px-6 md:px-8"
+			class="relative z-10 font-inter flex flex-col items-center justify-end h-full text-[#FFFFFF] text-center px-4 sm:px-6 md:px-8"
 		>
-			<p class="xl:text-[39px]  text-[25px] font-inter sm:text-[32px] md:text-5xl text-[#EEEDEE]  font-semibold sm:leading-5">
+			<p
+				class="xl:text-[39px] text-[25px] font-inter sm:text-[32px] md:text-5xl text-[#EEEDEE] font-semibold sm:leading-5"
+			>
 				No Hesi is always evolving
 			</p>
 			<p
@@ -320,7 +326,9 @@
 	</div>
 
 	<section class="text-[#EEEDEE] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
-		<p class="text-lg sm:text-xl md:text-2xl lg:text-[30px] leading-5 font-semibold mb-3">Announcements</p>
+		<p class="text-lg sm:text-xl md:text-2xl lg:text-[30px] leading-5 font-semibold mb-3">
+			Announcements
+		</p>
 
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
 			<!-- First Left Card -->
@@ -337,7 +345,7 @@
 					<span
 						class="absolute bottom-1 left-1 px-9 py-4 text-xs sm:text-sm md:text-[16px] font-medium border border-border-light text-[#EEEDEE] rounded-full
 							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center leading-1"
-		 			>
+					>
 						Limited Times Event
 					</span>
 				</div>
@@ -347,8 +355,8 @@
 					<p
 						class="mt-3 text-base sm:text-lg md:text-xl lg:text-[20px] xl:text-[26px] font-semibold leading-snug lg:leading-8"
 					>
-						Ergonomic executive chair upholstered in <br> bonded black leather and PVC
-				</p>
+						Ergonomic executive chair upholstered in <br /> bonded black leather and PVC
+					</p>
 				</div>
 
 				<button
@@ -371,7 +379,7 @@
 							class=" w-full h-[160px] sm:h-[200px] md:h-[240px] lg:h-[200px] object-cover rounded-2xl sm:rounded-l-2xl sm:rounded-r-none"
 						/>
 						<span
-							class="absolute bottom-1 xl:bottom-1 border border-border-light  xl:w-[95%] left-1 px-11 py-4 text-xs sm:text-sm md:text-sm whitespace-nowrap text-[#EEEDEE] rounded-full
+							class="absolute bottom-1 xl:bottom-1 border border-border-light xl:w-[95%] left-1 px-11 py-4 text-xs sm:text-sm md:text-sm whitespace-nowrap text-[#EEEDEE] rounded-full
 							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center xl:text-[16px]"
 						>
 							Collabs
@@ -381,10 +389,10 @@
 						<div>
 							<p class="text-xs sm:text-sm md:text-base lg:text-[18px]">June 13, 2025</p>
 							<p
-								class="text-sm sm:text-base md:text-lg lg:text-[12px] xl:text-[24px] mt-3 font-semibold leading-snug lg:leading-[32px] "
+								class="text-sm sm:text-base md:text-lg lg:text-[12px] xl:text-[24px] mt-3 font-semibold leading-snug lg:leading-[32px]"
 							>
-								Andy shoes are designed to <br>keeping in mind durability as well<br> as trends, the most
-								stylish range of <br> shoes & sandals
+								Andy shoes are designed to <br />keeping in mind durability as well<br /> as trends,
+								the most stylish range of <br /> shoes & sandals
 							</p>
 						</div>
 						<button
@@ -438,9 +446,11 @@
 	<Test />
 
 	<section class="text-[#EEEDEE] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
-		<p class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold leading-10 mb-3">VIP-Only Updates</p>
+		<p class="text-lg sm:text-xl md:text-2xl lg:text-[30px] font-semibold leading-10 mb-3">
+			VIP-Only Updates
+		</p>
 
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
 			<!-- First Left Card -->
 			<div
 				class="bg-[#E6E6E6]/[0.05] rounded-3xl p-2 overflow-hidden shadow-md relative flex flex-col h-auto"
@@ -477,7 +487,7 @@
 							class="w-8 h-8 flex items-center justify-center border border-border-light bg-[#FFFFFF1A] backdrop-blur-[24px] text-white rounded-full"
 						>
 							<svg
-								class="w-4 h-4 "
+								class="w-4 h-4"
 								fill="none"
 								stroke="currentColor"
 								stroke-width="2"
@@ -487,7 +497,9 @@
 							</svg>
 						</button>
 
-						<div class="flex gap-2 bg-[#FFFFFF1A] border border-border-light backdrop-blur-[24px] py-4 px-4 rounded-full">
+						<div
+							class="flex gap-2 bg-[#FFFFFF1A] border border-border-light backdrop-blur-[24px] py-4 px-4 rounded-full"
+						>
 							{#each images as _, i}
 								<!-- svelte-ignore a11y-click-events-have-key-events -->
 								<!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -525,8 +537,6 @@
 						Ergonomic executive chair upholstered in bonded black leather and PVC
 					</p>
 				</div>
-
-			
 			</div>
 
 			<!-- Right Column (Two Cards) -->
@@ -587,7 +597,7 @@
 								</p>
 							</div>
 							<button
-								class="absolute  bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
+								class="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
 							>
 								<img src="/blog/ArrowUpRight.svg" alt="" />
 							</button>
@@ -608,7 +618,7 @@
 								class="absolute bottom-1 xl:bottom-1 left-1 px-6 lg:px-4 xl:px-6 py-4 lg:text-[11px] text-xs sm:text-sm md:text-sm font-medium xl:text-[16px] whitespace-nowrap text-[#EEEDEE] rounded-full
 							   bg-[#FFFFFF1A] backdrop-blur-[24px] text-center"
 							>
-						Public Car Releases
+								Public Car Releases
 							</span>
 						</div>
 						<div class="flex flex-col justify-between p-4 w-full">
@@ -623,27 +633,24 @@
 									ingredients.
 								</p>
 								<div
-						class="relative inline-flex border border-border-light items-center justify-between bg-[#FFFFFF1A] backdrop-blur-[24px] rounded-full"
-					>
+									class="relative inline-flex border border-border-light items-center justify-between bg-[#FFFFFF1A] backdrop-blur-[24px] rounded-full"
+								>
+									<button
+										class=" w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
+									>
+										<img src="/blog/ArrowUpRight.svg" alt="" />
+									</button>
+									<span
+										class="px-6 py-4 text-xs text-[10px] md:text-base font-medium text-[#EEEDEE] rounded-full whitespace-nowrap"
+									>
+										Get VIP Access
+									</span>
 
-
-					<button
-							class=" w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
-						>
-							<img src="/blog/ArrowUpRight.svg" alt="" />
-						</button>
-						<span
-							class="px-6 py-4 text-xs text-[10px] md:text-base font-medium text-[#EEEDEE] rounded-full whitespace-nowrap"
-						>
-							Get VIP Access
-						</span>
-
-						<!-- Arrow Button -->
-						
-					</div>
+									<!-- Arrow Button -->
+								</div>
 							</div>
 							<button
-								class="absolute  bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
+								class="absolute bottom-4 right-4 w-10 h-10 flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
 							>
 								<img src="/blog/ArrowUpRight.svg" alt="" />
 							</button>
@@ -655,7 +662,11 @@
 	</section>
 
 	<section class="px-1 py-2 sm:px-6 md:px-8 lg:px-9">
-						<p class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl leading-[48px] lg:text-[30px] font-semibold mb-3">Under The Hood: Devlogs and Patch Notes</p>
+		<p
+			class="text-lg sm:text-xl text-[#EEEDEE] font-inter md:text-2xl leading-[48px] lg:text-[30px] font-semibold mb-3"
+		>
+			Under The Hood: Devlogs and Patch Notes
+		</p>
 
 		{#each devlogCards as log}
 			<div
@@ -670,14 +681,19 @@
 					</span>
 
 					<span
-						class="flex gap-6 relative items-center text-sm sm:text-sm md:text-md lg:text-lg xl:text-[22px] font-semibold flex-1 leading-snug"
+						class="flex gap-6 items-center relative text-sm sm:text-sm md:text-md lg:text-lg xl:text-[22px] font-semibold flex-1 leading-snug"
 					>
 						{#if log.img}
-							<img src={log.img} alt="" class=" h-17 w-20 xl:w-[240px] leading-[48px] xl:h-[135px]" />
-
+							<div class="">
+								<img
+									src={log.img}
+									alt=""
+									class="  h-17 w-20 xl:w-[240px]  leading-[48px] xl:h-[135px]"
+								/>
+							</div>
 							<!-- Button only shows when image exists -->
 							<button
-								class=" hidden absolute bottom-1 left-[19%] w-13 h-13 xl:flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
+								class=" hidden absolute bottom-1 left-[18%] w-13 h-13 xl:flex items-center justify-center bg-[#FFFFFF] text-[#000000] rounded-full"
 							>
 								<img src="/blog/fi_27223.png" alt="Open" />
 							</button>
@@ -698,12 +714,12 @@
 		{/each}
 	</section>
 
-
-
 	<section
-		class=" font-inter flex flex-col items-center justify-end h-full text-[#FFFFFF] text-center  sm:px-6 md:px-8"
+		class=" font-inter flex flex-col items-center justify-end h-full text-[#FFFFFF] text-center sm:px-6 md:px-8"
 	>
-		<p class="text-[30px] sm:text-[32px] md:text-[30px] text-[#EEEDEE] font-semibold leading-[48px] py-2">
+		<p
+			class="text-[30px] sm:text-[32px] md:text-[30px] text-[#EEEDEE] font-semibold leading-[48px] py-2"
+		>
 			Unlock More Features With VIP
 		</p>
 
@@ -741,7 +757,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="group inline-flex cursor-pointer items-center gap-1 text-[15px] font-medium leading-1">
+				<div
+					class="group inline-flex cursor-pointer items-center gap-1 text-[15px] font-medium leading-1"
+				>
 					Can't choose? Compare plans
 					<img
 						src="/leftarrow.png"
@@ -749,28 +767,24 @@
 						class="duration-600 h-2 w-2 cursor-pointer brightness-0 contrast-200 invert filter transition-transform group-hover:translate-x-[5px]"
 					/>
 				</div>
-
-				
 			</div>
 		</div>
 	</section>
 
-
-
-	<section 		class=" font-inter flex flex-col  justify-end h-full text-[#FFFFFF] text-center  px-1 sm:px-6 md:px-8"
-><div
-					class="  grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:gap-1 xl:grid-cols-4"
-				>
-					{#each plans as plan}
-						<Tiercard
-							{...plan}
-							selectedPrice={selected === 'month' ? plan.price : plan.anuallayprice}
-							selectedType={selected}
-						/>
-					{/each}
-				</div></section>
+	<section
+		class=" font-inter flex flex-col justify-end h-full text-[#FFFFFF] text-center px-1 sm:px-6 md:px-8"
+	>
+		<div class="  grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2 lg:gap-1 xl:grid-cols-4">
+			{#each plans as plan}
+				<Tiercard
+					{...plan}
+					selectedPrice={selected === 'month' ? plan.price : plan.anuallayprice}
+					selectedType={selected}
+				/>
+			{/each}
+		</div>
+	</section>
 </div>
-
 
 <style>
 	.carousel-container {

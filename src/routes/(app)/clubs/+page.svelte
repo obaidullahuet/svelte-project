@@ -1,8 +1,9 @@
-<script>
+<script lang="ts">
 	// @ts-nocheck
 
 	import CancelModal from '$lib/+Modal1.svelte';
 	import { fade, scale } from 'svelte/transition';
+	import { onMount } from 'svelte';
 	//   export let isOpen = false;
 	//   export let close = () => {};
 	let showModal = false;
@@ -88,9 +89,28 @@
 			type: 'Public Club'
 		}
 	];
+
+
+	let isOpen = false;
+	let dropdownRef: HTMLDivElement;
+
+	function handleClickOutside(event: { target: any }) {
+		if (dropdownRef && !dropdownRef.contains(event.target)) {
+			isOpen = false;
+		}
+	}
+
+	onMount(() => {
+		document.addEventListener('click', handleClickOutside);
+
+		return () => {
+			document.removeEventListener('click', handleClickOutside);
+		};
+	});
+
 </script>
 
-<div class="mt-[100px] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
+<div class="hidden lg:block mt-[100px] px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
 	<nav class="rounded-2xl py-3">
 		<div class="flex flex-wrap items-center text-[#EEEDEE] justify-start lg:justify-end">
 			<!-- Right Section (Buttons) -->
@@ -178,6 +198,99 @@
 			</div>
 		</div>
 	</nav>
+</div>
+
+<div class="relative mt-[100px] px-2 sm:px-6 md:px-8 lg:px-9 lg:hidden">
+	<!-- Wrapper with z-index to bring it above others -->
+	<div
+		bind:this={dropdownRef}
+		class="relative z-10 text-[#EEEDEE] max-w-[230px] bg-background border border-border-light rounded-2xl p-4"
+	>
+		<!-- Header Button -->
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
+		<div
+			class="flex items-center justify-between px-3 py-2 rounded-lg bg-background border border-[#333] cursor-pointer"
+			on:click={() => (isOpen = !isOpen)}
+		>
+			<div class="flex items-center gap-2">
+				<img src="/billing/fi_9554529.svg" alt="Billing" class="h-5 w-5" />
+				<span class="text-sm font-bold uppercase">Clubs</span>
+			</div>
+
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class={`h-4 w-4 text-white transform transition-transform duration-300 ${
+					isOpen ? 'rotate-180' : ''
+				}`}
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+			</svg>
+		</div>
+
+		{#if isOpen}
+			<div
+				class="absolute left-0 right-0 top-[71px] bg-background border border-border-light rounded-xl p-2 shadow-xl space-y-1"
+			>
+				<a href="" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+					<img src="/billing/House.svg" alt="Home" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Home</span>
+				</a>
+				<a
+					href=""
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
+					<img src="/billing/Crown.svg" alt="Leaderboard" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Leaderboard</span>
+				</a>
+				<a
+					href=""
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
+					<img src="/billing/Users.svg" alt="Friends" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Friends</span>
+				</a>
+				<a
+					href=""
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
+					<img src="/billing/fi_6557720.svg" alt="Clients" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Clients</span>
+				</a>
+				<a
+					href=""
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
+					<img src="/billing/PencilSimple.svg" alt="Edit" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Edit Profile</span>
+				</a>
+				<a
+					href=""
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
+					<img src="/billing/Cube.svg" alt="Subscriptions" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Subscriptions</span>
+				</a>
+				<a
+					href=""
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
+					<img src="/billing/Cube.svg" alt="Transactions" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Transactions</span>
+				</a>
+				<a
+					href="/billing"
+					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
+				>
+					<img src="/billing/fi_9554529.svg" alt="Billing" class="h-5 w-5" />
+					<span class="text-sm font-bold uppercase">Billing</span>
+				</a>
+			</div>
+		{/if}
+	</div>
 </div>
 
 <div

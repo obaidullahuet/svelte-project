@@ -752,95 +752,14 @@ radial-gradient(36.24% 104.38% at 40.01% 64.79%, rgba(156, 53, 234, 0.2) 0%, rgb
 	{:else}
 		<div class=" mt-60 sm:mt-26 md:mt:30 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 			{#each cards as card}
-				<!-- <div
-					class="flex cursor-pointer flex-col rounded-2xl border border-white/10 bg-[#161416] py-4 transition-colors duration-1000"
-				>
-					<div class="mx-4 flex items-center justify-between">
-						<div class="flex w-[151px] items-center gap-1.5 bg-[#161416] text-sm">
-							<div
-								class="flex h-[36px] w-[90px] items-center justify-center gap-1 rounded-2xl px-1 py-2 font-medium {card.bg} {card.dp} "
-							>
-								<img
-									src={card.tier.icon}
-									class="h-[15px] w-[15px] rounded-2xl {card.dp}  "
-									alt="tier"
-								/>
-								<span class="whitespace-nowrap py-2 text-[15px] font-medium">{card.tier.label}</span
-								>
-							</div>
-						</div>
-
-						<div
-							class="flex w-[72px] items-center justify-center gap-2 bg-[#161416] px-1 py-2 text-sm"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 24 24"
-								class="h-[20px] w-[20px] fill-transparent stroke-[#5B5B5B] stroke-2 transition hover:fill-[#5B5B5B]"
-							>
-								<polygon points={card.rating.svg.points.join(' ')} />
-							</svg>
-							<img src={card.rating.image} class="h-[17px] w-[18px]" alt="rating" />
-						</div>
-					</div>
-
-					<div class=" flex flex-col justify-between gap-2 rounded-b-xl px-4 pt-5">
-						<div class="flex flex-col gap-4">
-							<img src={card.country.icon} alt="flag" class="h-[18px] w-6" />
-							<h5 class=" text-[26px] font-semibold">
-								{card.title}
-							</h5>
-						</div>
-
-						<div class="text-content-secondary flex flex-col items-start gap-2">
-							<div class="flex flex-wrap gap-4">
-								<div class="flex items-center gap-2">
-									<img src={card.players.icon} alt="players" />
-									<span>{card.players.count}</span>
-								</div>
-								<div class="flex items-center gap-2">
-									<img src={card.traffic.icon} alt="traffic" />
-									<span>{card.traffic.level}</span>
-								</div>
-								<div class="flex items-center gap-2">
-									<img src={card.location.icon} alt="location" />
-									<span>{card.location.name}</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
-
+				
 				<div
-					class="group flex cursor-pointer flex-col rounded-2xl border border-border text-[#EEEDEEAD] bg-border font-inter  p-4 shadow-lg transition-all duration-500 hover:shadow-[0_0_20px_rgba(255,129,38,0.2)] sm:p-5 lg:p-6"
+					class="group flex cursor-pointer flex-col rounded-2xl border border-border text-[#EEEDEEAD] bg-border font-inter  p-4 shadow-lg transition-all duration-500  sm:p-5 lg:p-6"
 				>
 					<!-- Tier Badge and Actions -->
 					<div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-						<!-- Tier Badge -->
 
-							<!-- <div class="  flex    ">
-								<div
-									class="flex h-[36px] min-w-[90px] items-center justify-center gap-1 rounded-2xl px-2 py-1 text-sm font-medium {card.bg} {card.dp}"
-								>
-									<img
-										src={card.tier.icon}
-										class="h-[15px] w-[15px] rounded-full object-cover"
-										alt="tier"
-									/>
-									<span class="text-[14px] font-semibold">{card.tier.label}</span>
-								</div>
-
-								<div class="flex items-center justify-end gap-2">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										viewBox="0 0 24 24"
-										class="h-[20px] w-[20px] fill-transparent stroke-[#5B5B5B] stroke-2 transition group-hover:fill-[#5B5B5B]"
-									>
-										<polygon points={card.rating.svg.points.join(' ')} />
-									</svg>
-									<img src={card.rating.image} class="h-[17px] w-[18px]" alt="rating" />
-								</div>
-							</div> -->
+						
 
 
 							<div class=" flex items-center justify-between w-full">

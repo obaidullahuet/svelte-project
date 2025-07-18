@@ -95,13 +95,11 @@
 			</div>
 
 			<button class="px-7 py-4 items-start border border-[#FFFFFF] rounded-md">
-				<a
-					href="/"
-					target="_blank"
+				<div
 					class="text-[#EEEDEE] font-semibold text-[16px] italic leading-1 font-inter"
 				>
 					GO TO FAQ
-				</a>
+				</div>
 			</button>
 		</div>
 

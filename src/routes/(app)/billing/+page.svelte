@@ -34,7 +34,7 @@
 				<div
 					class="flex w-full flex-wrap items-center justify-start gap-2 sm:w-auto sm:justify-end"
 				>
-					<a href="/Subscription">
+					<!-- <a href="/Subscription"> -->
 						<button
 							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-1 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
 						>
@@ -42,18 +42,18 @@
 
 							Home
 						</button>
-					</a>
+					<!-- </a> -->
 
-					<a href="/Subscription">
+					<!-- <a href="/Subscription"> -->
 						<button
 							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-1 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
 						>
 							<img src="/billing/Crown.svg" alt="Alert Icon" class="mr-2 h-5 w-5" />
 							Leaderboard
 						</button>
-					</a>
+					<!-- </a> -->
 
-					<a href="/Subscription">
+					<!-- <a href="/Subscription"> -->
 						<button
 							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-1 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
 						>
@@ -61,9 +61,9 @@
 
 							Friends
 						</button>
-					</a>
+					<!-- </a> -->
 
-					<a href="/Subscription">
+					<!-- <a href="/Subscription"> -->
 						<button
 							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-1 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
 						>
@@ -71,9 +71,9 @@
 
 							Clients
 						</button>
-					</a>
+					<!-- </a> -->
 
-					<a href="/Subscription">
+					<!-- <a href="/Subscription"> -->
 						<button
 							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-1 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
 						>
@@ -81,8 +81,8 @@
 
 							Edit Profile
 						</button>
-					</a>
-					<a href="/Subscription">
+					<!-- </a> -->
+					<!-- <a href="/Subscription"> -->
 						<button
 							class="font-inter font-normal flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] leading-1 tracking-normal transition-colors hover:bg-[#FFFFFF]/5"
 						>
@@ -90,8 +90,8 @@
 
 							Subscription
 						</button>
-					</a>
-					<a href="/Subscription">
+					<!-- </a> -->
+					<!-- <a href="/Subscription"> -->
 						<button
 							class="font-inter-tight flex h-9 items-center rounded-md px-2 py-[6px] text-[14px] font-medium leading-1 transition-colors hover:bg-[#FFFFFF]/5"
 						>
@@ -99,9 +99,9 @@
 
 							Transactions
 						</button>
-					</a>
+					<!-- </a> -->
 
-					<a href="/Billing">
+					<a href="/billing">
 						<button
 							class=" flex h-9 font-inter items-center rounded-md border border-[#FFFFFF]/5 px-2 py-[6px] text-[14px] font-semibold leading-1 transition-colors hover:bg-[#FFFFFF]/10"
 						>
@@ -248,47 +248,47 @@
 			<div
 				class="absolute left-0 right-0 top-[71px] bg-background border border-border-light rounded-xl p-2 shadow-xl space-y-1"
 			>
-				<a href="/home" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+				<a href="" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10">
+				</a>
 					<img src="/billing/House.svg" alt="Home" class="h-5 w-5" />
 					<span class="text-sm font-bold uppercase">Home</span>
-				</a>
 				<a
-					href="/leaderboard"
+					href=""
 					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
 				>
 					<img src="/billing/Crown.svg" alt="Leaderboard" class="h-5 w-5" />
 					<span class="text-sm font-bold uppercase">Leaderboard</span>
 				</a>
 				<a
-					href="/friends"
+					href=""
 					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
 				>
 					<img src="/billing/Users.svg" alt="Friends" class="h-5 w-5" />
 					<span class="text-sm font-bold uppercase">Friends</span>
 				</a>
 				<a
-					href="/clients"
+					href=""
 					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
 				>
 					<img src="/billing/fi_6557720.svg" alt="Clients" class="h-5 w-5" />
 					<span class="text-sm font-bold uppercase">Clients</span>
 				</a>
 				<a
-					href="/edit-profile"
+					href=""
 					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
 				>
 					<img src="/billing/PencilSimple.svg" alt="Edit" class="h-5 w-5" />
 					<span class="text-sm font-bold uppercase">Edit Profile</span>
 				</a>
 				<a
-					href="/subscriptions"
+					href=""
 					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
 				>
 					<img src="/billing/Cube.svg" alt="Subscriptions" class="h-5 w-5" />
 					<span class="text-sm font-bold uppercase">Subscriptions</span>
 				</a>
 				<a
-					href="/transactions"
+					href=""
 					class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10"
 				>
 					<img src="/billing/Cube.svg" alt="Transactions" class="h-5 w-5" />

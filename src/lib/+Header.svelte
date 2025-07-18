@@ -6,12 +6,11 @@
 	import Star from '../lib/assets/Star.svg';
 	import Data from '../lib/assets/Database.png';
 	import File from '../lib/assets/FileArrowDown.svg';
-	import Bell from '../lib/assets/Bell.png';
-	import Avatar from '../lib/assets/9fbd4972fc0c3ffddfc14a8b901a6aa53a99193c.jpg';
-	import Arrow from '../lib/assets/Arrow.png';
+
 	import { onMount } from 'svelte';
 
-	let isOpen = false;
+	let isUserDropdownOpen = false;
+	let isNotificationDropdownOpen = false;
 	let isMobileMenuOpen = false;
 
 	const toggleMobileMenu = () => {
@@ -24,11 +23,15 @@
 		}
 	};
 
-	let dropdownRef: HTMLDivElement;
+	let userDropdownRef: HTMLDivElement;
+	let notificationDropdownRef: HTMLDivElement;
 
 	function handleClickOutside(event: { target: any }) {
-		if (dropdownRef && !dropdownRef.contains(event.target)) {
-			isOpen = false;
+		if (userDropdownRef && !userDropdownRef.contains(event.target)) {
+			isUserDropdownOpen = false;
+		}
+		if (notificationDropdownRef && !notificationDropdownRef.contains(event.target)) {
+			isNotificationDropdownOpen = false;
 		}
 	}
 
@@ -61,16 +64,17 @@
 				<a href="/billing" class="nav-link">
 					<button class="nav-button">Get started</button>
 				</a>
-				<a href="/shop" class="nav-link">
-					<button class="nav-button">Shop</button>
+				<!-- <a href="/" class="nav-link">
 				</a>
-				<a href="/about" class="nav-link">
-					<button class="nav-button">About us</button>
+				<a href="/" class="nav-link">
 				</a>
-
+				
 				<a href="/contacts" class="nav-link">
-					<button class="nav-button">Contacts</button>
-				</a>
+				</a> -->
+
+				<button class="nav-button">Shop</button>
+				<button class="nav-button">About us</button>
+				<button class="nav-button">Contacts</button>
 				<a href="/clubs" class="nav-link">
 					<button class="nav-button">Club</button>
 				</a>
@@ -80,7 +84,7 @@
 		<!-- Right Side Actions -->
 		<div class="flex items-center gap-2 h-11">
 			<!-- Desktop Action Buttons - Progressive display based on screen size -->
-			<div class="hidden items-center gap-1 h-11 xl:flex">
+			<div class="hidden items-center gap-4 h-11 xl:flex">
 				<div
 					class="rounded-full border border-[#ffffff]/10 px-3 text-[#ffffff] flex items-center justify-between gap-2"
 				>
@@ -108,32 +112,48 @@
 
 					<span class="w-[1px] h-full text-border">|</span>
 					<!-- Download Button - Show on xl+ -->
-					<a href="/download" class="action-link hidden xl:block">
-						<button class="flex items-center gap-2">
-							<img src={File} alt="Download" class="h-[13px] w-[11px] flex-shrink-0" />
-							<span class="action-text">Download launcher</span>
-						</button>
-					</a>
+					<!-- <a href="/" class="action-link hidden xl:block"> -->
+					<button class="flex items-center gap-2">
+						<img src={File} alt="Download" class="h-4 w-4 flex-shrink-0" />
+						<span class="action-text">Download launcher</span>
+					</button>
+					<!-- </a> -->
 				</div>
 
 				<!-- Bell Button - Show on lg+ -->
-				<div class="ml-4 flex justify-normal bg-border rounded-full">
-					<a
-						href="/notifications"
-						class="action-link hidden xl:block rounded-full border border-[#ffffff]/10"
+				<div class="flex justify-normal bg-border rounded-full">
+					<div
+						class="action-link hidden xl:block rounded-full border border-[#ffffff]/10 relative"
+						bind:this={notificationDropdownRef}
 					>
 						<button
-							class="flex h-11 w-11 items-center justify-center rounded-md border border-white/10 transition-colors hover:bg-white/10"
+							class="flex h-11 w-11 items-center justify-center rounded-md border border-white/10 transition-colors cursor-pointer hover:bg-white/10"
+							on:click={() => (isNotificationDropdownOpen = !isNotificationDropdownOpen)}
 						>
 							<img src="/belo.svg" alt="Notifications" class="h-3 w-[13px] rounded-full" />
 						</button>
-					</a>
+						{#if isNotificationDropdownOpen}
+							<div
+								class="absolute right-[0] top-[50px] w-[400px] h-[550px] text-[#EEEDEE] bg-background border border-border-light rounded-xl p-2 shadow-xl space-y-1 z-50"
+								transition:slide={{ duration: 200 }}
+							>
+								<div class="flex items-center gap-3 px-3 py-2 rounded-lg">
+									<div class="flex items-center gap-3">
+										<span class="text-base text-gray-400 font-medium ">No new notifications</span>
+										<!-- <img src="/billing/House.svg" alt="Notification" class="h-5 w-5" /> -->
+									</div>
+
+									<span class="text-base text-gray-400 font-medium"> Mark all as read</span>
+								</div>
+							</div>
+						{/if}
+					</div>
 
 					<!-- User Profile with Dropdown -->
-					<div class="relative" bind:this={dropdownRef}>
+					<div class="relative flex justify-between px-5" bind:this={userDropdownRef}>
 						<button
-							class="items-center content-center h-11 gap-2 ml-3 rounded-full px-5 hidden xl:flex sm:px-3 cursor-pointer transition-colors hover:bg-white/10"
-							on:click={() => (isOpen = !isOpen)}
+							class="items-center content-center h-11 gap-2 rounded-full px-5 hidden xl:flex sm:px-3 cursor-pointer transition-colors hover:bg-white/10"
+							on:click={() => (isUserDropdownOpen = !isUserDropdownOpen)}
 						>
 							<span class="hidden text-sm font-medium text-white lg:inline xl:text-base">
 								JohnDoe_911
@@ -141,58 +161,61 @@
 							<img
 								src="/downar (1).svg"
 								alt="Dropdown"
-								class={`ml-1 hidden h-[6px] w-[11px] lg:inline transform transition-transform duration-300 ${
-									isOpen ? 'rotate-180' : ''
+								class={`ml-1 hidden h-[8px] w-[11px] lg:inline transform transition-transform duration-300 ${
+									isUserDropdownOpen ? 'rotate-180' : ''
 								}`}
 							/>
 						</button>
 
-						{#if isOpen}
+						{#if isUserDropdownOpen}
 							<div
-								class="absolute right-0 top-[60px] w-[250px] text-[#EEEDEE]  bg-background border border-border-light rounded-xl p-2 shadow-xl space-y-1 z-50"
+								class="absolute right-[0] top-[50px] w-[240px] text-[#EEEDEE] bg-background border border-border-light rounded-xl p-2 shadow-xl space-y-1 z-50"
 								transition:slide={{ duration: 200 }}
 							>
-								<a href="/home" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors">
+								<a
+									href="/"
+									class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors"
+								>
 									<img src="/billing/House.svg" alt="Home" class="h-5 w-5" />
 									<span class="text-sm font-bold uppercase">Home</span>
 								</a>
 								<a
-									href="/leaderboard"
+									href="/"
 									class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors"
 								>
 									<img src="/billing/Crown.svg" alt="Leaderboard" class="h-5 w-5" />
 									<span class="text-sm font-bold uppercase">Leaderboard</span>
 								</a>
 								<a
-									href="/friends"
+									href="/"
 									class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors"
 								>
 									<img src="/billing/Users.svg" alt="Friends" class="h-5 w-5" />
 									<span class="text-sm font-bold uppercase">Friends</span>
 								</a>
 								<a
-									href="/clients"
+									href="/"
 									class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors"
 								>
 									<img src="/billing/fi_6557720.svg" alt="Clients" class="h-5 w-5" />
 									<span class="text-sm font-bold uppercase">Clients</span>
 								</a>
 								<a
-									href="/edit-profile"
+									href="/"
 									class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors"
 								>
 									<img src="/billing/PencilSimple.svg" alt="Edit" class="h-5 w-5" />
 									<span class="text-sm font-bold uppercase">Edit Profile</span>
 								</a>
 								<a
-									href="/subscriptions"
+									href="/"
 									class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors"
 								>
 									<img src="/billing/Cube.svg" alt="Subscriptions" class="h-5 w-5" />
 									<span class="text-sm font-bold uppercase">Subscriptions</span>
 								</a>
 								<a
-									href="/transactions"
+									href="/"
 									class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#FFFFFF]/10 transition-colors"
 								>
 									<img src="/billing/Cube.svg" alt="Transactions" class="h-5 w-5" />

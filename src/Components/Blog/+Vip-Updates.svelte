@@ -53,7 +53,7 @@
 
 	<div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
 		<!-- First Left Card with Carousel -->
-		<div class="bg-border rounded-3xl p-2 overflow-hidden shadow-md relative flex flex-col h-auto">
+		<div class="bg-border border border-border rounded-3xl p-2 overflow-hidden shadow-md relative flex flex-col h-auto">
 			<div class="relative w-full overflow-hidden rounded-2xl">
 				<!-- svelte-ignore a11y-img-redundant-alt -->
 				<img

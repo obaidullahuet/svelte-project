@@ -15,11 +15,11 @@
 			class="mt-3 sm:mt-4 max-w-md sm:max-w-lg md:max-w-2xl md:px-[62px] font-inter text-md xl:text-base sm:text-sm md:text-base leading-2 font-normal text-content-secondary"
 		>
 			Our evolution is community-led, and VIPs direct the future. The Garage is where you'll find
-			every update: cars, maps, devlogs, and everything else we're working on…
+			every update: cars, maps, devlogs, and everything else we're working on.
 		</p>
 		<div class="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center gap-4 sm:gap-4">
 			<button
-				class="bg-border-light text-content-primary font-medium py-[12px] font-inter sm:py-[14px] px-5 sm:px-6 leading-1 rounded-full  text-sm sm:text-md"
+				class="bg-top-light-17 text-content-primary font-medium py-[12px] font-inter sm:py-[14px] px-5 sm:px-6 leading-1 rounded-full  text-sm sm:text-md"
 			>
 				See What’s New
 			</button>

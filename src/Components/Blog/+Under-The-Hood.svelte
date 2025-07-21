@@ -65,9 +65,11 @@
 				</span>
 
 				<span
-					class="flex gap-6 items-center relative text-sm sm:text-sm md:text-md lg:text-lg xl:text-slg font-semibold flex-1 "
+					class="flex gap-6 items-center relative text-sm sm:text-sm md:text-md lg:text-lg xl:text-slg font-semibold flex-1 leading-5"
 				>
 					{#if log.img}
+
+
 						<div class="">
 							<img
 								src={log.img}

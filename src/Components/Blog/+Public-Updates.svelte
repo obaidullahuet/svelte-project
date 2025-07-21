@@ -210,13 +210,13 @@
 				</div>
 			{:else}
 				<div
-					class="bg-border text-content-primary font-inter min-w-[85%] lg:w-full sm:min-w-[320px] max-w-[360px] w-full md:w-[48%] xl:w-[366px] h-[400px] lg:h-[455px] rounded-2xl shadow-md p-4 flex flex-col justify-between shrink-0 transition-all duration-300"
+					class="bg-border text-content-primary font-inter min-w-[85%] lg:w-full sm:min-w-[320px] max-w-[360px] w-full md:w-[48%] xl:w-[366px] h-[400px] lg:h-[455px] rounded-3xl shadow-md p-4 flex flex-col justify-between shrink-0 transition-all duration-300"
 				>
 					<p class="text-[18px] font-inter font-normal  text-content-secondary leading-2 mb-4">{card.date}</p>
 					<p class="text-[24px] font-semibold font-inter mb-4 leading-9">{card.title}</p>
 					<span class="text-[18px] mb-4 leading-[26px] font-semibold font-inter text-content-secondary">{card.description}</span>
 					<button
-						class="mt-auto bg-border font-inter text-[16px] px-9 py-2 leading-1 font-medium rounded-full w-max"
+						class="mt-auto bg-border font-inter text-[16px] px-9 py-4 leading-1 font-medium rounded-full w-max"
 						>{card.buttonText}</button
 					>
 				</div>

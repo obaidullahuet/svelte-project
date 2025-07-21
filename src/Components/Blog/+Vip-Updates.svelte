@@ -3,12 +3,12 @@
 
 	// Dynamic data for VIP section
 	const vipData = {
-		carouselImages: ['/blog/car1.png', '/blog/car2.png', '/blog/car3.png'],
+		carouselImages: ['/blog/car1.png', '/blog/car2.png', '/blog/car3.png','/blog/car1.png', '/blog/car2.png', '/blog/car3.png'],
 		mainCard: {
 			id: 1,
 			tag: 'Vip Access Car Releases',
 			date: 'June 13, 2025',
-			title: 'Ergonomic executive chair upholstered in bonded black leather and PVC'
+			title: 'The beautiful range of Apple Naturalé that has an exciting mix of'
 		},
 		blurredCards: [
 			{
@@ -74,7 +74,7 @@
 					<img src="/blog/Frame 2616.png" class="h-7 md:h-[50px]" alt="" />
 				</span>
 
-				<div class="absolute bottom-2 left-0 right-0 flex justify-center items-center gap-4 z-10">
+				<div class="absolute bottom-1 left-0 right-0 flex justify-center items-center gap-4 z-10">
 					<!-- Left Arrow -->
 					<button
 						on:click={prevImage}
@@ -92,7 +92,7 @@
 					</button>
 
 					<div
-						class="flex gap-2 bg-border-light border border-border-light backdrop-blur-[24px] py-4 px-4 rounded-full"
+						class="flex gap-2 bg-border-light border border-border-light backdrop-blur-[24px] py-3 px-4 rounded-full"
 					>
 						{#each vipData.carouselImages as _, i}
 							<!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -145,17 +145,17 @@
 				</div>
 
 				<div
-					class="relative inline-flex border border-border-light items-center justify-between bg-top-light-10 backdrop-blur-[24px] rounded-full"
+					class="relative inline-flex border border-border-light items-center justify-between bg-top-light-10 backdrop-blur-[24px] rounded-full px-1"
 				>
 					<span
-						class="px-6 py-4 text-xs text-[10px] leading-1 md:text-base font-medium text-content-primary rounded-full whitespace-nowrap"
+						class="px-6 py-3 text-xs text-[10px] leading-1 md:text-base font-medium text-content-primary rounded-full whitespace-nowrap"
 					>
 						Get Vip Access
 					</span>
 
 					<!-- Arrow Button -->
 					<button
-						class=" w-10 h-10 flex items-center justify-center bg-content-primary rounded-full"
+						class=" w-10 h-10  flex items-center justify-center bg-content-primary rounded-full"
 					>
 						<img src="/blog/ArrowUpRight.svg" alt="" />
 					</button>

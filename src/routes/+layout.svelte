@@ -7,13 +7,13 @@
 
 <div class=" "> 
 	
-	<Header/>
+	<!-- <Header/> -->
 
 	<main class="">
 		<slot />
 	</main>
-	<Contact />
+	<!-- <Contact /> -->
 
-	<Footer />
+	<!-- <Footer /> -->
 
 </div>

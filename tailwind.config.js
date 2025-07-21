@@ -118,13 +118,17 @@ export default {
 
 		extend: {
 			lineHeight: {
+
+
 				7: '64px',
 				5: '48px',
 				4: '40px',
 				4: '36px',
 				3: '28px',
 				2: '24px',
-				1: '20px'
+				1: '20px',
+
+				// blog leading
 			},
 			fontSize: {
 				xxs: ['10px', '12px'],
@@ -137,7 +141,9 @@ export default {
 				mlg: ['27px', '32px'],
 				xl: ['30px', '36px'],
 				'2xl': ['36px', '40px'],
-				'3xl': ['48px', '46px']
+				'3xl': ['48px', '46px'],
+				// for blog page
+				'4xl': ['39px', '48px'],
 			},
 			blur: {
 				2: '2px',

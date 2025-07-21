@@ -60,24 +60,27 @@
 			</div>
 
 			<!-- Desktop Navigation Links - Show on large screens -->
-			<div class="ml-6 hidden items-center gap-1 xl:flex xl:gap-2">
-				<a href="/billing" class="nav-link">
-					<button class="nav-button">Get started</button>
-				</a>
-				<!-- <a href="/" class="nav-link">
-				</a>
-				<a href="/" class="nav-link">
-				</a>
-				
-				<a href="/contacts" class="nav-link">
-				</a> -->
-
-				<button class="nav-button">Shop</button>
-				<button class="nav-button">About us</button>
-				<button class="nav-button">Contacts</button>
-				<a href="/clubs" class="nav-link">
-					<button class="nav-button">Club</button>
-				</a>
+			<div class="ml-6 hidden items-center gap-6 xl:flex">
+				<a
+					class="text-sm lg:p-1 xl:p-2 lg:font-normal xl:font-medium 2xl:font-semibold rounded-sm text-content-secondary hover:bg-top-light-17 transition-all duration-500"
+					href="/billing">Get started</a
+				>
+				<a
+					class="text-sm lg:p-1 xl:p-2 lg:font-normal xl:font-medium 2xl:font-semibold rounded-sm text-content-secondary hover:bg-top-light-17 transition-all duration-500"
+					href="/about">Shop</a
+				>
+				<a
+					class="text-sm lg:p-1 xl:p-2 lg:font-normal xl:font-medium 2xl:font-semibold rounded-sm text-content-secondary hover:bg-top-light-17 transition-all duration-500"
+					href="/about">About us</a
+				>
+				<a
+					class="text-sm lg:p-1 xl:p-2 lg:font-normal xl:font-medium 2xl:font-semibold rounded-sm text-content-secondary hover:bg-top-light-17 transition-all duration-500"
+					href="/about">Contact</a
+				>
+				<a
+					class="text-sm lg:p-1 xl:p-2 lg:font-normal xl:font-medium 2xl:font-semibold rounded-sm text-content-secondary hover:bg-top-light-17 transition-all duration-500"
+					href="/clubs">Club</a
+				>
 			</div>
 		</div>
 
@@ -95,20 +98,39 @@
 							<span class="action-text">Blog</span>
 						</button>
 					</a>
-					<a href="/blog" class="action-link hidden py-3 xl:block">
-						<button class="flex items-center gap-2">
-							<img src={Star} alt="Subscription" class="h-[13px] w-[14px] flex-shrink-0" />
-							<span class="action-text">Subscription</span>
-						</button>
-					</a>
+					<!-- <a href="/blog" class="action-link hidden py-3 xl:block"> -->
+					<span class="w-[1px] h-full text-border">|</span>
+
+					<button class="flex items-center gap-2">
+						<img src={Star} alt="Subscription" class="h-[13px] w-[14px] flex-shrink-0" />
+						<span class="action-text">Subscription</span>
+					</button>
+
+					<!-- <button
+					class="flex btn-md font-inter 5xl:text-[25px] 5xl:!py-4 5xl:px-8 border bg-top-light-2 border-border text-content-secondary hover:bg-top-light-17 2xl:!py-3 2xl:text-lg !font-medium !rounded-sm non-italic transition-all duration-300 justify-center whitespace-nowrap"
+					type="button"
+					value="undefined"
+					><img src={Star} alt="cdn" class="w-6 opacity-30 5xl:scale-150 5xl:mr-2" /> Subscriptions</button
+				> -->
+					<!-- </a> -->
 					<!-- Servers Button - Show on lg+ -->
 					<span class="w-[1px] h-full text-border">|</span>
-					<a href="/Server" class=" hidden bg-border rounded-full py-1 w-full px-2 xl:block">
-						<button class=" flex items-center gap-2">
-							<img src="/beli.svg" alt="Servers" class="h-[13px] w-3 flex-shrink-0" />
-							<span class="action-text">Servers</span>
+					<a
+						href="/Server"
+						class=" hidden bg-border rounded-full hover:bg-top-light-17 py-1  px-2 xl:block"
+					>
+						<button class=" flex items-center justify-between gap-2">
+							<img src="/beli.svg" alt="Servers" class="h-[13px] w-3 " />
+							Servers
 						</button>
 					</a>
+
+					<!-- <button
+						class="flex btn-xs font-inter border bg-top-light-2 lg:!p-1 xl:!px-4 xl:py-1 !text-sm border-border text-content-secondary hover:bg-top-light-17 !font-medium !rounded-full non-italic transition-all duration-300 justify-center whitespace-nowrap"
+						type="button"
+						value="undefined"
+						><img width="15px" src="/beli.svg" alt="cdn" class="opacity-30" /> Servers</button
+					> -->
 
 					<span class="w-[1px] h-full text-border">|</span>
 					<!-- Download Button - Show on xl+ -->
@@ -117,6 +139,7 @@
 						<img src={File} alt="Download" class="h-4 w-4 flex-shrink-0" />
 						<span class="action-text">Download launcher</span>
 					</button>
+
 					<!-- </a> -->
 				</div>
 
@@ -137,14 +160,14 @@
 								class="absolute right-[0] top-[50px] w-[400px] h-[550px] text-[#EEEDEE] bg-background border border-border-light rounded-xl p-2 shadow-xl space-y-1 z-50"
 								transition:slide={{ duration: 200 }}
 							>
-								<div class="flex items-center gap-3 px-3 py-2 rounded-lg">
+								<!-- <div class="flex items-center gap-3 px-3 py-2 rounded-lg">
 									<div class="flex items-center gap-3">
 										<span class="text-base text-gray-400 font-medium ">No new notifications</span>
-										<!-- <img src="/billing/House.svg" alt="Notification" class="h-5 w-5" /> -->
+										<img src="/billing/House.svg" alt="Notification" class="h-5 w-5" />
 									</div>
 
 									<span class="text-base text-gray-400 font-medium"> Mark all as read</span>
-								</div>
+								</div> -->
 							</div>
 						{/if}
 					</div>

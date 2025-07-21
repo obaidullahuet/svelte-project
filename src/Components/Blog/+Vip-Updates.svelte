@@ -47,7 +47,7 @@
 </script>
 
 <section class="text-content-primary px-1 sm:px-6 md:px-8 lg:px-9 font-inter">
-	<p class="text-lg sm:text-xl md:text-2xl lg:text-xl font-semibold lg:leading-5 mb-3">
+	<p class="text-lg sm:text-xl md:text-2xl lg:text-xl font-semibold lg:leading-5 mb-4">
 		VIP-Only Updates
 	</p>
 
@@ -162,11 +162,11 @@
 				</div>
 			</div>
 
-			<div class="flex flex-col blur-8 gap-0">
+			<div class="flex flex-col  p-2 gap-0 border border-border rounded-3xl">
 				{#each vipData.blurredCards as card, index (card.id)}
 					<!-- Card with blur effect -->
 					<div
-						class="bg-border rounded-3xl z-0 p-2 overflow-hidden shadow-md relative flex flex-col sm:flex-row"
+						class="bg-border blur-8  rounded-3xl z-0 p-2 overflow-hidden shadow-md relative flex flex-col sm:flex-row"
 						class:mb-0={index === 0}
 					>
 						<div class="relative sm:w-[45%]">

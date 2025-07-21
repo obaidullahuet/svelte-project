@@ -182,7 +182,7 @@
 			{#if card.type === 'image-card'}
 				<!-- Image Card -->
 				<div
-					class="bg-border sm:w-[360px] md:w-[49%] w-full xl:w-[497px] lg:w-[60%] h-[400px] lg:h-[455px] rounded-3xl p-2 overflow-hidden shadow-md relative flex flex-col shrink-0 transition-all duration-300"
+					class="bg-border border border-border sm:w-[360px] md:w-[49%] w-full xl:w-[497px] lg:w-[60%] h-[400px] lg:h-[455px] rounded-3xl p-2 overflow-hidden shadow-md relative flex flex-col shrink-0 transition-all duration-300"
 				>
 					<div class="relative">
 						<img
@@ -210,7 +210,7 @@
 				</div>
 			{:else}
 				<div
-					class="bg-border text-content-primary font-inter min-w-[85%] lg:w-full sm:min-w-[320px] max-w-[360px] w-full md:w-[48%] xl:w-[366px] h-[400px] lg:h-[455px] rounded-3xl shadow-md p-4 flex flex-col justify-between shrink-0 transition-all duration-300"
+					class="bg-border border border-border text-content-primary font-inter min-w-[85%] lg:w-full sm:min-w-[320px] max-w-[360px] w-full md:w-[48%] xl:w-[366px] h-[400px] lg:h-[455px] rounded-3xl shadow-md p-4 flex flex-col justify-between shrink-0 transition-all duration-300"
 				>
 					<p class="text-[18px] font-inter font-normal  text-content-secondary leading-2 mb-4">{card.date}</p>
 					<p class="text-[24px] font-semibold font-inter mb-4 leading-9">{card.title}</p>

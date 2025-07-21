@@ -4,7 +4,7 @@
 			id: 1,
 			imgSrc: '/blog/car1.svg',
 			imgAlt: 'car1',
-			tag: 'Limited Times Event',
+			tag: 'Limited Time Events',
 			date: 'June 13, 2025',
 			title: 'Ergonomic executive chair upholstered in bonded black leather and PVC'
 		},
@@ -52,7 +52,7 @@
 						class="w-full object-cover rounded-2xl h-[160px] sm:h-[200px] md:h-[240px] lg:h-[260px]"
 					/>
 					<span
-						class="absolute bottom-1 left-1 px-9 py-4 text-xs sm:text-sm md:text-md font-medium border border-border-light text-content-primary rounded-full backdrop-blur-16 text-center leading-1"
+						class="absolute bottom-1   left-1 px-6 py-3 text-xs sm:text-sm md:text-md font-medium border  bg-border-light border-border-light text-content-primary rounded-full backdrop-blur-16 text-center leading-1"
 					>
 						{firstAnnouncement.tag}
 					</span>
@@ -87,7 +87,7 @@
 						<img
 							src={announcement.imgSrc}
 							alt={announcement.imgAlt}
-							class="w-full h-[160px] sm:h-[200px] md:h-[240px] lg:h-[200px] object-cover rounded-2xl sm:rounded-l-2xl sm:rounded-md"
+							class="w-full h-[160px] sm:h-[200px] md:h-[240px] lg:h-auto object-cover rounded-2xl sm:rounded-l-2xl sm:rounded-md"
 						/>
 						<span
 							class="absolute bottom-1 xl:bottom-1 border border-border-light left-1 px-6 sm:w-[95%] lg:px-4 xl:px-[24px] py-4 lg:text-xxs text-xs sm:text-sm md:text-sm font-medium xl:text-md whitespace-nowrap text-content-primary rounded-full bg-border-light backdrop-blur-16 text-center leading-1"

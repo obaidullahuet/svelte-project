@@ -48,14 +48,14 @@
 
 <section class="px-1 py-2 sm:px-6 md:px-8 lg:px-9">
 	<p
-		class="text-lg sm:text-xl text-content-primary font-inter md:text-2xl leading-5 lg:text-xl font-semibold mb-3"
+		class="text-lg sm:text-xl text-content-primary font-inter md:text-2xl leading-5 lg:text-xl font-semibold mb-4"
 	>
 		Under The Hood: Devlogs and Patch Notes
 	</p>
 
 	{#each devlogCards as log}
 		<div
-			class="bg-border text-content-primary mb-[6px] rounded-2xl px-3 py-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm border border-border"
+			class="bg-border text-content-primary mb-[6px] rounded-2xl px-7 py-2 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm border border-border"
 		>
 			<div
 				class="flex flex-col sm:flex-row items-start sm:items-center w-full gap-2 sm:gap-6 font-inter"
